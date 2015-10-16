@@ -12,7 +12,7 @@
 */
 
 
-	Route::get('/', 'WelcomeController@index');
+Route::get('/', 'WelcomeController@index');
 
 Route::post('vistas', [
 
@@ -20,8 +20,6 @@ Route::post('vistas', [
 		'uses'=> 'VistasController@vistapropiedad'
 
 	]
-
-
 );
 Route::post('vista', [
 

@@ -6,7 +6,7 @@
         <div class="card-panel blue">
         <center><span class="white-text" ><h5>INDEPENDENT LIVING</h5>
           </span></center>
-          
+
         </div>
       </div>
     </div>
@@ -56,9 +56,8 @@ You want to enjoy activities and meals in the company of others.
 
         </div>
       </div>
-      <h5>Why Sol & Luna Health Resorts?</h5><p class="grey-text text-darken-2" align="justify"> 
-        Aqui redactar el porque es mejor elegir Sol & Luna Health Resorts respecto a la competencia, ademas 
-        de los beneficios que tiene hospedarse con nosotros y la diferencia de hospedarse en otra parte.
+      <h5>Why Sol & Luna Health Resorts?</h5><p class="grey-text text-darken-2" align="justify">
+        @yield('letras')
       </p>
       <br>
       <br>
@@ -74,7 +73,7 @@ You want to enjoy activities and meals in the company of others.
 <!--Section-->
   <div class="section ">
 
-   
+
 
   <!--Section-->
       </div>

@@ -13,27 +13,29 @@
                     <div class="divider"></div>
                     @include('admin.users.partial.messages')
                     {!! Form::open(['route' => 'admin.gastronomy.store', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12' ]) !!}
-                   
-                    {!!Form::label('nombre', 'Nombre del chef');!!}
-                    {!!Form::text('nombre');!!}
-
-                    {!!Form::label('apellido', 'Apellidos del chef');!!}
-                    {!!Form::text('apellido');!!}
-
-                    {!!Form::label('acerca', 'Acerca del Chef (historia)');!!}
-                    {!!Form::text('acerca');!!}
-
-
-                    {!!Form::label('docencia', 'docencia del Chef ');!!}
-                    {!!Form::text('acerca');!!}
-
- 					{!!Form::label('image', 'Imagen del Chef ');!!}
-                    {!!Form::file('image');!!}
+                    <div class="input-field">
+                    {!!Form::label('nombre', 'Nombre del chef')!!}
+                    {!!Form::text('nombre' , null, ['class' => 'validate'])!!}
+                    </div>
+                    <div class="input-field">
+                    {!!Form::label('nombre', 'Nombre del chef')!!}
+                    {!!Form::text('nombre' , null, ['class' => 'validate'])!!}
+                    </div>
+                    <div class="input-field">
+                    {!!Form::label('nombre', 'Nombre del chef')!!}
+                    {!!Form::text('nombre' , null, ['class' => 'validate'])!!}
+                    </div>
+                    <div class="input-field">
+                    {!!Form::label('nombre', 'Nombre del chef')!!}
+                    {!!Form::text('nombre' , null, ['class' => 'validate'])!!}
+                    </div>
+ 					{!!Form::label('image', 'Imagen del Chef ')!!}
+                    {!!Form::file('image')!!}
 
                    
                     {!! Form::close() !!}
 
-                     {!!Form::submit('Add chef');!!}
+                     {!!Form::submit('Add chef')!!}
                 </div>
             </div>
         </div>
