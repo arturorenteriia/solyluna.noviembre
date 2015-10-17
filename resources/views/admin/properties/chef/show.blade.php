@@ -21,7 +21,7 @@
                         <li><b>Type: </b> {{ $property->property_type->property_type }}</li>
                     </div>
                     <div class="card-action">
-                        <a href="{{ route('admin.gastronomy.create', $property) }}" class="right-align">Add Chef</a>
+                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Add Chef</a>
                       </div>
                 </div>
             </div>

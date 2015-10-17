@@ -115,7 +115,7 @@ class AmenetiesController extends Controller {
             ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
             ->orderBy('name', 'ASC')
             ->get();
-        //return dd($properties);
+
         return view('admin.properties.ameneties.show',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
     }
 

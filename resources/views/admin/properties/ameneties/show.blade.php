@@ -1,7 +1,7 @@
 @extends('admin.control.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">Properties</a>
+    <a href="#" class="brand-logo center">Amenitis</a>
 @endsection
 
 @section('add')

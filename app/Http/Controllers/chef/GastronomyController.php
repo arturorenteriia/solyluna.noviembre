@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Session;
 use solyluna\Bedroom;
 use solyluna\Country;
 use solyluna\File;
+use solyluna\Gastronomy;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
+use solyluna\Http\Requests\CreateChefRequest;
 use solyluna\Http\Requests\CreatePropertyRequest;
 use solyluna\Http\Requests\CreateUserRequest;
 use solyluna\Http\Requests\EditPropertyRequest;
@@ -36,16 +38,13 @@ class GastronomyController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create($id)
 	{
 		$user_id = Auth::user()->id;
         $user_role = User::findOrfail($user_id);
-        $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
-            ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
-            ->orderBy('name', 'ASC')
-            ->get();
+		$id_property = Property::findOrFail($id);
 
-            return view ('admin.properties.chef.create',compact('properties','user_id','user_role'));
+            return view ('admin.properties.chef.create',compact('id_property','user_id','user_role'));
 
 
 	}
@@ -55,9 +54,41 @@ class GastronomyController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateChefRequest $request)
 	{
-		//
+
+
+		$validate = new Gastronomy($request->all());
+		$validate = $validate->property_id;
+
+		$agregar = Gastronomy::select('id')
+			->where('property_id', '=', $validate)
+			->get();
+
+					if(count($agregar)>0)
+
+
+		{
+			dd("esta casa ya tiene chef wey");
+
+		}
+		else {
+			$file = Input::file('image');
+
+			if (Input::hasFile('image')) {
+				$fileName = $file->getClientOriginalName();
+				$path = public_path() . '\uploads\\';
+
+				$chef = new Gastronomy($request->all());
+				$chef->image = $fileName;
+
+				if ($file->move($path, $fileName)) {
+					$chef->save();
+					return redirect()->route('admin.ameneties.show');
+				}
+			}
+
+		}
 	}
 
 	/**

@@ -65,7 +65,7 @@
                 <li class="divider"></li>
                  <li><a href="{{ route('admin.ameneties.show') }}">Edit</a></li>
             </ul>
-            <li><a class="button" href="{{ route('admin.gastronomy.show') }}" data-activates="dropdown6">Edit Chef<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="button" href="{{ route('admin.properties.chef.show') }}" data-activates="dropdown6">Edit Chef<i class="material-icons right">arrow_drop_down</i></a></li>
         @endif
          </ul>
     <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="small material-icons">view_headline</i></a>
