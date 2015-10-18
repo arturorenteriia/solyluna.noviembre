@@ -5,7 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sol&Luna</title>
-
+	<link href="{{ asset('/css/materialize.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/materialize.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
@@ -19,40 +20,14 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/">Sol&Luna</a>
-			</div>
+<nav>
+	<div class="nav-wrapper blue darken-3">
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url('home') }}">Home</a></li>
-				</ul>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
 
-				<ul class="nav navbar-nav navbar-right">
-					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-					@else
-						<li><a href="{{ route('admin.users.index') }}">Users</a></li>
-						<li><a href="{{ route('admin.properties.index') }}">Properties</a></li>
-						<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->last_name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-					@endif
-				</ul>
-			</div>
-		</div>
-	</nav>
+		</ul>
+	</div>
+</nav>
 
 	@yield('content')
 
