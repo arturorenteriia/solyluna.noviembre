@@ -80,27 +80,7 @@ class AmenetiesController extends Controller {
             }
         }
     }
-    public function storedrinks( FileRequest  $request, Redirector $redirect)
-    {
 
-        $file = Input::file('drinks');
-        if(Input::hasFile('drinks'))
-        {
-            $fileName = $file->getClientOriginalName();
-            $path = public_path().'\drinks\\';
-
-
-            $files= new File($request->all());
-
-            $files->drinks = $fileName;
-            if($file->move($path, $fileName))
-            {
-                //return dd($menu);
-                $files->save();
-                return $redirect->route('admin.ameneties.edit');
-            }
-        }
-    }
     /**
      * Display the specified resource.
      *
