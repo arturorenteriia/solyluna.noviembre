@@ -45,6 +45,14 @@
 
 
 @endif
+@if(Session::has('actualizado'))
+
+    <script>
+        swal("Actualizado!", "Los campos han sido actualizados correctamente", "success")
+    </script>
+
+
+@endif
 <header>
     <ul id="slide-out" class="side-nav fixed grey lighten-5">
          <div class="section">

@@ -169,3 +169,7 @@ Route::get('formulario', [
 	Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
 		Route::resource('properties.chef', 'GastronomyController');
 	});
+Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
+	Route::resource('chef', 'GastronomyController');
+
+});

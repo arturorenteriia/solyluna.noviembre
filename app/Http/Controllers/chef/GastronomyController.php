@@ -14,6 +14,7 @@ use solyluna\Http\Controllers\Controller;
 use solyluna\Http\Requests\CreateChefRequest;
 use solyluna\Http\Requests\CreatePropertyRequest;
 use solyluna\Http\Requests\CreateUserRequest;
+use solyluna\Http\Requests\EditChefRequest;
 use solyluna\Http\Requests\EditPropertyRequest;
 use solyluna\Http\Requests\FileRequest;
 use solyluna\Property;
@@ -136,18 +137,29 @@ class GastronomyController extends Controller {
 	 */
 	public function edit($id)
 	{
-		dd("estas para edita");
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		$datos = Gastronomy::select('id','nombre','apellidos','acerca','docencia','property_id')
+			->where('property_id', '=' , $id)
+			->get();
+
+		return view('admin.properties.chef.edit', compact('datos','id','user_id','user_role'));
 	}
 
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param EditChefRequest $request
 	 * @return Response
+	 * @internal param int $id
 	 */
-	public function update($id)
+	public function update(EditChefRequest $request, $id)
 	{
-		//
+		$id_property = Gastronomy::findOrfail($id);
+		$id_property->fill($request->all());
+		$id_property->save();
+		Session::flash('actualizado','update');
+		return redirect()->route('admin.properties.chef.show');
 	}
 
 	/**
@@ -158,7 +170,7 @@ class GastronomyController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		dd("destroy!");
 	}
 
 }

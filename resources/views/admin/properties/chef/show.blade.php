@@ -7,7 +7,7 @@
 @section('add')
     <div class="row">
         @foreach($properties as $property)
-            <div class="col s12 m4 l3">
+            <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{ asset('uploads') }}/{{ $property->image }}" height="180px">
@@ -21,23 +21,12 @@
                         <li><b>Type: </b> {{ $property->property_type->property_type }}</li>
                     </div>
                     <div class="card-action">
-                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Agregar Chef</a>
 
-                    </div>
+                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align" title="Agregar Chef a la propiedad"><i class="material-icons">note_add</i></a>
+                        <a href="{{ route('admin.chef.edit',$property) }}" class="right-align" title="Actualizar Chef"><i class="material-icons">loop</i></a>
+                        <a href="{{ route('admin.chef.edit',$property) }}" class="right-align" title="Eliminar Chef"><i class="material-icons">delete</i></a>
 
-                        <div class="card-action">
-                            <a href="{{ route('admin.properties.chef.edit', $property) }}" class="right-align">Editar Chef</a>
-                        </div>
-
-                    <div class="card-action">
-                        <a href="{{ route('admin.properties.chef.destroy', $property) }}" class="right-align">Eliminar Chef</a>
-
-                    </div>
-
-
-
-
-
+                   </div>
                 </div>
             </div>
         @endforeach
