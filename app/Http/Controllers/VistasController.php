@@ -2,6 +2,7 @@
 
 use solyluna\Amenity;
 use solyluna\File;
+use solyluna\Gastronomy;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
@@ -45,7 +46,7 @@ class VistasController extends Controller {
 		$pictures = Picture::select('image1','image2','image3','image4','image5','image6','image7','image8','image9')
 			->where ('property_id','=',$property_id)
 			->get();
-		$files = File::select('menu','activities','drinks')
+		$files = File::select('activities')
 				->where ('property_id','=',$property_id)
 				->get();
 
@@ -74,7 +75,13 @@ class VistasController extends Controller {
 			->orderBy('name', 'ASC')
 			->get();
 
-			return view('gastronomy',compact('properties','property_id'	));
+		$chef = Gastronomy::select('nombre','apellidos','acerca','docencia','image')
+			->where('property_id', '=', $property_id)
+			->get();
+		$files = File::select('menu','drinks')
+			->where ('property_id','=',$property_id)
+			->get();
+			return view('gastronomy',compact('properties','property_id','chef','files'));
 
 	}
 

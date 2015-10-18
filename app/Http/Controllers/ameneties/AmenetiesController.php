@@ -136,12 +136,14 @@ class AmenetiesController extends Controller {
             ->where('property_id', '=', $id)
             ->get();
 
-        if(!empty($files))
+        if (count($files) > 0)
         {
-            $files= new File();
-            $files->property_id = $id;
-            $files->save();
+            return view('admin.properties.ameneties.edit',compact('properties', 'user_role'));
+
         }
+        $files= new File();
+        $files->property_id = $id;
+        $files->save();
 
         return view('admin.properties.ameneties.edit',compact('properties', 'user_role'));
     }
