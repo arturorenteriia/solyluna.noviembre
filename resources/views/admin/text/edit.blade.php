@@ -7,13 +7,13 @@
 @section('add')
     <div class="container">
         <div class="row">
-            {!! Form::open(['route' => 'admin.text.store', 'method' => 'POST' , 'class' => 'col s12' ]) !!}
+            {!! Form::model($text, ['route' => ['admin.text.update', $text], 'method' => 'PUT' ]) !!}
                 <div class="row">
                     <div class="col s12">
                         <blockquote><h5>Title</h5></blockquote>
                     </div>
                     <div class="input-field col s12">
-                        <input type="text" name="title" class="validate" length="40">
+                        <input type="text" name="title" value="{{ $text->title }}" class="validate" length="40">
                         <label for="title">Title</label>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                         <blockquote><h5>First Text</h5></blockquote>
                     </div>
                     <div class="input-field col s12">
-                        <input type="text" name="firstText" class="validate" length="700">
+                        <textarea id="textarea1" name="firstText" class="materialize-textarea" length="700">{{ $text->firstText }}</textarea>
                         <label for="firstText">First Text</label>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <blockquote><h5>Second Text</h5></blockquote>
                     </div>
                     <div class="input-field col s12">
-                        <input type="text" name="secondText" class="validate" length="700">
+                        <textarea id="textarea2" name="secondText" class="materialize-textarea" length="700">{{ $text->secondText }}</textarea>
                         <label for="secondText">Second Text</label>
                     </div>
                 </div>
@@ -40,8 +40,17 @@
                         <blockquote><h5>Phrase of image</h5></blockquote>
                     </div>
                     <div class="input-field col s12">
-                        <input type="text" name="phrase" class="validate" length="40">
+                        <input type="text" name="phrase" class="validate" value=" {{ $text->phrase }}" length="40">
                         <label for="phrase">Phrase of image</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <blockquote><h5>Description</h5></blockquote>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" name="description" value="{{ $text->description }}" class="validate" length="35">
+                        <label for="description">Description</label>
                     </div>
                 </div>
                 <div class="row">

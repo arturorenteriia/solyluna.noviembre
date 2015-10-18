@@ -471,22 +471,23 @@
             <div class="card-panel col s12 m12 l9 ">
                 <div class="divider"></div>
                 <div class="section">
-                    <h5 class="grey-text text-darken-4">EXPERIENCE SOL & LUNA HEALTH RESORTS</h5>
-                    <p class="grey-text text-darken-2">Aqui va texto donde menciona lo grandioso que es hospedarse en sol y luna y todos los servicios que ofrecemos ademas de las actividades a realizar, poder hacer videollamadas, llevar un control de los huespedes, etc... Aqui va texto donde menciona lo grandioso que es hospedarse en sol y luna y todos los servicios que ofrecemos ademas de las actividades a realizar, poder hacer videollamadas, llevar un control de los huespedes, etc..
-                                                       Aqui va texto donde menciona lo grandioso que es hospedarse en sol y luna y todos los servicios que ofrecemos ademas de las actividades a realizar, poder hacer videollamadas, llevar un control de los huespedes, etc..</p>
+                    @foreach($textW as $text)
+
+                    <h5 class="grey-text text-darken-4">{{ $text->title }}</h5>
+                    <p class="grey-text text-darken-2" align="justify"> {{ $text->firstText }} </p>
                     <div class="row">
                         <div class="col s12 l4">
                             <div class="card-panel white">
                                 <img src="images/anciana.jpg" class="responsive-img" width="100%" alt="">
                             </div>
-                            <blockquote class="grey-text text-darken-4">Sara, 74 Years Old, Alburquerque</blockquote>
+                            <blockquote class="grey-text text-darken-4" align="">{{ $text->description }}</blockquote>
                         </div>
                         <div class="col s12 l4">
-                            <p class="flow-text grey-text text-darken-4">"The best experience of my life..."</p>
+                            <p class="flow-text grey-text text-darken-4" align=''>{{ $text->phrase }}</p>
                         </div>
-                        <p class="grey-text text-darken-2">Aqui va texto donde menciona lo grandioso que es hospedarse en sol y luna y todos los servicios que ofrecemos ademas de las actividades a realizar, poder hacer videollamadas, llevar un control de los huespedes, etc... Aqui va texto donde menciona lo grandioso que es hospedarse en sol y luna y todos los servicios que ofrecemos ademas de las actividades a realizar, poder hacer videollamadas, llevar un control de los huespedes, etc..
-                            Aqui va texto donde menciona lo grandioso que es hospedarse en sol y luna y todos los servicios que ofrecemos ademas de las actividades a realizar, poder hacer videollamadas, llevar un control de los huespedes, etc..</p>
+                        <p class="grey-text text-darken-2" align="justify">{{ $text->secondText }}</p>
                     </div>
+                    @endforeach
                 </div>
             </div>
          </div>

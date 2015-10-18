@@ -5,6 +5,8 @@ use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use solyluna\Http\Requests\WelcomeTextRequest;
+use solyluna\TextWelcome;
 use solyluna\User;
 
 class EditTextController extends Controller {
@@ -28,9 +30,11 @@ class EditTextController extends Controller {
      *
      * @return Response
      */
-    public function store()
+    public function store(WelcomeTextRequest $request)
     {
-
+        $welcome = new TextWelcome($request->all());
+        $welcome->save();
+        return view('admin.control');
     }
 
     /**
@@ -41,7 +45,7 @@ class EditTextController extends Controller {
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -52,7 +56,11 @@ class EditTextController extends Controller {
      */
     public function edit($id)
     {
-
+        $user_id = Auth::user()->id;
+        $user_role = User::findOrfail($user_id);
+        $text = TextWelcome::findOrfail($id);
+        $welcometext = TextWelcome::findOrfail(3);
+        return view('admin.text.edit', compact('user_role','text', 'welcometext'));
     }
 
     /**
@@ -63,7 +71,9 @@ class EditTextController extends Controller {
      */
     public function update($id)
     {
-
+        $text = TextWelcome::findOrFail($id);
+        $text->fill(\Request::all());
+        $text->save();
     }
 
     /**

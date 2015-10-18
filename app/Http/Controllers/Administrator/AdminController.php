@@ -6,6 +6,7 @@ use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use solyluna\TextWelcome;
 use solyluna\User;
 
 class AdminController extends Controller {
@@ -19,8 +20,9 @@ class AdminController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
+		$welcometext = TextWelcome::findOrfail(3);
 		//return dd($user);
-		return view('admin.control.admin',compact('user_role'));
+		return view('admin.control.admin',compact('user_role', 'welcometext'));
 	}
 
 	/**

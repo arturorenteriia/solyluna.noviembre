@@ -6,10 +6,6 @@
     <!--Import materialize.css-->
     <link href="{{ asset('/css/materialize.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/materialize.min.css') }}" rel="stylesheet">
-    <script src="{{ asset('/dist/sweetalert.min.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('/dist/sweetalert.css') }}">
-
-
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -28,31 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-@if(Session::has('procesorealizado'))
-
-    <script>
-        swal("Exito!", "Proceso realizado correctamente", "success")
-    </script>
-
-
-@endif
-
-@if(Session::has('yacreado'))
-
-    <script>
-        swal("Imposible!", "La Propiedad ya tiene un chef asignado, solo puedes actualizarlo o eliminarlo para agregar uno nuevo.", "error")
-    </script>
-
-
-@endif
-@if(Session::has('actualizado'))
-
-    <script>
-        swal("Actualizado!", "Los campos han sido actualizados correctamente", "success")
-    </script>
-
-
-@endif
 <header>
     <ul id="slide-out" class="side-nav fixed grey lighten-5">
          <div class="section">
@@ -62,25 +33,29 @@
          <div class="divider"></div>
 
         @if($user_role->role == 'superadmin')
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Users<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Users</a></li>
             <ul id="dropdown1" class="dropdown-content">
                 <li><a href="#">Create user</a></li>
             </ul>
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Resideces<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Resideces</a></li>
             <ul id="dropdown2" class="dropdown-content">
                 <li class="divider"></li>
                 <li><a href="#">Add residences</a></li>
                 <li><a href="#">Show</a></li>
             </ul>
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Edit amenities<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Edit amenities</a></li>
             <ul id="dropdown3" class="dropdown-content">
                 <li class="divider"></li>
                 <li><a href="#!">Edit</a></li>
             </ul>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
+            <ul id="dropdown7" class="dropdown-content">
+                <li><a href="text/welcome">Edit Welcome</a></li>
+            </ul>
         @endif
 
         @if($user_role->role == 'realstate')
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown5">Residences<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown5">Residences</a></li>
             <ul id="dropdown5" class="dropdown-content">
                 <li class="divider"></li>
                 <li><a href="{{ route('admin.properties.create') }}">Add residences</a></li>
@@ -89,12 +64,12 @@
         @endif
 
         @if($user_role->role == 'admin')
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown6">Edit amenities<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown6">Edit amenities</a></li>
             <ul id="dropdown6" class="dropdown-content">
                 <li class="divider"></li>
                  <li><a href="{{ route('admin.ameneties.show') }}">Edit</a></li>
             </ul>
-            <li><a class="button" href="{{ route('admin.properties.chef.show') }}" data-activates="dropdown6">Edit Chef<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="button" href="{{ route('admin.gastronomy.show') }}" data-activates="dropdown6">Edit Chef</a></li>
         @endif
          </ul>
     <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="small material-icons">view_headline</i></a>

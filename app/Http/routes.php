@@ -15,24 +15,18 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::post('vistas', [
-
 		'as' => 'vistas.vistapropiedad',
 		'uses'=> 'VistasController@vistapropiedad'
-
 	]
 );
-Route::post('vista', [
 
+Route::post('vista', [
 		'as' => 'vista.gastronomy',
 		'uses'=> 'VistasController@gastronomy'
-
 	]
-
-
 );
 
 Route::get('gastronomy', 'GastronomyController@addchef');
-
 Route::get('casasassisting', 'vistasController@casasassisting');
 Route::get('gastronomy', 'vistasController@gastronomy');
 
@@ -43,103 +37,75 @@ Route::get('gastronomy', 'vistasController@gastronomy');
 		'auth' => 'Auth\AuthController',
 		'password' => 'Auth\PasswordController',
 	]);
+
 Route::get('contacto', function(){
 	return view('contacto');
 });
 Route::get('heredado', function(){
 	return view('heredado');
 });
-
 Route::get('welcome', function () {
 	return view('welcome');
-
 });
 Route::get('independent', function () {
 	return view('independent');
-
 });
 Route::get('assisting', function () {
 	return view('assisting');
-
 });
 Route::get('memorycare', function () {
 	return view('memorycare');
-
 });
 Route::get('plantillasimple', function () {
 	return view('plantillasimple');
-
 });
 Route::get('Icasas', function () {
 	return view('Icasas');
-
 });
 Route::get('casasayulita', function () {
 	return view('casasayulita');
-
 });
 Route::get('tecnologia', function () {
 	return view('tecnologia');
-
 });
 Route::get('healthcare', function () {
 	return view('healthcare');
-
 });
 Route::get('amenities', function () {
 	return view('amenities');
-
 });
 Route::get('gacasasayulita', function () {
 	return view('gacasasayulita');
-
 });
 Route::get('casabusqueda', function () {
 	return view('casabusqueda');
-
 });
-
 Route::get('busqueda', function () {
 	return view('busqueda');
-
 });
 Route::get('casaconchaschinas', function () {
 	return view('casaconchaschinas');
-
 });
 Route::get('casamemorycare', function () {
 	return view('casamemorycare');
-
 });
 Route::get('residenciaamapa', function () {
 	return view('residenciaamapa');
-
-
 });
-
 Route::get('Acasas', function () {
 	return view('Acasas');
-
-
 });
 Route::get('formulario', function () {
 	return view('formulario');
-
-
 });
 Route::get('Mcasas', function () {
 	return view('Mcasas');
-
-
 });
 Route::get('makeyourmenu', function () {
 	return view('makeyourmenu');
-
-
 });
 Route::get('formulario', [
 	'as' => 'form_path',
-
 ]);
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function (){
@@ -163,13 +129,16 @@ Route::get('formulario', [
 		Route::group(['prefix' => 'admin', 'namespace' => 'Characteristic'], function (){
 		Route::resource('properties.characteristic', 'CharacteristicsController');
 	});
+
 	Route::group(['prefix' => 'admin', 'namespace' => 'Images'], function (){
 		Route::resource('properties.images', 'ImagesController');
 	});
-	Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
-		Route::resource('properties.chef', 'GastronomyController');
-	});
-Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
-	Route::resource('chef', 'GastronomyController');
 
-});
+	Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
+		Route::resource('gastronomy', 'GastronomyController');
+	});
+
+	Route::group(['prefix' => 'admin', 'namespace' => 'EditText'], function (){
+		Route::resource('text', 'EditTextController');
+	});
+
