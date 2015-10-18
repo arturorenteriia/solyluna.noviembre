@@ -26,11 +26,11 @@
                     </div>
 
                         <div class="card-action">
-                            <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Actualizar Chef</a>
+                            <a href="{{ route('admin.properties.chef.edit', $property) }}" class="right-align">Editar Chef</a>
                         </div>
 
                     <div class="card-action">
-                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Eliminar Chef</a>
+                        <a href="{{ route('admin.properties.chef.destroy', $property) }}" class="right-align">Eliminar Chef</a>
 
                     </div>
 

@@ -136,7 +136,7 @@ class GastronomyController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		dd("estas para edita");
 	}
 
 	/**

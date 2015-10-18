@@ -182,7 +182,7 @@ class AmenetiesController extends Controller {
                         $concha = File::findOrFail($ides->id);
                         $concha->menu = $fileName;
                         $concha->save();
-                       Session::flash('mensaje','exito');
+                       Session::flash('procesorealizado','exito');
                         return view('admin.properties.ameneties.edit', compact('user_role', 'properties'));
                     }
                 }
@@ -204,7 +204,7 @@ class AmenetiesController extends Controller {
                         $concha = File::findOrFail($ides->id);
                         $concha->drinks = $fileName;
                         $concha->save();
-                        Session::flash('mensaje','exito');
+                        Session::flash('procesorealizado','exito');
                         return view('admin.properties.ameneties.edit', compact('user_role', 'properties'));
                     }
                 }
@@ -226,7 +226,7 @@ class AmenetiesController extends Controller {
                         $concha = File::findOrFail($ides->id);
                         $concha->activities = $fileName;
                         $concha->save();
-                        Session::flash('mensaje','exito');
+                        Session::flash('procesorealizado','exito');
                         return view('admin.properties.ameneties.edit', compact('user_role', 'properties'));
                     }
                 }
