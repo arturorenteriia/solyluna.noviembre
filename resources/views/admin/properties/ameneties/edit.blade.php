@@ -5,6 +5,10 @@
 @endsection
 
 @section('add')
+
+
+
+
     <div class="row">
 
         <div class="row">
@@ -25,9 +29,7 @@
                             <span class="card-title">MENU DEL RESORTS</span>
                         </div>
                         <div class="card-content">
-                            <div class="card-action">
-                                <a href="admin.ameneties.edit" class="right-align">Add Menu</a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -64,9 +66,7 @@
                         </div>
                         <div class="card-content">
 
-                            <div class="card-action">
-                                <a href="admin.ameneties.edit" class="right-align">Add BEBIDAS</a>
-                            </div>
+
                         </div>
                     </div>
 
@@ -107,10 +107,7 @@
                         </div>
                         <div class="card-content">
 
-                            <div class="card-action">
-                                <a href="admin.ameneties.edit" class="right-align">Add Actividades</a>
-                            </div>
-                        </div>
+                                                   </div>
                     </div>
 
                 </div>

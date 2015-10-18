@@ -6,6 +6,10 @@
     <!--Import materialize.css-->
     <link href="{{ asset('/css/materialize.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/materialize.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('/dist/sweetalert.min.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/dist/sweetalert.css') }}">
+
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,6 +28,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+@if(Session::has('procesorealizado'))
+
+    <script>
+        swal("Good job!", "Proceso realizado correctamente", "success")
+    </script>
+
+
+@endif
+
+@if(Session::has('yacreado'))
+
+    <script>
+        swal("Imposible!", "La Propiedad ya tiene un chef asignado, solo puedes actualizarlo o eliminarlo para agregar uno nuevo.", "error")
+    </script>
+
+
+@endif
 <header>
     <ul id="slide-out" class="side-nav fixed grey lighten-5">
          <div class="section">

@@ -41,12 +41,23 @@ class GastronomyController extends Controller {
 	public function create($id)
 	{
 		$user_id = Auth::user()->id;
-        $user_role = User::findOrfail($user_id);
-		$id_property = Property::findOrFail($id);
+		$user_role = User::findOrfail($user_id);
+		$id_property = ($id);
 
-            return view ('admin.properties.chef.create',compact('id_property','user_id','user_role'));
+		$agregar = Gastronomy::select('id')
+			->where('property_id', '=', $id)
+			->get();
+
+		if (count($agregar) > 0) {
+			Session::flash('yacreado','error');
+			return redirect()->route('admin.properties.chef.show');
+
+		} else {
+
+			return view('admin.properties.chef.create', compact('id_property', 'user_id', 'user_role'));
 
 
+		}
 	}
 
 	/**
@@ -84,7 +95,8 @@ class GastronomyController extends Controller {
 
 				if ($file->move($path, $fileName)) {
 					$chef->save();
-					return redirect()->route('admin.ameneties.show');
+					Session::flash('procesorealizado','exito');
+					return redirect()->route('admin.properties.chef.show');
 				}
 			}
 
@@ -106,8 +118,12 @@ class GastronomyController extends Controller {
             ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
             ->orderBy('name', 'ASC')
             ->get();
+
+		$tipomenu = Gastronomy::select('property_id')
+						->get();
+
           
-        return view('admin.properties.chef.show',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
+        return view('admin.properties.chef.show',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role','tipomenu'));
     
 	
 	}

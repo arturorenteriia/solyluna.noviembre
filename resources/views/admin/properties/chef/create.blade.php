@@ -14,7 +14,7 @@
                     @include('admin.users.partial.messages')
                     {!! Form::open(['route' => 'admin.properties.chef.store', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12' ]) !!}
                     <div class="form-group">
-                        {!! Form::text('property_id', $id_property->id,  ['class' => 'form-control']) !!}
+                        {!! Form::text('property_id', $id_property,  ['class' => 'form-control']) !!}
                     </div>
                     <div class="input-field">
                     {!!Form::label('nombre', 'Nombre del chef')!!}

@@ -21,8 +21,23 @@
                         <li><b>Type: </b> {{ $property->property_type->property_type }}</li>
                     </div>
                     <div class="card-action">
-                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Add Chef</a>
-                      </div>
+                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Agregar Chef</a>
+
+                    </div>
+
+                        <div class="card-action">
+                            <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Actualizar Chef</a>
+                        </div>
+
+                    <div class="card-action">
+                        <a href="{{ route('admin.properties.chef.create', $property) }}" class="right-align">Eliminar Chef</a>
+
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         @endforeach
