@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'NavigationController@welcome');
 
 Route::post('vistas', [
 		'as' => 'vistas.vistapropiedad',
@@ -44,9 +44,9 @@ Route::get('contacto', function(){
 Route::get('heredado', function(){
 	return view('heredado');
 });
-Route::get('welcome', function () {
-	return view('welcome');
-});
+
+Route::get('welcome', 'NavigationController@welcome');
+
 Route::get('independent', function () {
 	return view('independent');
 });
@@ -135,7 +135,11 @@ Route::get('formulario', [
 	});
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
-		Route::resource('gastronomy', 'GastronomyController');
+		Route::resource('properties.chef', 'GastronomyController');
+	});
+
+	Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){
+		Route::resource('chef', 'GastronomyController');
 	});
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'EditText'], function (){

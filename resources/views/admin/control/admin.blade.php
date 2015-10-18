@@ -50,13 +50,13 @@
             </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
             <ul id="dropdown7" class="dropdown-content">
-                <li><a href="text/welcome">Edit Welcome</a></li>
+                <li><a href="{{ route('admin.text.edit', $welcometext) }}">Edit Welcome</a></li>
             </ul>
         @endif
 
         @if($user_role->role == 'realstate')
             <li><a class="dropdown-button" href="#!" data-activates="dropdown5">Residences</a></li>
-            <ul id="dropdown5" class="dropdown-content">
+            <ul id  ="dropdown5" class="dropdown-content">
                 <li class="divider"></li>
                 <li><a href="{{ route('admin.properties.create') }}">Add residences</a></li>
                 <li><a href="{{ route('admin.properties.show') }}">Show</a></li>
@@ -69,7 +69,7 @@
                 <li class="divider"></li>
                  <li><a href="{{ route('admin.ameneties.show') }}">Edit</a></li>
             </ul>
-            <li><a class="button" href="{{ route('admin.gastronomy.show') }}" data-activates="dropdown6">Edit Chef</a></li>
+            <li><a class="button" href="{{ route('admin.chef.show') }}" data-activates="dropdown6">Edit Chef</a></li>
         @endif
          </ul>
     <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="small material-icons">view_headline</i></a>
