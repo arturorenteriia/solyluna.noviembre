@@ -31,7 +31,7 @@
 @if(Session::has('procesorealizado'))
 
     <script>
-        swal("Good job!", "Proceso realizado correctamente", "success")
+        swal("Exito!", "Proceso realizado correctamente", "success")
     </script>
 
 
