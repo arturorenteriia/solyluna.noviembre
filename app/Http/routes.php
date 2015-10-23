@@ -46,13 +46,9 @@ Route::get('heredado', function(){
 });
 
 Route::get('welcome', 'NavigationController@welcome');
+Route::get('independent', 'NavigationController@independent');
+Route::get('assisting', 'NavigationController@assisted');
 
-Route::get('independent', function () {
-	return view('independent');
-});
-Route::get('assisting', function () {
-	return view('assisting');
-});
 Route::get('memorycare', function () {
 	return view('memorycare');
 });
@@ -146,3 +142,14 @@ Route::get('formulario', [
 		Route::resource('text', 'EditTextController');
 	});
 
+	Route::group(['prefix' => 'admin', 'namespace' => 'EditIndependent'], function (){
+		Route::resource('text.independent', 'EditIndependentTextController');
+	});
+
+	Route::group(['prefix' => 'admin', 'namespace' => 'EditAssisted'], function (){
+		Route::resource('text.assisted', 'EditAssistedTextController');
+	});
+
+	Route::group(['prefix' => 'admin', 'namespace' => 'EditMemory'], function (){
+		Route::resource('text.memory', 'EditMemoryTextController');
+	});

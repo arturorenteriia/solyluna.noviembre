@@ -472,7 +472,6 @@
                 <div class="divider"></div>
                 <div class="section">
                     @foreach($textW as $text)
-
                     <h5 class="grey-text text-darken-4">{{ $text->title }}</h5>
                     <p class="grey-text text-darken-2" align="justify"> {{ $text->firstText }} </p>
                     <div class="row">

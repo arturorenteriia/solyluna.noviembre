@@ -51,7 +51,7 @@
           <div class="col s12 m4 l4 hoverable">
             <div class="col s12 m12 l12 ">
 
-             <center> <a href="{{ asset('menus') }}/{{ $file->menu }}" TARGET="_blank"><img src="images/menu semanal.jpg" class="responsive-img z-depth-2" alt="" style="width: 207px; height: 231px;"></a></center>
+             <center> <a href="{{ asset('menus') }}/{{ $file->menu }}" TARGET="_blank"><img src="images/personaliza tu menu.jpg" class="responsive-img z-depth-2" alt="" style="width: 207px; height: 231px;"></a></center>
             </div>
             <div class="col s12 m12 l12 ">
               <p class="center-align">You can see the menu for this week</p>

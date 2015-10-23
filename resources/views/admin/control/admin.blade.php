@@ -27,7 +27,7 @@
 <header>
     <ul id="slide-out" class="side-nav fixed grey lighten-5">
          <div class="section">
-             <center><a href="#" class="brand-logo"><img src="{{ asset('/images/LogoSolyLuna.png') }}" class="responsive-img" width="120px" alt=""></a></center>
+             <center><a href="{{ route('admin.control.index') }}" class="brand-logo"><img src="{{ asset('/images/LogoSolyLuna.png') }}" class="responsive-img" width="120px" alt=""></a></center>
          </div>
          <br><br><br><br>
          <div class="divider"></div>
@@ -51,6 +51,9 @@
          <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
             <ul id="dropdown7" class="dropdown-content">
                 <li><a href="{{ route('admin.text.edit', $welcometext) }}">Edit Welcome</a></li>
+                <li><a href="{{ route('admin.text.independent.create') }}">Edit Independent</a></li>
+                <li><a href="{{ route('admin.text.assisted.create') }}">Edit Assisting</a></li>
+                <li><a href="{{ route('admin.text.memory.create') }}">Edit Memory</a></li>
             </ul>
         @endif
 

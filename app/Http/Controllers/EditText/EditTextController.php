@@ -71,9 +71,13 @@ class EditTextController extends Controller {
      */
     public function update($id)
     {
+        $user_id = Auth::user()->id;
+        $user_role = User::findOrfail($user_id);
+        $welcometext = TextWelcome::findOrfail(3);
         $text = TextWelcome::findOrFail($id);
         $text->fill(\Request::all());
         $text->save();
+        return view('admin.control.admin', compact('user_role', 'welcometext'));
     }
 
     /**

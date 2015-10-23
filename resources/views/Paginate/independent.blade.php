@@ -20,16 +20,14 @@
           <div class="card-panel col s12 m12 l9 ">
           <div class="divider"></div>
   <div class="section">
-     <blockquote class="grey-text text-darken-4" align="justify"><h4>What is an Independent Living Community?</h4></blockquote>
+      @foreach($textI as $text)
+     <blockquote class="grey-text text-darken-4" align="justify"><h4>{{ $text->title1 }}</h4></blockquote>
     <div class="col s12 m5 l9">
         <div class="card-panel white">
          <img src="images/ILgrupo.jpg" class="responsive-img" width="100%" alt="">
         </div>
       </div>
-    <p class="grey-text text-darken-2" align="justify">Our secured Independent Living communities are designed for seniors who want to live at an exclusive resort with gourmet meals, access to healthcare professional as needed, recreational and social activities, housekeeping, and transportation, access to interactive communications with family and friends and a professional trained staff dedicated to serve your outmost needs.
-
-    <br>
-An independent living community may be a good option if:
+    <p class="grey-text text-darken-2" align="justify">
 <li class="grey-text text-darken-2" align="justify">
   Only minor assistance is needed with activities of daily living.
 </li >
@@ -66,14 +64,13 @@ You want to enjoy activities and meals in the company of others.
       <br>
         <a class="grey-text " href="Icasas"><h5>Find out Independent Living Residences</h5></a>
         <span><a class="btn" role="button" href="Icasas"><i class="material-icons">trending_flat</i></a></span>
+          @endforeach
   </div>
   </div>
   </div>
 <div class="divider col s12 m8 l9 "></div>
 <!--Section-->
   <div class="section ">
-
-
 
   <!--Section-->
       </div>

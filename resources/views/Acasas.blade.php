@@ -20,7 +20,7 @@
 
 
      @foreach($properties as $property)
-         @if($property->service_id == 2)
+         @if($property->service_id == 1)
         <div class="col s12 m12 l3">
             <div class="card small hoverable">
               <div class="card-image"  alt="">
