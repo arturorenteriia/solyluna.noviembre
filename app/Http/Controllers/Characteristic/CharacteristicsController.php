@@ -1,5 +1,6 @@
 <?php namespace solyluna\Http\Controllers\Characteristic;
 
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 use solyluna\Amenity;
 use solyluna\Http\Requests;
@@ -45,13 +46,16 @@ class CharacteristicsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(Request $request, Redirector $redirector)
 	{
+		$this->validate($request, [
+			'category' => 'required', 'amenity' => 'required',
+		]);
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
 		$characteristic = new Amenity($request->all());
 		$characteristic->save();
-		return view('admin.control.admin',compact('user_role'));
+		return $redirector->back();
 	}
 
 	/**
@@ -73,7 +77,7 @@ class CharacteristicsController extends Controller {
 	 */
 	public function edit($id)
 	{
-		return 'Hola mundo';
+
 	}
 
 	/**
@@ -93,15 +97,12 @@ class CharacteristicsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id, Request $request)
+	public function destroy($id, Redirector $redirector)
 	{
 		$amenity = Amenity::findOrfail($id);
 		$amenity->delete();
-		if($request->ajax()){
-			return response()->json([
-				'id' => $amenity = Amenity::findOrfail($id)
-			]);
-		}
+		return $redirector->back();
+
 	}
 
 }

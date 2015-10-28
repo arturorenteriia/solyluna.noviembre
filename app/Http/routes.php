@@ -124,10 +124,11 @@ Route::get('formulario', [
 	});
 		Route::group(['prefix' => 'admin', 'namespace' => 'Characteristic'], function (){
 		Route::resource('properties.characteristic', 'CharacteristicsController');
+		Route::resource('characteristic', 'CharacteristicsController');
 	});
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'Images'], function (){
-		Route::resource('properties.images', 'ImagesController');
+		Route::resource('images', 'ImagesController');
 	});
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'Chef'], function (){

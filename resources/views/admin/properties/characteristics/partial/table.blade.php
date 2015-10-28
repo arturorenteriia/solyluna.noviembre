@@ -12,7 +12,9 @@
             <td class="">{{ $amenity->category }}</td>
             <td class="">{{ $amenity->amenity }}</td>
             <td class="">
-                <a href="{{ route('admin.properties.characteristic.edit', $amenity->id) }}" class="right-align"><i class="material-icons">delete</i></a>
+                {!! Form::open(['route' => ['admin.characteristic.destroy', $amenity], 'method' => 'DELETE' ]) !!}
+                <button type="submit" onclick="return confirm('Seguro que desea eliminar')" class="btn btn-danger">delete</button>
+                {!! Form::close() !!}
             </td>
         </tr>
     @endforeach

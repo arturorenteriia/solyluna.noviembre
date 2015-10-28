@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Property extends Model {
 
-    protected $fillable = ['name', 'available', 'status', 'num_bedrooms', 'description', 'service_id', 'country_id', 'state_id', 'city_id', 'property_type_id', 'user_id'];
+    protected $fillable = ['name', 'available', 'status', 'num_bedrooms', 'slogan', 'description', 'image', 'service_id', 'country_id', 'state_id', 'city_id', 'property_type_id', 'user_id'];
 
     public function country()
     {
@@ -37,6 +37,14 @@ class Property extends Model {
     public function amenity()
     {
         return $this->hasOne('solyluna\Amenity');
+    }
+
+    public function setAvailableAttribute($value)
+    {
+        if(!empty($value))
+        {
+            $this->attributes['available'] = $value;
+        }
     }
 
 }

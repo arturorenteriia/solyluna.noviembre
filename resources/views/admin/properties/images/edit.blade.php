@@ -1,7 +1,7 @@
 @extends('admin.control.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">Images</a>
+    <a href="#" class="brand-logo center">Editar imagenes</a>
 @endsection
 
 @section('add')
@@ -11,9 +11,8 @@
                 <blockquote><h4>Important</h4></blockquote>
                 <p>Las fotos se mostraran en orden en que se van agregando.</p>
             </div>
-            {!! Form::open(['route' => 'admin.images.store', 'method' => 'POST' , 'files' => 'true', 'class' => 'col s12' ]) !!}
+            {!! Form::model($edit, ['route' => ['admin.images.update', $edit], 'files' => 'true', 'method' => 'PUT' ]) !!}
             <div class="row">
-                {!! Form::hidden('property_id', $property_id,  ['class' => 'form-control']) !!}
                 {!! Form::label('image1', 'image1') !!}
                 {!! Form::file('image1', ['class' => 'form-control']) !!}
             </div>

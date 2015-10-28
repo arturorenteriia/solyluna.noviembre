@@ -7,8 +7,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Editar propiedad: {{ $properties->name }}</div>
                     <div class="panel-body">
-                        {!! Form::model($properties, ['route' => ['admin.properties.update', $properties], 'method' => 'PUT' ]) !!}
-                        @include('admin.properties.partial.form')
+                        {!! Form::model($properties, ['route' => ['admin.properties.update', $properties], 'files' => 'true', 'method' => 'PUT' ]) !!}
+                        @include('admin.properties.partial.formedit')
                         <button type="submit" class="btn btn-info">Actualizar propiedad</button>
                         {!! Form::close() !!}
                         @include('admin.properties.partial.delete')

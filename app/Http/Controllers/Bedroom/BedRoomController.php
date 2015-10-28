@@ -2,6 +2,7 @@
 
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use solyluna\Bedroom;
@@ -37,12 +38,28 @@ class BedRoomController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create($id)
+	public function create($id, Redirector $redirector)
 	{
-		$user_id = Auth::user()->id;
-		$user_role = User::findOrfail($user_id);
-		$bedroom = Property::findOrFail($id);
-		return view('admin.properties.bedrooms.index',compact('bedroom','user_role'));
+		$rooms = Bedroom::select('property_id')
+			->where('property_id', '=', $id)
+			->count();
+		$Arooms = Property::select('id','num_bedrooms')
+			->where('id', '=', $id)
+			->get('num_bedrooms');
+		foreach($Arooms as $bedrooms)
+		{
+			$num = $bedrooms->num_bedrooms;
+			if($rooms < $num)
+			{
+				$user_id = Auth::user()->id;
+				$user_role = User::findOrfail($user_id);
+				$bedroom = Property::findOrFail($id);
+				return view('admin.properties.bedrooms.index',compact('bedroom','user_role'));
+			}
+			else{
+				return $redirector->back();
+			}
+		}
 	}
 
 	/**
@@ -64,7 +81,7 @@ class BedRoomController extends Controller {
 			if($file->move($path, $fileName))
 			{
 				$bedroom->save();
-				return redirect()->route('admin.properties.index');
+				return redirect()->route('admin.properties.show');
 			}
 		}
 	}

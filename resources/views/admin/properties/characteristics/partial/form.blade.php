@@ -1,7 +1,7 @@
 <div class="row">
     <div class="row">
         <div class="input-field col s12">
-            <select name="category">
+            <select name="category" required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="Special amenities">Special Amenities</option>
                 <option value="Services">Services</option>
@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="input-field col s6">
-            <input placeholder="Amenity" name="amenity" type="text" class="validate">
+            <input placeholder="Amenity" name="amenity" type="text" class="validate" required>
             <label for="amenity">Amenity</label>
         </div>
         {!! Form::hidden('property_id', $property,  ['class' => 'form-control']) !!}

@@ -122,9 +122,30 @@ class PropertiesController extends Controller {
 	 */
 	public function update(EditPropertyRequest $request ,$id )
 	{
+		$file = Input::file('image');
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
 		$property = Property::findOrFail($id);
-		$property->fill($request->all());
-		$property->save();
+
+		if(Input::hasFile('image'))
+		{
+			$fileName = $file->getClientOriginalName();
+			$path = public_path().'\uploads\\';
+
+			if($file->move($path, $fileName))
+			{
+				$property->fill($request->all());
+				$property->image = $fileName;
+				$property->save();
+				return view('admin.control.admin', compact('user_role'));
+			}
+		}
+		else
+		{
+			$property->fill($request->all());
+			$property->save();
+			return view('admin.control.admin', compact('user_role'));
+		}
 	}
 
 	/**

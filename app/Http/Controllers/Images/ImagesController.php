@@ -16,12 +16,9 @@ class ImagesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($id)
+	public function index()
 	{
-		$property_id = $id;
-		$user_id = Auth::user()->id;
-		$user_role = User::findOrfail($user_id);
-		return view('admin.properties.images.index', compact('user_role', 'property_id'));
+
 	}
 
 	/**
@@ -93,7 +90,17 @@ class ImagesController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$property_id = $id;
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		$count = Picture::select('id')
+			->count();
+		$images = Picture::all();
+		if($count>0)
+		{
+			return view('admin.properties.images.show', compact('user_role','images'));
+		}
+		return view('admin.properties.images.index', compact('user_role', 'property_id'));
 	}
 
 	/**
@@ -104,7 +111,10 @@ class ImagesController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$edit = Picture::findOrFail($id);
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		return view('admin.properties.images.edit', compact('edit', 'user_role'));
 	}
 
 	/**
@@ -113,9 +123,112 @@ class ImagesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+		$picture = Picture::findOrFail($id);
+		$file1 = Input::file('image1');
+		$file2 = Input::file('image2');
+		$file3 = Input::file('image3');
+		$file4 = Input::file('image4');
+		$file5 = Input::file('image5');
+		$file6 = Input::file('image6');
+		$file7 = Input::file('image7');
+		$file8 = Input::file('image8');
+		$file9 = Input::file('image9');
+
+		if(Input::hasFile('image1'))
+		{
+			$fileName1 = $file1->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file1->move($path,$fileName1))
+			{
+				$picture->image1 = $fileName1;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image2'))
+		{
+			$fileName2 = $file2->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file2->move($path,$fileName2))
+			{
+				$picture->image2 = $fileName2;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image3'))
+		{
+			$fileName3 = $file3->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file3->move($path,$fileName3))
+			{
+				$picture->image3 = $fileName3;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image4'))
+		{
+			$fileName4 = $file4->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file4->move($path,$fileName4))
+			{
+				$picture->image4 = $fileName4;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image5'))
+		{
+			$fileName5 = $file5->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file5->move($path,$fileName5))
+			{
+				$picture->image5 = $fileName5;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image6'))
+		{
+			$fileName6 = $file6->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file6->move($path,$fileName6))
+			{
+				$picture->image6 = $fileName6;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image7'))
+		{
+			$fileName7 = $file7->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file7->move($path,$fileName7))
+			{
+				$picture->image7 = $fileName7;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image8'))
+		{
+			$fileName8 = $file8->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file8->move($path,$fileName8))
+			{
+				$picture->image8 = $fileName8;
+				$picture->save();
+			}
+		}
+		if(Input::hasFile('image9'))
+		{
+			$fileName9 = $file9->getClientOriginalName();
+			$path = public_path().'\carousel\\';
+			if($file9->move($path,$fileName9))
+			{
+				$picture->image9 = $fileName9;
+				$picture->save();
+			}
+		}
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		return view('admin.control.admin', compact('user_role'));
 	}
 
 	/**
