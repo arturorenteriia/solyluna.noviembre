@@ -22,7 +22,19 @@ class EditTextController extends Controller {
      */
     public function create()
     {
+        $count = TextAssited::select('id')
+            ->count();
 
+        if($count >= 1)
+        {
+            return $this->show();
+        }
+        else {
+            $user_id = Auth::user()->id;
+            $user_role = User::findOrfail($user_id);
+            $welcometext = TextWelcome::findOrfail(3);
+            return view('admin.text.assisted.create', compact('user_role','welcometext'));
+        }
     }
 
     /**

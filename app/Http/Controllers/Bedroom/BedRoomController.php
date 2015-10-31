@@ -9,6 +9,7 @@ use solyluna\Bedroom;
 use solyluna\Http\Controllers\Controller;
 
 use solyluna\Http\Requests\CreateBedRoomRequest;
+use solyluna\Http\Requests\EditBedroomRequest;
 use solyluna\Property;
 use solyluna\User;
 
@@ -19,18 +20,9 @@ class BedRoomController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($id)
+	public function index()
 	{
-		$properties = Bedroom::select('id', 'bedroom_asigned', 'status', 'beds', 'size_metrics', 'description', 'image', 'property_id')
-			->with('Property')
-			->where('property_id', '=', $id)
-			->get();
-		$count = Bedroom::select('id', 'property_id')
-			->with('Property')
-			->where('property_id', '=', $id)
-			->count();
-		return view('admin.properties.bedrooms.show', compact('properties', 'count'));
-		//dd($properties);
+
 	}
 
 	/**
@@ -54,7 +46,7 @@ class BedRoomController extends Controller {
 				$user_id = Auth::user()->id;
 				$user_role = User::findOrfail($user_id);
 				$bedroom = Property::findOrFail($id);
-				return view('admin.properties.bedrooms.index',compact('bedroom','user_role'));
+				return view('admin.properties.bedrooms.index',compact('user_role', 'bedroom'));
 			}
 			else{
 				return $redirector->back();
@@ -94,7 +86,18 @@ class BedRoomController extends Controller {
 	 */
 	public function show($id)
 	{
-
+		$properties = Bedroom::select('id', 'bedroom_asigned', 'status', 'beds', 'size_metrics', 'description', 'image', 'property_id')
+			->with('Property')
+			->where('property_id', '=', $id)
+			->get();
+		$count = Bedroom::select('id', 'property_id')
+			->with('Property')
+			->where('property_id', '=', $id)
+			->count();
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		return view('admin.properties.bedrooms.show', compact('properties', 'count', 'user_role'));
+		//dd($properties);
 	}
 
 	/**
@@ -105,7 +108,10 @@ class BedRoomController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		$bedrooms = Bedroom::findOrFail($id);
+		return view('admin.properties.bedrooms.edit', compact('user_role', 'bedrooms'));
 	}
 
 	/**
@@ -114,9 +120,32 @@ class BedRoomController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, EditBedroomRequest $request)
 	{
-		//
+		$file = Input::file('image');
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		$property = Bedroom::findOrFail($id);
+
+		if(Input::hasFile('image'))
+		{
+			$fileName = $file->getClientOriginalName();
+			$path = public_path().'\uploads\\';
+
+			if($file->move($path, $fileName))
+			{
+				$property->fill($request->all());
+				$property->image = $fileName;
+				$property->save();
+				return view('admin.control.admin', compact('user_role'));
+			}
+		}
+		else
+		{
+			$property->fill($request->all());
+			$property->save();
+			return view('admin.control.admin', compact('user_role'));
+		}
 	}
 
 	/**
@@ -125,9 +154,13 @@ class BedRoomController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($id, Redirector $redirector)
 	{
-		//
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		$bedroom = Bedroom::findOrFail($id);
+		$bedroom->delete();
+		return view('admin.control.admin', compact('user_role'));
 	}
 
 }

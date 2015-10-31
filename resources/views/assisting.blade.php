@@ -4,7 +4,7 @@
   <div class="row">
       <div class="col s12 m12 l12 ">
         <div class="card-panel blue">
-        <center><span class="white-text" ><h5>ASSISTING LIVING</h5>
+        <center><span class="white-text" ><h5>ASSISTED LIVING</h5>
           </span></center>
           
         </div>
@@ -14,32 +14,20 @@
 @stop
 @section('form_residencias')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div class="col s12 m12 l9"> <!-- Note that "m8 l9" was added -->
          <div class="row">
+             <!-- foreach -->
+             @foreach($textA as $text)
           <div class="card-panel col s12 m12 l9 ">
           <div class="divider"></div>
   <div class="section">
-     <blockquote class="grey-text text-darken-4" align="justify"><h4>Assisiting living</h4></blockquote>
+     <blockquote class="grey-text text-darken-4" align="justify"><h4>{{ $text->title1 }}</h4></blockquote>
     <div class="col s12 m5 l9">
         <div class="card-panel white">
          <img src="images/asisting.jpg" class="responsive-img" width="100%" alt="">
         </div>
       </div>
-    <p class="grey-text text-darken-2" align="justify">Professional trained caregivers, nurses and access to physicians 24/7 provides to your love one with the best possible support that is needed for assisted living care, including assistance with medication management, activities of daily living, engaging programming, and coordination with outside healthcare providers like hospitals and interactive visual communications with physicians, families and friends.
+    <p class="grey-text text-darken-2" align="justify">{{ $text->text1 }}
     <br>
       Services offered in assisted living are:
         <li class="grey-text text-darken-2" align="justify">
@@ -92,9 +80,8 @@ Care for residents with cognitive impairments
 
         </div>
       </div>
-      <h5>Why Sol & Luna Health Resorts?</h5><p class="grey-text text-darken-2" align="justify"> 
-        Aqui redactar el porque es mejor elegir Sol & Luna Health Resorts respecto a la competencia, ademas 
-        de los beneficios que tiene hospedarse con nosotros y la diferencia de hospedarse en otra parte.
+      <h5>{{ $text->title2 }}</h5><p class="grey-text text-darken-2" align="justify">
+        {{ $text->text2 }}
       </p>
       <br>
       <br>
@@ -105,6 +92,8 @@ Care for residents with cognitive impairments
          <span><a class="btn" role="button" href="casasassisting"><i class="material-icons">trending_flat</i></a></span>
   </div>
   </div>
+             <!-- foreach -->
+                 @endforeach
   </div>
 <div class="divider col s12 m8 l9 "></div>
 <!--Section-->

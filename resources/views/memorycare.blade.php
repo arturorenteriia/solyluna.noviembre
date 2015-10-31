@@ -19,25 +19,24 @@
          <div class="row">
           <div class="card-panel col s12 m12 l9 ">
           <div class="divider"></div>
+              <!-- foreach -->
+              @foreach($textM as $text)
   <div class="section">
-     <blockquote class="grey-text text-darken-4" align="justify"><h4>Memory care</h4></blockquote>
+     <blockquote class="grey-text text-darken-4" align="justify"><h4>{{ $text->title1 }}</h4></blockquote>
     <div class="col s12 m5 l9">
         <div class="card-panel white col s12">
          <img src="images/memori-care.jpg" class="responsive-img" width="100%" alt="">
-
         </div>
     </div>
-
-  
+      <p class="grey-text text-darken-2" align="justify">{{ $text->text1 }}
 
     <div class="col s5 m5 l5">
         <div class="card-panel white">
          <img src="images/bysyl.jpg" class="responsive-img" width="100%" alt="">
              </div>
       </div>
-      <h5>Why Sol & Luna Health Resorts?</h5><p class="grey-text text-darken-2" align="justify"> 
-        Aqui redactar el porque es mejor elegir Sol & Luna Health Resorts respecto a la competencia, ademas 
-        de los beneficios que tiene hospedarse con nosotros y la diferencia de hospedarse en otra parte.
+      <h5>{{ $text->title2 }}</h5><p class="grey-text text-darken-2" align="justify">
+        {{ $text->text2 }}
       </p>
       <br>
       <br>
@@ -47,6 +46,8 @@
         <a class="grey-text " href="Mcasas"><h5>Find out Independent Living Residences</h5></a>
         <span><a class="btn" role="button" href="Mcasas"><i class="material-icons">trending_flat</i></a></span>
   </div>
+              <!-- foreach -->
+                  @endforeach
   </div>
   </div>
 <div class="divider col s12 m8 l9 "></div>

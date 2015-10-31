@@ -1,15 +1,14 @@
 @extends('app')
-
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Editar propiedad: {{ $properties->name }}</div>
+                    <div cl ass="panel-heading">Editar propiedad: {{ $properties->name }}</div>
                     <div class="panel-body">
                         {!! Form::model($properties, ['route' => ['admin.properties.update', $properties], 'files' => 'true', 'method' => 'PUT' ]) !!}
                         @include('admin.properties.partial.formedit')
-                        <button type="submit" class="btn btn-info">Actualizar propiedad</button>
+                        <center><button type="submit" class="btn btn-info">Actualizar propiedad</button></center>
                         {!! Form::close() !!}
                         @include('admin.properties.partial.delete')
                     </div>

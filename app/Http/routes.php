@@ -48,10 +48,8 @@ Route::get('heredado', function(){
 Route::get('welcome', 'NavigationController@welcome');
 Route::get('independent', 'NavigationController@independent');
 Route::get('assisting', 'NavigationController@assisted');
+Route::get('memorycare', 'NavigationController@memory');
 
-Route::get('memorycare', function () {
-	return view('memorycare');
-});
 Route::get('plantillasimple', function () {
 	return view('plantillasimple');
 });
@@ -110,6 +108,10 @@ Route::get('formulario', [
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'Property'], function (){
 		Route::resource('properties', 'PropertiesController');
+	});
+
+	Route::group(['prefix' => 'admin', 'namespace' => 'Bedroom'], function (){
+		Route::resource('bedrooms', 'BedRoomController');
 	});
 
 	Route::group(['prefix' => 'admin', 'namespace' => 'Bedroom'], function (){

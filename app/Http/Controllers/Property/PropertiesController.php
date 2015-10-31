@@ -91,7 +91,9 @@ class PropertiesController extends Controller {
 			->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
 			->orderBy('name', 'ASC')
 			->get();
-		//return dd($properties);
+		$roomsA = Bedroom::select('id', 'property_id', 'status')
+			->where('bedrooms.property_id', '=', 'property.id')
+			->get();
 		return view('admin.properties.show',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
 	}
 
@@ -168,7 +170,7 @@ class PropertiesController extends Controller {
 			}
 
 			Session::flash('message', $property->id. " Fue eliminado de nuestros registros");
-			return redirect()->route('admin.properties	.index');
+			return redirect()->route('admin.properties.index');
 		}
 	}
 

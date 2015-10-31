@@ -5,9 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sol&Luna</title>
-	<link href="{{ asset('/css/materialize.css') }}" rel="stylesheet">
-	<link href="{{ asset('/css/materialize.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/mystyle.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -20,15 +19,19 @@
 	<![endif]-->
 </head>
 <body>
-<nav>
-	<div class="nav-wrapper blue darken-3">
-
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
-
-		</ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">
+				<center><img alt="Brand" src="/images/LogoSolyLuna.png" width="100px"></center>
+			</a>
+		</div>
 	</div>
 </nav>
-
+<br>
+<br>
+<br>
+<br>
 	@yield('content')
 
 	<!-- Scripts -->

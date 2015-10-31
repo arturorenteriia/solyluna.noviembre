@@ -5,6 +5,7 @@ use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use solyluna\TextIndependent;
+use solyluna\TextMemory;
 use solyluna\TextWelcome;
 
 class NavigationController extends Controller {
@@ -25,6 +26,12 @@ class NavigationController extends Controller {
     {
         $textA = TextIndependent::all();
         return view('Assisting', compact('textA'));
+    }
+
+    public function memory()
+    {
+        $textM = TextMemory::all();
+        return view('memorycare', compact('textM'));
     }
 
 }
