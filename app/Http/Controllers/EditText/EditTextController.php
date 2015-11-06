@@ -22,7 +22,7 @@ class EditTextController extends Controller {
      */
     public function create()
     {
-        $count = TextAssited::select('id')
+        $count = TextWelcome::select('id')
             ->count();
 
         if($count >= 1)
@@ -32,8 +32,7 @@ class EditTextController extends Controller {
         else {
             $user_id = Auth::user()->id;
             $user_role = User::findOrfail($user_id);
-            $welcometext = TextWelcome::findOrfail(3);
-            return view('admin.text.assisted.create', compact('user_role','welcometext'));
+            return view('admin.text.create', compact('user_role'));
         }
     }
 
@@ -46,7 +45,7 @@ class EditTextController extends Controller {
     {
         $welcome = new TextWelcome($request->all());
         $welcome->save();
-        return view('admin.control');
+        return view('admin.control.admin');
     }
 
     /**
@@ -55,9 +54,12 @@ class EditTextController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show()
     {
-
+        $edit = TextWelcome::all();
+        $user_id = Auth::user()->id;
+        $user_role = User::findOrfail($user_id);
+        return view('admin.text.show', compact('user_role', 'edit'));
     }
 
     /**
@@ -71,8 +73,7 @@ class EditTextController extends Controller {
         $user_id = Auth::user()->id;
         $user_role = User::findOrfail($user_id);
         $text = TextWelcome::findOrfail($id);
-        $welcometext = TextWelcome::findOrfail(3);
-        return view('admin.text.edit', compact('user_role','text', 'welcometext'));
+        return view('admin.text.edit', compact('user_role','text'));
     }
 
     /**
@@ -85,11 +86,10 @@ class EditTextController extends Controller {
     {
         $user_id = Auth::user()->id;
         $user_role = User::findOrfail($user_id);
-        $welcometext = TextWelcome::findOrfail(3);
         $text = TextWelcome::findOrFail($id);
         $text->fill(\Request::all());
         $text->save();
-        return view('admin.control.admin', compact('user_role', 'welcometext'));
+        return view('admin.control.admin', compact('user_role'));
     }
 
     /**

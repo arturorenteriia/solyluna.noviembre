@@ -38,8 +38,7 @@ class EditMemoryTextController extends Controller {
 		else{
 			$user_id = Auth::user()->id;
 			$user_role = User::findOrfail($user_id);
-			$welcometext = TextWelcome::findOrfail(3);
-			return view('admin.text.memory.create', compact('user_role','welcometext'));
+			return view('admin.text.memory.create', compact('user_role'));
 		}
 	}
 
@@ -52,10 +51,9 @@ class EditMemoryTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		$textMemory = new TextMemory($request->all());
 		$textMemory->save();
-		return view('admin.control.admin', compact('user_role', 'welcometext'));
+		return view('admin.control.admin', compact('user_role'));
 	}
 
 	/**
@@ -69,8 +67,7 @@ class EditMemoryTextController extends Controller {
 		$edit = TextMemory::all();
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
-		return view('admin.text.memory.show', compact('user_role', 'welcometext', 'edit'));
+		return view('admin.text.memory.show', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -84,8 +81,7 @@ class EditMemoryTextController extends Controller {
 		$edit = TextMemory::findOrfail(1);
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
-		return view('admin.text.memory.edit', compact('user_role', 'welcometext', 'edit'));
+		return view('admin.text.memory.edit', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -98,11 +94,10 @@ class EditMemoryTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		$text = TextMemory::findOrFail($id);
 		$text->fill(\Request::all());
 		$text->save();
-		return view('admin.control.admin',	 compact('user_role', 'welcometext'));
+		return view('admin.control.admin',	 compact('user_role'));
 	}
 
 	/**

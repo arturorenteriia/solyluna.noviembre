@@ -145,6 +145,7 @@ return [
 		'solyluna\Providers\ConfigServiceProvider',
 		'solyluna\Providers\EventServiceProvider',
 		'solyluna\Providers\RouteServiceProvider',
+		'solyluna\Providers\ValidatorServiceProvider',
 
 	],
 

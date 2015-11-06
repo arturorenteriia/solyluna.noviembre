@@ -93,7 +93,8 @@ class ImagesController extends Controller {
 		$property_id = $id;
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$count = Picture::select('id')
+		$count = Picture::select('id', 'property_id')
+			->where('property_id', '=', $property_id)
 			->count();
 		$images = Picture::all();
 		if($count>0)

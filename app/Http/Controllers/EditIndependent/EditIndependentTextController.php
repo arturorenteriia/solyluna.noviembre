@@ -40,8 +40,7 @@ class EditIndependentTextController extends Controller {
 		else{
 			$user_id = Auth::user()->id;
 			$user_role = User::findOrfail($user_id);
-			$welcometext = TextWelcome::findOrfail(3);
-			return view('admin.text.independent.create', compact('user_role','welcometext'));
+			return view('admin.text.independent.create', compact('user_role'));
 		}
 	}
 
@@ -54,10 +53,9 @@ class EditIndependentTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		$textIndependent = new TextIndependent($request->all());
 		$textIndependent->save();
-		return view('admin.control.admin', compact('user_role', 'welcometext'));
+		return view('admin.control.admin', compact('user_role'));
 	}
 
 	/**
@@ -71,8 +69,7 @@ class EditIndependentTextController extends Controller {
 		$edit = TextIndependent::all();
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
-		return view('admin.text.independent.show', compact('user_role', 'welcometext', 'edit'));
+		return view('admin.text.independent.show', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -87,8 +84,7 @@ class EditIndependentTextController extends Controller {
 		$edit = TextIndependent::findOrfail(1);
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
-		return view('admin.text.independent.edit', compact('user_role', 'welcometext', 'edit'));
+		return view('admin.text.independent.edit', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -101,11 +97,10 @@ class EditIndependentTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		$text = TextIndependent::findOrFail($id);
 		$text->fill(\Request::all());
 		$text->save();
-		return view('admin.control.admin',	 compact('user_role', 'welcometext'));
+		return view('admin.control.admin',	 compact('user_role'));
 	}
 
 	/**

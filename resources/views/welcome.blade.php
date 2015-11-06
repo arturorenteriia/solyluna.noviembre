@@ -209,7 +209,7 @@
     <!-- Carrousel -->
    <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. -->
-    <div id="slider1_container" style="position: relative; margin: 0 auto;
+    <div class="hide-on-med-and-down" id="slider1_container" style="position: relative; margin: 0 auto;
 
         top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
         <!-- Loading Screen -->
@@ -227,24 +227,6 @@
             height: 500px; overflow: hidden;">
             <div>
                 <img u="image" src="images/tarde.jpg" />
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                <!--
-                    <img src="img/new-site/c-phone.png" style="position: absolute; width: 445px; height: 300px; top: 0px; left: 0px;" />
-                    <img u="caption" t="CLIP|LR" du="4000" t2="NO" src="img/new-site/c-jssor-slider.png" style="position: absolute; width: 102px; height: 78px; top: 70px; left: 130px;" />
-                    <img u="caption" t="ZMF|10" t2="NO" src="img/new-site/c-text.png" style="position: absolute; width: 80px; height: 53px; top: 153px; left: 163px;" />
-                    <img u="caption" t="RTT|10" t2="NO" src="img/new-site/c-fruit.png" style="position: absolute; width: 140px; height: 90px; top: 60px; left: 220px;" />
-                    <img u="caption" t="T" du="4000" t2="NO" src="img/new-site/c-navigator.png" style="position: absolute; width: 200px; height: 155px; top: 57px; left: 121px;" />
-                    -->
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                <!--
-                    <img src="img/new-site/c-phone-horizontal.png" style="position: absolute; width: 470px; height: 220px; top: 0px; left: 0px;" />
-                    <img u="caption" t3="MCLIP|L" du3="2000" src="img/new-site/c-slide-1.jpg" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
-                    <img u="caption" t="MCLIP|R" du="2000" t2="NO" src="img/new-site/c-slide-3.jpg" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
-                    <img u="caption" t="RTTL|BR" x="500%" y="500%" du="1000" d="-3000" r="-30%" t3="L" x3="70%" du3="1600" src="img/new-site/c-finger-pointing.png" style="position: absolute; width: 257px; height: 300px; top: 80px; left: 200px;" />
-                    <img src="img/new-site/c-navigator-horizontal.png" style="position: absolute; width: 379px; height: 213px; top: 4px; left: 45px;" />
-                    -->
-                </div>
                 <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 400px; padding: 5px;
 
                     text-align: center; line-height: 60px; text-transform: uppercase; font-size: 50px;
@@ -260,70 +242,24 @@
                         We care We linsting
                 </div>
             </div>
+            @foreach($images as $image)
             <div>
-                <a href="casasayulita" class="brand-logo " ><img u="image" src="images/casasayulita.jpg" /></a>
+                <a href="casasayulita" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
                 <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 500px; padding: 5px;
 
                     text-align: right; line-height: 60px; text-transform: uppercase; font-size: 50px;
 
-                        color: #FFFFFF;">Casa Sayulita
+                        color: #FFFFFF;">{{ $image->name }}
                 </div>
                 <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 500px; padding: 5px;
 
                     text-align: left; line-height: 36px; font-size: 30px;
 
                         color: #FFFFFF;">
-                        Perfect for Relax
+                        {{ $image->slogan }}
                 </div>
             </div>
-            <div>
-                <a href="casaconchaschinas" class="brand-logo " ><img u="image" src="images/casaconchaschinas.jpg" /></a>
-                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 400px; padding: 5px;
-
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-
-                        color: #FFFFFF;">Casa Conchas chinas
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 500px; padding: 5px;
-
-                    text-align: left; line-height: 36px; font-size: 30px;
-
-                        color: #FFFFFF;">
-                        A perfect view, a perfect life
-                </div>
-            </div>
-            <div>
-                <a href="casamemorycare" class="brand-logo " > <img u="image" src="images/casamemoria.jpg" /></a>
-                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 400px; padding: 5px;
-
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-
-                        color: #FFFFFF;">Casa unidad de memoria
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 500px; padding: 5px;
-
-                    text-align: left; line-height: 36px; font-size: 30px;
-
-                        color: #FFFFFF;">
-                        The better place, the better Services
-                </div>
-            </div>
-            <div>
-                <a href="residenciaamapa" class="brand-logo " > <img u="image" src="images/residenciaamapa.jpg" /></a>
-                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 400px; padding: 5px;
-
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-
-                        color: #FFFFFF;">Residencia Amapa
-                </div>
-                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 500px; padding: 5px;
-
-                    text-align: left; line-height: 36px; font-size: 30px;
-
-                        color: #FFFFFF;">
-                    A beautiful life...
-                </div>
-            </div>
+            @endforeach
         </div>
         <!--#region Bullet Navigator Skin Begin -->
         <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
@@ -403,6 +339,28 @@
     </div>
     <!-- Jssor Slider End -->
    <!-- Carrousel -->
+    <!-- Carrusel movil -->
+    <div class="slider hide-on-large-only">
+        <ul class="slides">
+            <li>
+                <img u="image" src="images/tarde.jpg" />
+                <div class="caption center-align">
+                    <h3>Welcome to paradise</h3>
+                    <h5 class="light grey-text text-lighten-3">We Care We listen.</h5>
+                </div>
+            </li>
+            @foreach($images as $image)
+            <li>
+                <a href="casasayulita" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
+                <div class="caption center-align">
+                    <h3>{{ $image->name }}</h3>
+                    <h5 class="light grey-text text-lighten-3">{{ $image->slogan }}</h5>
+                </div>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+    <!-- Fin carrusel movil -->
 
    <!-- navbar -->
    <nav>
@@ -414,7 +372,7 @@
 ">Sol & Luna Exclusive Health Resorts</a>
       <a href="#" class="brand-logo hide-on-med-and-up"><h5>Sol&Luna Exclusive HealthResorts</h5></a>
       <ul id="" class="right hide-on-med-and-down">
-        <li><a href="/">Inicio</a></li>
+        <li><a href="#">About Us</a></li>
         <li><a href="independent">Independent living</a></li>
         <li><a href="assisting">Assisting livig</a></li>
         <li><a href="memorycare">Memory Care</a></li>
@@ -497,8 +455,8 @@
             <div class="col s12 m12 l3">
               <div class="card big hoverable">
                 <div class="card-image">
-                   <a href="independent" class="brand-logo"> <img src="images/viejos.jpg"></a>
-                   <a href="independent" class="brand-logo">   <span class="card-title ">Vida Independiente</span></a>
+                   <a href="tecnologia" class="brand-logo"> <img src="images/Turismo medico.png" height="150"></a>
+                   <a href="tecnologia" class="brand-logo">   <span class="card-title ">Turismo medico</span></a>
                 </div>
                 <div class="card-content">
                   <a href="independent" class="brand-logo"><p class="grey-text text-darken-2">Viva de manera extraordinaria</p></a>
@@ -511,7 +469,7 @@
             <div class="col s12 m12 l3">
               <div class="card big hoverable">
                 <div class="card-image">
-                  <a href="assisting" class="brand-logo"> <img src="images/vidaasistida.jpg"></a>
+                  <a href="assisting" class="brand-logo"> <img src="images/vidaasistida.jpg" height="150"></a>
                   <a href="assisting" class="brand-logo"> <span class="card-title ">Vida Asistida</span></a>
                 </div>
                 <div class="card-content">
@@ -525,7 +483,7 @@
             <div class="col s12 m12 l3 ">
               <div class="card big hoverable ">
                 <div class="card-image">
-                    <a href="memorycare" class="brand-logo"><img src="images/memoria.jpg"></a>
+                    <a href="memorycare" class="brand-logo"><img src="images/memoria.jpg" height="150"></a>
                     <a href="memorycare" class="brand-logo">   <span class="card-title">Unidad de Cuidado de Memoria</span></a>
                 </div>
                 <div class="card-content">
@@ -543,11 +501,11 @@
             <div class="col s12 m12 l3">
               <div class="card big hoverable">
                 <div class="card-image">
-                    <a href="tecnologia" class="brand-logo"> <img src="images/tecnologia.jpg"></a>
-                    <a href="tecnologia" class="brand-logo">   <span class="card-title ">Technology</span></a>
+                    <a href="independent" class="brand-logo"> <img src="images/viejos.jpg" height="150"></a>
+                    <a href="independent" class="brand-logo">   <span class="card-title ">Vida Asistida</span></a>
                 </div>
                 <div class="card-content">
-                  <a href="independent" class="brand-logo">  <p class="grey-text text-darken-2">Technology and Innovation</p></a>
+                  <a href="independent" class="brand-logo">  <p class="grey-text text-darken-2">Viva de manera extraordinaria</p></a>
                 </div>
 
                 <div class="card-action">
@@ -559,7 +517,7 @@
             <div class="col s12 m12 l3">
               <div class="card big hoverable">
                 <div class="card-image">
-                  <a href="healthcare" class="brand-logo"> <img src="images/healthcare.jpg"></a>
+                  <a href="healthcare" class="brand-logo"> <img src="images/healthcare.jpg" height="150"></a>
                   <a href="healthcare" class="brand-logo">  <span class="card-title">HealthCare</span></a>
                 </div>
                 <div class="card-content">
@@ -574,7 +532,7 @@
             <div class="col s12 m12 l3 ">
               <div class="card big hoverable ">
                 <div class="card-image">
-                  <a href="amenities" class="brand-logo"><img src="images/amenities.jpg"></a>
+                  <a href="amenities" class="brand-logo"><img src="images/amenities.jpg" height="150"></a>
                  <a href="amenities" class="brand-logo"> <span class="card-title">Amenities</span></a>
                 </div>
                 <div class="card-content">

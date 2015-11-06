@@ -2,6 +2,8 @@
 
 use Illuminate\Routing\Redirector;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use solyluna\Http\Requests;
@@ -28,9 +30,11 @@ class UsersController extends Controller {
 	 */
 	public function index()
 	{
-		//$users = User::paginate();
+		$users = User::paginate();
 		//return view('admin.users.index', compact('users'));
-		return view('admin.users.admin');
+		$user_id = Auth::user()->id;
+		$user_role = User::findOrfail($user_id);
+		return view('admin.users.index', compact('user_role', 'users'));
 	}
 
 	/**
@@ -54,10 +58,16 @@ class UsersController extends Controller {
 		//$user = User::create(Request::all());
 		//redirect->()->route('admin.users.index');
 		$user = new User($request->all());
+		$confirm = \Request::input('password_confirmation');
 		$user->full_name = $request->first_name." ".$request->last_name;
-		$user->save();
-		return $redirect->route('admin.users.index');
-
+		if(Hash::check($confirm, $user->password))
+		{
+			$user->save();
+			return $redirect->route('admin.users.index');
+		}
+		else{
+			return $redirect->back();
+		}
 	}
 
 	/**

@@ -20,9 +20,8 @@ class AdminController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		//return dd($user);
-		return view('admin.control.admin',compact('user_role', 'welcometext'));
+		return view('admin.control.admin',compact('user_role'));
 	}
 
 	/**

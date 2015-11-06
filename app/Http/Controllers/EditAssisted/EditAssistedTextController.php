@@ -40,8 +40,7 @@ class EditAssistedTextController extends Controller {
 		else {
 			$user_id = Auth::user()->id;
 			$user_role = User::findOrfail($user_id);
-			$welcometext = TextWelcome::findOrfail(3);
-			return view('admin.text.assisted.create', compact('user_role','welcometext'));
+			return view('admin.text.assisted.create', compact('user_role'));
 		}
 	}
 
@@ -54,10 +53,9 @@ class EditAssistedTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		$textAssisted = new TextAssited($request->all());
 		$textAssisted->save();
-		return view('admin.control.admin', compact('user_role', 'welcometext'));
+		return view('admin.control.admin', compact('user_role'));
 	}
 
 	/**
@@ -71,8 +69,7 @@ class EditAssistedTextController extends Controller {
 		$edit = TextAssited::all();
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
-		return view('admin.text.assisted.show', compact('user_role', 'welcometext', 'edit'));
+		return view('admin.text.assisted.show', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -86,8 +83,7 @@ class EditAssistedTextController extends Controller {
 		$edit = TextAssited::findOrfail(1);
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
-		return view('admin.text.assisted.edit', compact('user_role', 'welcometext', 'edit'));
+		return view('admin.text.assisted.edit', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -100,11 +96,10 @@ class EditAssistedTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$welcometext = TextWelcome::findOrfail(3);
 		$text = TextAssited::findOrFail($id);
 		$text->fill(\Request::all());
 		$text->save();
-		return view('admin.control.admin',	 compact('user_role', 'welcometext'));
+		return view('admin.control.admin',	 compact('user_role'));
 	}
 
 	/**

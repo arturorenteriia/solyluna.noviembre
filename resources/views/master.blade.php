@@ -119,10 +119,11 @@
    <div class="navbar-fixed ">
     <nav>
       <div class="nav-wrapper blue darken-3">
-        <a href="welcome" class="brand-logo"><img src="images/LogoSolyLuna.png" class="responsive-img" width="40%" alt=""></a>
+          <a href="welcome" class="brand-logo"><center><img src="images/LogoSolyLuna.png" class="responsive-img" width="40%" alt=""></center></a>
         <ul id="" class="right hide-on-med-and-down">
         <li><a href="contacto">Contact Us<i class="material-icons left">call</i></a></li>
         <li><a href="welcome">Home</a></li>
+        <li><a href="#">About Us</a></li>
         <li><a href="independent">Independent living</a></li>
         <li><a href="assisting">Assisting livig</a></li>
         <li><a href="memorycare">Memory Care</a></li>
@@ -131,7 +132,8 @@
       <!--Navar Movil-->
         <ul class="side-nav" id="slide-out">
           <li><a href="contacto.html">Contact us<i class="material-icons left">call</i></a></li>
-           <li><a href="welcome">Home</a></li>
+          <li><a href="welcome">Home</a></li>
+          <li><a href="#">About Us</a></li>
           <li><a href="independent.html">Independent living</a></li>
           <li><a href="assisting.html">Assisting livig</a></li>
           <li><a href="memorycare">Memory Care</a></li>

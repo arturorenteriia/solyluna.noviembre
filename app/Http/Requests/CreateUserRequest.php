@@ -27,9 +27,9 @@ class CreateUserRequest extends Request {
 			'email' => 'required|unique:users,email', //users es la tabla e email la columna
 			'telephone' => 'required|unique:users,telephone',
 			'cellphone' => 'required|unique:users,cellphone',
-			'role' => 'required',
-			'password' => 'required'
+			'role' => 'required|in:admin,superadmin,realstate',
+			'password' => 'required|min:6',
+			'password_confirmation' => 'required',
 		];
 	}
-
 }

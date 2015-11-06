@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table class="striped responsive-table">
     <tr>
         <th>#</th>
         <th>Role</th>
@@ -13,8 +13,7 @@
             <td>{{ $user->full_name }}</td>
             <td>{{ $user->email }}</td>
             <td>
-                <a href="{{route('admin.users.edit',$user)}}">Editar</a>
-                <a href="#!" class="btn-delete">Eliminar</a>
+                <a href="{{ route('admin.users.edit', $user) }}" class="waves-effect waves-light btn"><i class="material-icons left">settings</i></a>
             </td>
         </tr>
     @endforeach

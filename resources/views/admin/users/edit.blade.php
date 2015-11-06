@@ -8,8 +8,8 @@
                     <div class="panel-heading">Editar usuario: {{ $user->first_name }}</div>
                     <div class="panel-body">
                         {!! Form::model($user, ['route' => ['admin.users.update', $user], 'method' => 'PUT' ]) !!}
-                        @include('admin.users.partial.form')
-                        <button type="submit" class="btn btn-default">Actualizar usuario</button>
+                        @include('admin.users.partial.editform')
+                        <button type="submit" class="btn btn-success">Actualizar usuario</button>
                         {!! Form::close() !!}
                     </div>
                     @include('admin.users.partial.delete')

@@ -6,9 +6,9 @@
     <!--Import materialize.css-->
     <link href="{{ asset('/css/materialize.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/materialize.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         header, main, footer {
@@ -16,15 +16,16 @@
         }
 
         @media only screen and (max-width : 992px) {
-            header, main, footer {
-                padding-left: 0;
-            }
         }
     </style>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+
+@if(session())
+
+
 <header>
     <ul id="slide-out" class="side-nav fixed grey lighten-5">
          <div class="section">
@@ -32,11 +33,15 @@
          </div>
          <br><br><br><br>
          <div class="divider"></div>
+        header, main, footer {
+        padding-left: 0;
+        }
 
         @if($user_role->role == 'superadmin')
          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Users</a></li>
             <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#">Create user</a></li>
+                <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
+                <li><a href="{{ route('admin.users.create') }}">Crear Usuarios</a></li>
             </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Resideces</a></li>
             <ul id="dropdown2" class="dropdown-content">
@@ -57,6 +62,7 @@
                 <li><a href="{{ route('admin.text.assisted.create') }}">Edit Assisting</a></li>
                 <li><a href="{{ route('admin.text.memory.create') }}">Edit Memory</a></li>
             </ul>
+         <li><a href="/" target="_blank">Sol&Luna</a></li>
         @endif
 
         @if($user_role->role == 'realstate')
@@ -66,6 +72,7 @@
                 <li><a href="{{ route('admin.properties.create') }}">Add residences</a></li>
                 <li><a href="{{ route('admin.properties.show') }}">Show</a></li>
             </ul>
+            <li><a href="/" target="_blank">Sol&Luna</a></li>
         @endif
 
         @if($user_role->role == 'admin')
@@ -75,10 +82,10 @@
                  <li><a href="{{ route('admin.ameneties.show') }}">Edit</a></li>
             </ul>
             <li><a class="button" href="{{ route('admin.chef.show') }}" data-activates="dropdown6">Edit Chef</a></li>
+            <li><a href="/" target="_blank">Sol&Luna</a></li>
         @endif
          </ul>
     <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="small material-icons">view_headline</i></a>
-
 </header>
 
 <main>
@@ -90,6 +97,7 @@
                <!-- Dropdown Structure -->
                <ul id="dropdown4" class="dropdown-content">
                    <li class="divider"></li>
+                   <li><a href="{{ route('change') }}">Cambiar password</a></li>
                    <li><a href="{{ url('/auth/logout') }}">log out</a></li>
                </ul>
            </ul>
@@ -104,8 +112,8 @@
 </footer>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
 <script type="text/javascript" src="{{ asset('/js/materialize.js') }}"></script>
+<script src="dist/sweetalert.min.js"></script>
 
 @yield('scripts')
 <script>
