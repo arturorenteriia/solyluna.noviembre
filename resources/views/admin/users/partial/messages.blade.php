@@ -1,10 +1,10 @@
 
     @if($errors->any())
-        <div class="alert alert-danger">
-            <p>Por favor corrija los errores: </p>
+        <div class="card-panel  red darken-1">
+            <p class="white-text text-darken-2">Por favor corrija los errores: </p>
             <ul>
                 @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                    <li class="white-text text-darken-2">{{ $error }}</li>
                 @endforeach
             </ul>
         </div>

@@ -46,13 +46,21 @@
 		return view('heredado');
 	});
 
+	//enviar un e-mail
 	Route::post('send', ['as' => 'send', 'uses' => 'MailController@send'] );
+	//cambiar password
+	Route::post('reset_password', ['as' => 'reset_password', 'uses' => 'PasswordsController@reset_password'] );
+	//navegacion
 	Route::get('welcome', 'NavigationController@welcome');
 	Route::get('independent', 'NavigationController@independent');
 	Route::get('assisting', 'NavigationController@assisted');
 	Route::get('memorycare', 'NavigationController@memory');
 	Route::get('memorycare', 'NavigationController@memory');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
+	Route::get('casasassisting', 'vistasController@casasassisting');
+
+	Route::get('memoryhouses', 'NavigationController@memoryhouses');
+	Route::get('independenthouses', 'NavigationController@independenthouses');
 
 	Route::get('plantillasimple', function () {
 		return view('plantillasimple');

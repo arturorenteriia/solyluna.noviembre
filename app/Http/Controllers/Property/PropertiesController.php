@@ -72,7 +72,8 @@ class PropertiesController extends Controller {
 			{
 				//return dd($properties);
 				$properties->save();
-				return $redirect->route('admin.control.index');
+				Session::flash('message', "La casa se agrego correctamente");
+				return $redirect->route('admin.properties.show');
 			}
 		}
 	}
@@ -139,14 +140,15 @@ class PropertiesController extends Controller {
 				$property->fill($request->all());
 				$property->image = $fileName;
 				$property->save();
-				return view('admin.control.admin', compact('user_role'));
+				return redirect()->route('admin.properties.show', compact('user_role'));
 			}
 		}
 		else
 		{
 			$property->fill($request->all());
 			$property->save();
-			return view('admin.control.admin', compact('user_role'));
+			Session::flash('message', $property->name. " Se modifico correctamente");
+			return redirect()->route('admin.properties.show', compact('user_role'));
 		}
 	}
 
@@ -159,6 +161,8 @@ class PropertiesController extends Controller {
 	public function destroy($id, Request $request)
 	{
 		{
+			$user_id = Auth::user()->id;
+			$user_role = User::findOrfail($user_id);
 			$property = Property::findOrFail($id);
 			$property->delete();
 			$message = $property->name.' Fue eliminado de nuestros registros';
@@ -169,8 +173,8 @@ class PropertiesController extends Controller {
 				]);
 			}
 
-			Session::flash('message', $property->id. " Fue eliminado de nuestros registros");
-			return redirect()->route('admin.properties.index');
+			Session::flash('message', $property->name. " Fue eliminado de nuestros registros");
+			return redirect()->route('admin.properties.show', compact('user_role'));
 		}
 	}
 

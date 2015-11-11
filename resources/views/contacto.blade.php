@@ -105,9 +105,7 @@
                 <label for="icon_prefix">ZIP Code</label>
           </div>
         </div>
-       
-   
-   
+
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">mode_edit</i>

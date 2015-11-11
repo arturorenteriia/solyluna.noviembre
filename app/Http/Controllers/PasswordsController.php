@@ -5,7 +5,9 @@ use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Symfony\Component\Security\Core\User\User;
+use solyluna\Http\Requests\ChangePasswordRequest;
+use solyluna\User;
+
 
 class PasswordsController extends Controller {
 
@@ -16,4 +18,8 @@ class PasswordsController extends Controller {
         return view('admin.users.changepass', compact('user_role'));
     }
 
+    public function reset_password(Request $request)
+    {
+        dd($request);
+    }
 }

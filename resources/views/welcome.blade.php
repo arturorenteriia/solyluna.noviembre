@@ -31,7 +31,6 @@
         var Jalisco = new Array()
             Jalisco[0] = new slctr('- -Jalisco- -')
             Jalisco[1] = new slctr("Puerto Vallarta",null)
-            Jalisco[2] = new slctr("Cabo corrientes" ,null)
 
         var Nayarit = new Array()
             Nayarit[0] = new slctr('- -Nayarit- -')
@@ -194,9 +193,10 @@
             <!--Navar Movil-->
             <ul class="side-nav" id="slide-out">
               <li><a href="contacto">Contact us</a></li>
-              <li><a href="independent">Independent living</a></li>
-              <li><a href="assisting">Assisting livig</a></li>
-              <li><a href="memorycare">Memory Care</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="independent">Independent Living</a></li>
+                <li><a href="assisting">Assisted Living</a></li>
+                <li><a href="memorycare">Memory Care</a></li>
               <li><a href="#">Login</a></li>
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">reorder</i></a>
@@ -373,10 +373,10 @@
       <a href="#" class="brand-logo hide-on-med-and-up"><h5>Sol&Luna Exclusive HealthResorts</h5></a>
       <ul id="" class="right hide-on-med-and-down">
         <li><a href="#">About Us</a></li>
-        <li><a href="independent">Independent living</a></li>
-        <li><a href="assisting">Assisting livig</a></li>
+        <li><a href="independent">Independent Living</a></li>
+        <li><a href="assisting">Assisted Living</a></li>
         <li><a href="memorycare">Memory Care</a></li>
-            <li><a href="#"><i class="material-icons">person_pin</i></a></li>
+        <li><a href="#"><i class="material-icons">person_pin</i></a></li>
       </ul>
     </div>
   </nav>
@@ -395,26 +395,33 @@
                      <b class="grey-text text-darken-4">Find a Health Resort</b>
                     </blockquote>
                       {!! Form::open() !!}
-                      <select class="browser-default" name="service" >
-                          <option>- -Servicio - -</option>
+                      <select class="input-field col s12" name="service" >
+                          <option value="" disabled selected>Services Provided</option>
                           <option value="I">Independent Living</option>
                           <option value="A">Assisting Living</option>
                           <option value="M">Memory Care</option>
                       </select>
+                      <label>Services Providedt</label>
 
-                      <select class="browser-default" name="select" onchange="slctryole(this,this.form.select2)">
-                          <option>- -Seleccionar - -</option>
+                      <select class="input-field col s12" name="select" onchange="slctryole(this,this.form.select2)">
+                          <option>- - Country - -</option>
                           <option value="Mexico">Mexico</option>
-                          <option value="EUA">EUA</option>
                       </select>
+                      <br>
                       <select class="browser-default" name="select2" onchange="slctryole(this,this.form.select3)">
-                          <option>- - - - - -</option>
+                          <option>- - State - -</option>
                       </select>
+                      <br>
                       <select  class="browser-default" name="select3" action="">
-                          <option>- - - - - -</option>
+                          <option>- - City - -</option>
                       </select>
+                      <br>
                      <div class="form-group">
-                         {!! Form::submit('Seleccionar', ['class'=> 'btn btn-primary btn-block']) !!}
+                         <center>
+                             <button class="btn waves-effect waves-light" type="submit" name="action">search
+                                 <i class="material-icons right">send</i>
+                             </button>
+                         </center>
                      </div>
                       {!! Form::close() !!}
                   </span>
@@ -456,7 +463,7 @@
               <div class="card big hoverable">
                 <div class="card-image">
                    <a href="tecnologia" class="brand-logo"> <img src="images/Turismo medico.png" height="150"></a>
-                   <a href="tecnologia" class="brand-logo">   <span class="card-title ">Turismo medico</span></a>
+                   <a href="tecnologia" class="brand-logo">   <span class="card-title ">Medical turism</span></a>
                 </div>
                 <div class="card-content">
                   <a href="independent" class="brand-logo"><p class="grey-text text-darken-2">Viva de manera extraordinaria</p></a>
@@ -470,7 +477,7 @@
               <div class="card big hoverable">
                 <div class="card-image">
                   <a href="assisting" class="brand-logo"> <img src="images/vidaasistida.jpg" height="150"></a>
-                  <a href="assisting" class="brand-logo"> <span class="card-title ">Vida Asistida</span></a>
+                  <a href="assisting" class="brand-logo"> <span class="card-title ">Assisted Living</span></a>
                 </div>
                 <div class="card-content">
                   <a href="assisting" class="brand-logo"> <p class="grey-text text-darken-2">Reciba los mejores cuidados asistidos.</p></a>
@@ -484,7 +491,7 @@
               <div class="card big hoverable ">
                 <div class="card-image">
                     <a href="memorycare" class="brand-logo"><img src="images/memoria.jpg" height="150"></a>
-                    <a href="memorycare" class="brand-logo">   <span class="card-title">Unidad de Cuidado de Memoria</span></a>
+                    <a href="memorycare" class="brand-logo">   <span class="card-title">Memory Care</span></a>
                 </div>
                 <div class="card-content">
                     <a href="memorycare" class="brand-logo">   <p class="grey-text text-darken-2">Medicos capacitados para su cuidado.</p></a>
@@ -502,7 +509,7 @@
               <div class="card big hoverable">
                 <div class="card-image">
                     <a href="independent" class="brand-logo"> <img src="images/viejos.jpg" height="150"></a>
-                    <a href="independent" class="brand-logo">   <span class="card-title ">Vida Asistida</span></a>
+                    <a href="independent" class="brand-logo">   <span class="card-title ">Independent Living</span></a>
                 </div>
                 <div class="card-content">
                   <a href="independent" class="brand-logo">  <p class="grey-text text-darken-2">Viva de manera extraordinaria</p></a>

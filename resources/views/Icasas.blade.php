@@ -1,67 +1,55 @@
 @extends('master')
 @section('navbar_menu')
 
-  <div class="row">
-      <div class="col s12 m12 l12 ">
-        <div class="card-panel blue">
-        <center><span class="white-text" ><h5>INDEPENDENT LIVING</h5>
+    <div class="row">
+        <div class="col s12 m12 l12 ">
+            <div class="card-panel blue">
+                <center><span class="white-text" ><h5>ASSISTING LIVING</h5>
           </span></center>
-          
+
+            </div>
         </div>
-      </div>
     </div>
 
-@stop
-@section('form_residencias')
+    @stop
+    @section('form_residencias')
 
-  <!--Aqui va el contenido de la pagina-->
+            <!--Aqui va el contenido de la pagina-->
 
- <div class="row">
-     
+    <div class="row">
 
-  
-        <div class="col s12 m12 l3">
-            <div class="card small hoverable">
-              <div class="card-image"  alt="">
-                  <a href="casasayulita" class="brand-logo"> <img src="images/casasayulita.jpg"  ></a>
-                  <a href="casasayulita" class="brand-logo"><span class="card-title ">Casa Sayulita</span></a>
-              </div>
-              <div class="card-content">
-                  <a href="casasayulita" class="brand-logo">  <p class="grey-text text-darken-2">A day in paradise  </p></a>
-              </div>
-              <div class="card-action">
-                <a href="casasayulita">See more...</a>
-              </div>
-            </div>
-          </div>
-         
 
-   
-  
-        
-        <div class="col s12 m12 l3">
-            <div class="card small hoverable">
-              <div class="card-image">
-                  <a href="residenciaamapa" class="brand-logo">  <img src="images/residenciaamapa.jpg" ></a>
-                  <a href="residenciaamapa" class="brand-logo">   <span class="card-title ">Residencia Amapa</span></a>
-              </div>
-              <div class="card-content">
-                  <a href="residenciaamapa" class="brand-logo">  <p class="grey-text text-darken-2">Perfect for you  </p></a>
-              </div>
-              <div class="card-action">
-                <a href="residenciaamapa">See more...</a>
-              </div>
-            </div>
-          </div>
-         
-         
-  
-          
+        @foreach($properties as $property)
+            @if($property->service_id == 3)
+                <div class="col s12 m12 l3">
+                    <div class="card small hoverable">
+                        <div class="card-image"  alt="">
+                            <a href="#" class="brand-logo"> <img src="{{ asset('uploads') }}/{{ $property->image }}" height="180px"></a>
+                            <a href="#" class="brand-logo"><span class="card-title ">{{ $property->name }}</span></a>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="brand-logo">  <p class="grey-text text-darken-2">{{ $property->slogan }}  </p></a>
+                        </div>
+                        <div class="card-action">
+                            {!! Form::open(['route' => 'vistas.vistapropiedad', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
+                            {!! Form::hidden('property_id', $property->id,  ['class' => 'form-control']) !!}
 
-         
+                            <center> <button type="submit" class="btn waves-effect waves-light">See More</button></center>
 
-        </div>
-   
+                            {!! Form::close() !!}
+
+
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endforeach
+
+
+
+
+    </div>
+
 
 
 

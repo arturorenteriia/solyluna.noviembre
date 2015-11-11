@@ -6,6 +6,7 @@
                 <div class="panel panel-default">
                     <div cl ass="panel-heading">Editar propiedad: {{ $properties->name }}</div>
                     <div class="panel-body">
+                        @include('admin.users.partial.messages')
                         {!! Form::model($properties, ['route' => ['admin.properties.update', $properties], 'files' => 'true', 'method' => 'PUT' ]) !!}
                         @include('admin.properties.partial.formedit')
                         <center><button type="submit" class="btn btn-info">Actualizar propiedad</button></center>

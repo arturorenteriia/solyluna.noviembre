@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 use solyluna\Bedroom;
 use solyluna\Http\Controllers\Controller;
 
@@ -49,6 +50,7 @@ class BedRoomController extends Controller {
 				return view('admin.properties.bedrooms.index',compact('user_role', 'bedroom'));
 			}
 			else{
+				Session::flash('message', "Ya se agregaron los $bedrooms->num_bedrooms cuartos, si la casa tiene mas cuartos modifica el numero de cuartos de la casa.");
 				return $redirector->back();
 			}
 		}
@@ -73,6 +75,7 @@ class BedRoomController extends Controller {
 			if($file->move($path, $fileName))
 			{
 				$bedroom->save();
+				Session::flash('message', "El cuarto fue agregado correctamente");
 				return redirect()->route('admin.properties.show');
 			}
 		}
@@ -137,6 +140,7 @@ class BedRoomController extends Controller {
 				$property->fill($request->all());
 				$property->image = $fileName;
 				$property->save();
+				Session::flash('message', "El cuarto se modifico correctamente");
 				return view('admin.control.admin', compact('user_role'));
 			}
 		}
@@ -144,7 +148,8 @@ class BedRoomController extends Controller {
 		{
 			$property->fill($request->all());
 			$property->save();
-			return view('admin.control.admin', compact('user_role'));
+			Session::flash('message', "El cuarto se modifico correctamente");
+			return redirect()->route('admin.properties.show', compact('user_role'));
 		}
 	}
 

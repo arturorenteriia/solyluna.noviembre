@@ -43,8 +43,8 @@
 
       <br>
       <br>
-        <a class="grey-text " href="Mcasas"><h5>Find out Independent Living Residences</h5></a>
-        <span><a class="btn" role="button" href="Mcasas"><i class="material-icons">trending_flat</i></a></span>
+        <a class="grey-text " href="memoryhouses"><h5>Find out Independent Living Residences</h5></a>
+        <span><a class="btn" role="button" href="memoryhouses"><i class="material-icons">trending_flat</i></a></span>
   </div>
               <!-- foreach -->
                   @endforeach

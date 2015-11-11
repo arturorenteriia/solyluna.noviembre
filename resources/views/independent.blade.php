@@ -63,8 +63,8 @@ You want to enjoy activities and meals in the company of others.
 
       <br>
       <br>
-        <a class="grey-text " href="Icasas"><h5>Find out Independent Living Residences</h5></a>
-        <span><a class="btn" role="button" href="Icasas"><i class="material-icons">trending_flat</i></a></span>
+        <a class="grey-text " href="independenthouses"><h5>Find out Independent Living Residences</h5></a>
+        <span><a class="btn" role="button" href="independenthouses"><i class="material-icons">trending_flat</i></a></span>
           @endforeach
   </div>
   </div>

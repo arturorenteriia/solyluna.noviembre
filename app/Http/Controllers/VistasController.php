@@ -50,10 +50,6 @@ class VistasController extends Controller {
 				->where ('property_id','=',$property_id)
 				->get();
 
-
-
-
-
 		return view('vistapropiedad',compact('properties','property_id','service','state', 'city',
 			'property_type', 'user', 'user_role','amenity','slogan','amenities','amenity','service_a',
 			'technology_a','pictures','files'));
@@ -107,12 +103,6 @@ class VistasController extends Controller {
 			->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
 			->orderBy('name', 'ASC')
 			->get();
-
-
-
-
-
-
 		return view('Acasas',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
 	}
 

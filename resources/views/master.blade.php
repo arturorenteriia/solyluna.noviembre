@@ -39,7 +39,6 @@
         var Jalisco = new Array()
         Jalisco[0] = new slctr('- -Jalisco- -')
         Jalisco[1] = new slctr("Puerto Vallarta",null)
-        Jalisco[2] = new slctr("Cabo corrientes" ,null)
 
         var Nayarit = new Array()
         Nayarit[0] = new slctr('- -Nayarit- -')
@@ -124,22 +123,21 @@
         <li><a href="contacto">Contact Us<i class="material-icons left">call</i></a></li>
         <li><a href="welcome">Home</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="independent">Independent living</a></li>
-        <li><a href="assisting">Assisting livig</a></li>
+        <li><a href="independent">Independent Living</a></li>
+        <li><a href="assisting">Assisted Living</a></li>
         <li><a href="memorycare">Memory Care</a></li>
-        <li><a href="home"><i class="material-icons">person_pin</i></a></li>
+        <li><a href="#"><i class="material-icons">person_pin</i></a></li>
       </ul>
       <!--Navar Movil-->
         <ul class="side-nav" id="slide-out">
-          <li><a href="contacto.html">Contact us<i class="material-icons left">call</i></a></li>
+          <li><a href="contacto.html">Contact us</a></li>
           <li><a href="welcome">Home</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a href="independent.html">Independent living</a></li>
-          <li><a href="assisting.html">Assisting livig</a></li>
+          <li><a href="independent.html">Independent Living</a></li>
+          <li><a href="assisting.html">Assisted Living</a></li>
           <li><a href="memorycare">Memory Care</a></li>
-          <li><a href="home"><i class="material-icons">person_pin</i></a></li>
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">reorder</i></a>
         <!--Fin Navar Movil-->
     </nav>
   </div>
@@ -156,45 +154,51 @@
    <!-- navbar -->
 
 
-    <!-- Page Layout here -->
-    <div class="row">
-    <!-- Note that "m4 l3" was added -->
-      <div class="col s12 m12 l3"> 
-      <div class="row">
-      <div class="col s12 m12 l12">
-        <div class="card-panel ">
-          <span class="grey lighten-1">
-    <blockquote>
-     <b class="grey-text text-darken-4">Find a Health Resort</b>
-    </blockquote>
-             <form action="ingresar.php" method="POST" id="formulario">
-                 <select class="browser-default" name="service" >
-                     <option>- -Servicio - -</option>
-                     <option value="I">Independent Living</option>
-                     <option value="A">Assisting Living</option>
-                     <option value="M">Memory Care</option>
-                 </select>
+  <!-- Page Layout here -->
+  <div class="row">
+      <div class="col s12 m12 l3"> <!-- Note that "m4 l3" was added -->
+          <div class="row">
+              <div class="col s12 m12 l12">
+                  <div class="card-panel ">
+                  <span class="grey lighten-1">
+                    <blockquote>
+                        <b class="grey-text text-darken-4">Find a Health Resort</b>
+                    </blockquote>
+                      {!! Form::open() !!}
+                      <select class="input-field col s12" name="service" >
+                          <option value="" disabled selected>Services Provided</option>
+                          <option value="I">Independent Living</option>
+                          <option value="A">Assisting Living</option>
+                          <option value="M">Memory Care</option>
+                      </select>
+                      <label>Services Providedt</label>
 
-                 <select class="browser-default" name="select" onchange="slctryole(this,this.form.select2)">
-                     <option>- -Seleccionar - -</option>
-                     <option value="Mexico">Mexico</option>
-                     <option value="EUA">EUA</option>
-                 </select>
-                 <select class="browser-default" name="select2" onchange="slctryole(this,this.form.select3)">
-                     <option>- - - - - -</option>
-                 </select>
-                 <select  class="browser-default" name="select3" action="">
-                     <option>- - - - - -</option>
-
-                 </select>
-                 <button name="button" type="submit">Search </button>
-             </form>
-          </span>
-
-        </div>
-      </div>
-    </div>
-      </div>
+                      <select class="input-field col s12" name="select" onchange="slctryole(this,this.form.select2)">
+                          <option>- - Country - -</option>
+                          <option value="Mexico">Mexico</option>
+                      </select>
+                      <br>
+                      <select class="browser-default" name="select2" onchange="slctryole(this,this.form.select3)">
+                          <option>- - State - -</option>
+                      </select>
+                      <br>
+                      <select  class="browser-default" name="select3" action="">
+                          <option>- - City - -</option>
+                      </select>
+                      <br>
+                     <div class="form-group">
+                         <center>
+                             <button class="btn waves-effect waves-light" type="submit" name="action">search
+                                 <i class="material-icons right">send</i>
+                             </button>
+                         </center>
+                     </div>
+                      {!! Form::close() !!}
+                  </span>
+                  </div>
+              </div>
+          </div>
+      </div> <!-- Note that "m4 l3" was added -->
 
       @yield('form_residencias')
 
