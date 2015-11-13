@@ -10,6 +10,7 @@ use solyluna\Http\Requests\CreateTextIndependentRequest;
 use solyluna\TextIndependent;
 use solyluna\TextWelcome;
 use solyluna\User;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 
 class EditIndependentTextController extends Controller {
@@ -55,6 +56,7 @@ class EditIndependentTextController extends Controller {
 		$user_role = User::findOrfail($user_id);
 		$textIndependent = new TextIndependent($request->all());
 		$textIndependent->save();
+		Session::flash('message', 'Se guardo el texto correctamento');
 		return view('admin.control.admin', compact('user_role'));
 	}
 
@@ -100,6 +102,7 @@ class EditIndependentTextController extends Controller {
 		$text = TextIndependent::findOrFail($id);
 		$text->fill(\Request::all());
 		$text->save();
+		Session::flash('message', 'El texto fue editado con exito');
 		return view('admin.control.admin',	 compact('user_role'));
 	}
 

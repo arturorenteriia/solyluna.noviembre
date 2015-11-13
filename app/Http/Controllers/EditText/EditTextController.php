@@ -1,6 +1,7 @@
 <?php namespace solyluna\Http\Controllers\EditText;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
@@ -45,6 +46,7 @@ class EditTextController extends Controller {
     {
         $welcome = new TextWelcome($request->all());
         $welcome->save();
+        Session::flash('message', 'Se guardo el texto correctamento');
         return view('admin.control.admin');
     }
 
@@ -89,6 +91,7 @@ class EditTextController extends Controller {
         $text = TextWelcome::findOrFail($id);
         $text->fill(\Request::all());
         $text->save();
+        Session::flash('message', 'El texto fue editado con exito');
         return view('admin.control.admin', compact('user_role'));
     }
 

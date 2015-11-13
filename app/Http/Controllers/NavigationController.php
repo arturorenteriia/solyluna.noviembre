@@ -6,6 +6,7 @@ use solyluna\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use solyluna\Property;
 use solyluna\TextAssited;
+use solyluna\TextContact;
 use solyluna\TextIndependent;
 use solyluna\TextMemory;
 use solyluna\TextWelcome;
@@ -35,6 +36,12 @@ class NavigationController extends Controller {
     {
         $textM = TextMemory::all();
         return view('memorycare', compact('textM'));
+    }
+
+    public function contactUs()
+    {
+        $textC = TextContact::all();
+        return view('contacto', compact('textC'));
     }
 
     public function memoryhouses()

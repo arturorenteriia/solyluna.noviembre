@@ -1,4 +1,4 @@
-<?php namespace solyluna\Http\Controllers\EditMemory;
+<?php namespace solyluna\Http\Controllers\EditContacto;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -6,12 +6,13 @@ use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use solyluna\Http\Requests\CreateMemoryTextRequest;
-use solyluna\TextMemory;
-use solyluna\TextWelcome;
+use solyluna\Http\Requests\CreateTextContactRequest;
+use solyluna\Http\Requests\EditTextContactRequest;
+use solyluna\TextContact;
 use solyluna\User;
 
-class EditMemoryTextController extends Controller {
+
+class EditContactController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -30,7 +31,7 @@ class EditMemoryTextController extends Controller {
 	 */
 	public function create()
 	{
-		$count = TextMemory::select('id')
+		$count = TextContact::select('id')
 			->count();
 		if($count >= 1)
 		{
@@ -39,7 +40,7 @@ class EditMemoryTextController extends Controller {
 		else{
 			$user_id = Auth::user()->id;
 			$user_role = User::findOrfail($user_id);
-			return view('admin.text.memory.create', compact('user_role'));
+			return view('admin.text.contact.create', compact('user_role'));
 		}
 	}
 
@@ -48,12 +49,12 @@ class EditMemoryTextController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateMemoryTextRequest $request)
+	public function store(CreateTextContactRequest $request)
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$textMemory = new TextMemory($request->all());
-		$textMemory->save();
+		$textContact = new TextContact($request->all());
+		$textContact->save();
 		Session::flash('message', 'Se guardo el texto correctamento');
 		return view('admin.control.admin', compact('user_role'));
 	}
@@ -66,10 +67,10 @@ class EditMemoryTextController extends Controller {
 	 */
 	public function show()
 	{
-		$edit = TextMemory::all();
+		$edit = TextContact::all();
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		return view('admin.text.memory.show', compact('user_role', 'edit'));
+		return view('admin.text.contact.show', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -80,10 +81,10 @@ class EditMemoryTextController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$edit = TextMemory::findOrfail(1);
+		$edit = TextContact::findOrfail($id);
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		return view('admin.text.memory.edit', compact('user_role', 'edit'));
+		return view('admin.text.contact.edit', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -92,12 +93,12 @@ class EditMemoryTextController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, EditTextContactRequest $request)
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$text = TextMemory::findOrFail($id);
-		$text->fill(\Request::all());
+		$text = TextContact::findOrFail($id);
+		$text->fill($request->all());
 		$text->save();
 		Session::flash('message', 'El texto fue editado con exito');
 		return view('admin.control.admin',	 compact('user_role'));

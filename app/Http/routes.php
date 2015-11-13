@@ -55,7 +55,7 @@
 	Route::get('independent', 'NavigationController@independent');
 	Route::get('assisting', 'NavigationController@assisted');
 	Route::get('memorycare', 'NavigationController@memory');
-	Route::get('memorycare', 'NavigationController@memory');
+	Route::get('contacto', 'NavigationController@contactUs');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
 	Route::get('houses', 'NavigationController@houses');
 
@@ -169,4 +169,8 @@
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMemory'], function (){
 		Route::resource('text.memory', 'EditMemoryTextController');
+	});
+
+	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditContacto'], function (){
+		Route::resource('contact', 'EditContactController');
 	});

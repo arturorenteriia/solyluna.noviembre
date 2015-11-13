@@ -20,19 +20,20 @@
           <div class="card-panel col s12 m12 l9 ">
           <div class="divider"></div>
   <div class="section">
-      <blockquote class="grey-text text-darken-4"><h4>Have living related questions?</h4></blockquote><div class="col s12 m5">
+      @foreach($textC as $text)
+      <blockquote class="grey-text text-darken-4"><h4>{{ $text->title1 }}</h4></blockquote><div class="col s12 m5">
         <div class="card-panel white">
          <img src="images/ancianotelefono.jpg" class="responsive-img" width="100%" alt="">
         </div>
       </div>
-    <p class="grey-text text-darken-2 " align="justify">At Sol y Luna Exclusive Health Resorts, our goal is to provide a secured and caring environment with a professional trained staff to meet the needs of our residents and their families.
+    <p class="grey-text text-darken-2 " align="justify">{{ $text->text1 }}
     <br> 
     <br> 
-    Please, contact us for information at:  01 800 036 2768
+    {{ $text->text2 }}
         <br>
     <br>
-        If you would like to have additional information or questions regarding our services or availability, please use the following Contact Form and you will be contacted by one of ours Health Care Advisors. If you would like to have additional information or questions regarding our services or availability, please use the following Contact Form and you will be contacted by one of ours Health Care Advisors.</p>
-        
+        {{ $text->text3 }}.</p>
+    @endforeach
   </div>
   </div>
   </div>

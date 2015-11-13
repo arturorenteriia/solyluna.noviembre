@@ -45,18 +45,19 @@
                 <li><a href="{{ route('admin.properties.create') }}">Add residences</a></li>
                 <li><a href="{{ route('admin.properties.show') }}">Show</a></li>
             </ul>
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Edit amenities</a></li>
-            <ul id="dropdown3" class="dropdown-content">
-                <li class="divider"></li>
-                <li><a href="{{ route('admin.ameneties.show') }}">Edit</a></li>
-                <li><a class="button" href="{{ route('admin.chef.show') }}" data-activates="dropdown6">Edit Chef</a></li>
-            </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
             <ul id="dropdown7" class="dropdown-content">
                 <li><a href="{{ route('admin.text.create') }}">Edit Welcome</a></li>
                 <li><a href="{{ route('admin.text.independent.create') }}">Edit Independent</a></li>
                 <li><a href="{{ route('admin.text.assisted.create') }}">Edit Assisting</a></li>
                 <li><a href="{{ route('admin.text.memory.create') }}">Edit Memory</a></li>
+                <li><a href="{{ route('admin.contact.create') }}">Edit Contact Us</a></li>
+            </ul>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Edit amenities</a></li>
+            <ul id="dropdown3" class="dropdown-content">
+                <li class="divider"></li>
+                <li><a href="{{ route('admin.ameneties.show') }}">Edit</a></li>
+                <li><a class="button" href="{{ route('admin.chef.show') }}" data-activates="dropdown6">Edit Chef</a></li>
             </ul>
             <li><a href="/welcome" target="_blank">Sol&Luna</a></li>
         @endif
@@ -100,6 +101,10 @@
        </div>
     </nav>
     <br>
+    @if(Session::has('message'))
+        <p class="card-panel white-text teal lighten-2">{{ Session::get('message') }}</p>
+    @endif
+
     @yield('add')
 </main>
 

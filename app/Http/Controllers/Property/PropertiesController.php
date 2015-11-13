@@ -48,7 +48,7 @@ class PropertiesController extends Controller {
 		$cities= \DB::table('cities')->lists('city', 'id');
 		$services= \DB::table('services')->lists('service', 'id');
 		$property_types= \DB::table('property_types')->lists('property_type', 'id');
-		$users= \DB::table('users')->lists('full_name', 'id');
+		$users= \DB::table('users')->lists('full_name', 'id', 'role');
 		return view('admin.properties.create',compact('countries', 'states', 'cities','services', 'property_types','users', 'id_realstate'));
 	}
 

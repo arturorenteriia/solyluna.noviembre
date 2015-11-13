@@ -1,15 +1,19 @@
-
-    <div class="form-group">
+<div class="row">
+    <div class="form-group col-sm-12">
         {!! Form::label('name', 'name of property') !!}
         {!! Form::text('name', null,  ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        {!! Form::label('available', 'Date') !!}
+</div>
+<div class="row">
+    <div class="form-group col-sm-3">
+        {!! Form::label('available', 'Date', ['class' => 'col-sm-12']) !!}
         <input type="date" class="form-control" name="available">
     </div>
+</div>
+
     <div class="form-group">
         {!! Form::label('num_bedrooms', 'Number of rooms') !!}
-        {!! Form::text('num_bedrooms', null,  ['class' => 'form-control']) !!}
+        {!! Form::select('num_bedrooms', ['1' => '1', '2' => '2', '3' => '3', '4' => '4'], '1',  ['class' => 'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('status', 'Status') !!}
