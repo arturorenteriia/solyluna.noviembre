@@ -19,6 +19,7 @@ class VistasController extends Controller {
 	 */
 	public function vistapropiedad(Request $request)
 	{
+
 		$property_id = $request->input('property_id');
 
 
@@ -88,7 +89,7 @@ class VistasController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		dd("hola");
 	}
 
 	/**

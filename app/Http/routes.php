@@ -25,6 +25,11 @@
 			'uses'=> 'VistasController@gastronomy'
 		]
 	);
+Route::post('vista2', [
+		'as' => 'vista2.vistapropiedad',
+		'uses'=> 'VistasController@vistapropiedad'
+	]
+);
 
 	Route::get('gastronomy', 'GastronomyController@addchef');
 	Route::get('casasassisting', 'vistasController@casasassisting');
@@ -170,3 +175,7 @@
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMemory'], function (){
 		Route::resource('text.memory', 'EditMemoryTextController');
 	});
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function (){
+	Route::resource('vistapropiedad', 'VistasController');
+});
+Route::get('vistacasa', 'VistasController@vistapropiedad');
