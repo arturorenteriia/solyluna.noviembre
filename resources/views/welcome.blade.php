@@ -239,7 +239,7 @@
                     text-align: left; line-height: 36px; font-size: 30px;
 
                         color: #FFFFFF;">
-                        We care We linsting
+                  <h3>  <font face="Monotype Corsiva"> We care We linsting </font></h3>
                 </div>
             </div>
             @foreach($images as $image)
@@ -346,7 +346,9 @@
                 <img u="image" src="images/tarde.jpg" />
                 <div class="caption center-align">
                     <h3>Welcome to paradise</h3>
-                    <h5 class="light grey-text text-lighten-3">We Care We listen.</h5>
+
+                    <h5>We Care We listen.</h5>
+
                 </div>
             </li>
             @foreach($images as $image)

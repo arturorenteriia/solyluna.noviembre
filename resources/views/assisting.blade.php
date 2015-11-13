@@ -24,7 +24,7 @@
      <blockquote class="grey-text text-darken-4" align="justify"><h4>{{ $text->title1 }}</h4></blockquote>
     <div class="col s12 m5 l9">
         <div class="card-panel white">
-         <img src="images/asisting.jpg" class="responsive-img" width="100%" alt="">
+         <img src="images/assisted.jpg" class="responsive-img" width="100%" alt="">
         </div>
       </div>
     <p class="grey-text text-darken-2" align="justify">{{ $text->text1 }}
