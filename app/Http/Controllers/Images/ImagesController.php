@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use solyluna\Http\Requests\CreateImagesRequest;
 use solyluna\Picture;
 use solyluna\User;
 
@@ -36,7 +38,7 @@ class ImagesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(CreateImagesRequest $request)
 	{
 		$file1 = Input::file('image1');
 		$file2 = Input::file('image2');
@@ -77,7 +79,7 @@ class ImagesController extends Controller {
 				&& $file5->move($path,$fileName5) && $file6->move($path,$fileName6) && $file7->move($path,$fileName7) && $file8->move($path,$fileName8) && $file9->move($path,$fileName9))
 			{
 				$picture->save();
-				return redirect()->route('admin.control.index');
+				return redirect()->route('admin.properties.show');
 			}
 		}
 	}
@@ -96,7 +98,9 @@ class ImagesController extends Controller {
 		$count = Picture::select('id', 'property_id')
 			->where('property_id', '=', $property_id)
 			->count();
-		$images = Picture::all();
+		$images = Picture::select('id', 'property_id')
+			->where('property_id', '=', $property_id)
+			->get();
 		if($count>0)
 		{
 			return view('admin.properties.images.show', compact('user_role','images'));
@@ -145,6 +149,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image1 = $fileName1;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image2'))
@@ -155,6 +160,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image2 = $fileName2;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image3'))
@@ -165,6 +171,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image3 = $fileName3;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image4'))
@@ -175,6 +182,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image4 = $fileName4;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image5'))
@@ -185,6 +193,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image5 = $fileName5;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image6'))
@@ -195,6 +204,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image6 = $fileName6;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image7'))
@@ -205,6 +215,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image7 = $fileName7;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image8'))
@@ -215,6 +226,7 @@ class ImagesController extends Controller {
 			{
 				$picture->image8 = $fileName8;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		if(Input::hasFile('image9'))
@@ -225,11 +237,12 @@ class ImagesController extends Controller {
 			{
 				$picture->image9 = $fileName9;
 				$picture->save();
+				Session::flash('message', "Se ha mdificado el carrusel correctamente correctamente");
 			}
 		}
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		return view('admin.control.admin', compact('user_role'));
+		return redirect()->route('admin.properties.show', compact('user_role'));
 	}
 
 	/**

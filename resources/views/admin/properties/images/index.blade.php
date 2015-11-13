@@ -9,6 +9,7 @@
         <div class="row">
             <div class="row">
                 <blockquote><h4>Important</h4></blockquote>
+                @include('admin.users.partial.messages')
                 <p>Las fotos se mostraran en orden en que se van agregando.</p>
             </div>
             {!! Form::open(['route' => 'admin.images.store', 'method' => 'POST' , 'files' => 'true', 'class' => 'col s12' ]) !!}

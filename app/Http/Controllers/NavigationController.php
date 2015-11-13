@@ -57,4 +57,9 @@ class NavigationController extends Controller {
         return view('Icasas',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
     }
 
+    public function houses($id)
+    {
+
+    }
+
 }

@@ -57,7 +57,8 @@
 	Route::get('memorycare', 'NavigationController@memory');
 	Route::get('memorycare', 'NavigationController@memory');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
-	Route::get('casasassisting', 'vistasController@casasassisting');
+	Route::get('houses', 'NavigationController@houses');
+
 
 	Route::get('memoryhouses', 'NavigationController@memoryhouses');
 	Route::get('independenthouses', 'NavigationController@independenthouses');

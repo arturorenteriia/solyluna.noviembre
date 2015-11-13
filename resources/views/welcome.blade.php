@@ -244,7 +244,7 @@
             </div>
             @foreach($images as $image)
             <div>
-                <a href="casasayulita" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
+                <a href="vistas" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
                 <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 500px; padding: 5px;
 
                     text-align: right; line-height: 60px; text-transform: uppercase; font-size: 50px;
