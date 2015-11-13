@@ -239,12 +239,18 @@
                     text-align: left; line-height: 36px; font-size: 30px;
 
                         color: #FFFFFF;">
-                        We care We linsting
+                  <h3>  <font face="Monotype Corsiva"> We care We linsting </font></h3>
                 </div>
+                {!! Form::open(['route' => 'vista2.vistapropiedad','name'=>"form1", 'method' => 'POST', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
+
             </div>
+
             @foreach($images as $image)
             <div>
-                <a href="vistas" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
+
+
+                {!! Form::text('property_id', $image->id,  ['class' => 'form-control']) !!}
+                <a href="#" onclick="javascript:document.form1.submit() " class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
                 <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 500px; padding: 5px;
 
                     text-align: right; line-height: 60px; text-transform: uppercase; font-size: 50px;
@@ -257,8 +263,9 @@
 
                         color: #FFFFFF;">
                         {{ $image->slogan }}
+                    {{ $image->id }}
                 </div>
-            </div>
+                     </div>
             @endforeach
         </div>
         <!--#region Bullet Navigator Skin Begin -->
@@ -346,7 +353,9 @@
                 <img u="image" src="images/tarde.jpg" />
                 <div class="caption center-align">
                     <h3>Welcome to paradise</h3>
-                    <h5 class="light grey-text text-lighten-3">We Care We listen.</h5>
+
+                    <h5>We Care We listen.</h5>
+
                 </div>
             </li>
             @foreach($images as $image)
