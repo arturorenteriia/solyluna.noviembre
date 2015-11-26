@@ -1,13 +1,17 @@
 <?php namespace solyluna\Http\Controllers;
 
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Session;
+use solyluna\Contact;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use solyluna\Http\Requests\ContactoRequest;
 
 class MailController extends Controller {
 
-    public function send(Request $request)
+    public function send(ContactoRequest $request, Redirector $redirector)
     {
         //guarda el valor de los campos enviados desde el form en un array
         $data = $request->all();
@@ -22,9 +26,13 @@ class MailController extends Controller {
 
             //receptor
             $message->to(env('CONTACT_MAIL'), env('CONTACT_NAME'));
-
+            $contacts = new Contact($request->all());
+            $contacts->full_name = $request->first_name." ".$request->last_name;
+            $contacts->save();
+            Session::flash('message', $contacts->full_name." El correo se envio correctamente, y nosotros nos pondremos en contacto.");
         });
-        return \View::make('success');
+
+        return $redirector->back();
     }
 
 }

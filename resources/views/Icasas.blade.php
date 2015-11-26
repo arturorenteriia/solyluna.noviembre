@@ -20,7 +20,6 @@
 
 
         @foreach($properties as $property)
-            @if($property->service_id == 3)
                 <div class="col s12 m12 l3">
                     <div class="card small hoverable">
                         <div class="card-image"  alt="">
@@ -35,14 +34,11 @@
                             {!! Form::hidden('property_id', $property->id,  ['class' => 'form-control']) !!}
 
                             <center> <button type="submit" class="btn waves-effect waves-light">See More</button></center>
-
                             {!! Form::close() !!}
-
 
                         </div>
                     </div>
                 </div>
-            @endif
         @endforeach
 
 

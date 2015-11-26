@@ -4,9 +4,6 @@
     <a href="#" class="brand-logo center">Properties</a>
 @endsection
 @section('add')
-    @if(Session::has('message'))
-        <p class="card-panel white-text teal lighten-2">{{ Session::get('message') }}</p>
-    @endif
     <div class="row">
         @foreach($properties as $property)
         <div class="col s12 m4 l4">

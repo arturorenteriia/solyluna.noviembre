@@ -2,6 +2,7 @@
 
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
@@ -10,7 +11,6 @@ use solyluna\Http\Requests\CreateTextIndependentRequest;
 use solyluna\TextIndependent;
 use solyluna\TextWelcome;
 use solyluna\User;
-use Symfony\Component\HttpFoundation\Session\Session;
 
 
 class EditIndependentTextController extends Controller {

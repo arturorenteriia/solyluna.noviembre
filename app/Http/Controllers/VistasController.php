@@ -75,7 +75,7 @@ class VistasController extends Controller {
 		$chef = Gastronomy::select('nombre','apellidos','acerca','docencia','image')
 			->where('property_id', '=', $property_id)
 			->get();
-		$files = File::select('menu','drinks')
+		$files = File::select('id', 'menu','drinks')
 			->where ('property_id','=',$property_id)
 			->get();
 			return view('gastronomy',compact('properties','property_id','chef','files'));

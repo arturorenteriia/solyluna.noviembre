@@ -1,10 +1,12 @@
 <?php namespace solyluna\Http\Controllers;
 
+use Illuminate\Support\Facades\Session;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use solyluna\Property;
+use solyluna\Service;
 use solyluna\TextAssited;
 use solyluna\TextContact;
 use solyluna\TextIndependent;
@@ -64,9 +66,52 @@ class NavigationController extends Controller {
         return view('Icasas',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
     }
 
-    public function houses($id)
+    public function menu($id)
     {
-
+        return "hola";
     }
 
+    public function search(Request $request)
+    {
+        $service_id = $request->service;
+        $city_id = $request->select3;
+        $service = Service::findOrFail($service_id);
+
+        if(!empty($service_id) && !empty($city_id)){
+            $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+                ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
+                ->where('service_id', '=', $service_id)
+                ->where('city_id', '=', $city_id)
+                ->get();
+            $casas = count($properties);
+            if($casas)
+            {
+                return view('searhResorts',compact('properties','service','state', 'city', 'property_type', 'service'));
+            }
+            else
+            {
+                Session::flash('message', " No se encontraron Resorts con los valores buscados.");
+                return view('searhResorts',compact('properties','service','state', 'city', 'property_type', 'service'));
+            }
+        }
+
+        if(!empty($service_id))
+        {
+            $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+                ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
+                ->where('service_id', '=', $service_id)
+                ->get();
+            $casas = count($properties);
+            if($casas)
+            {
+                return view('searhResorts',compact('properties','service','state', 'city', 'property_type', 'service'));
+            }
+            else
+            {
+                Session::flash('message', " No se encontraron Resorts con los valores buscados.");
+                return view('searhResorts',compact('properties','service','state', 'city', 'property_type', 'service'));
+            }
+        }
+
+    }
 }

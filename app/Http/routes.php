@@ -58,6 +58,13 @@
 	Route::get('contacto', 'NavigationController@contactUs');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
 	Route::get('houses', 'NavigationController@houses');
+	Route::get('menu', 'NavigationController@menu');
+	Route::post('vista2', [
+		'as' => 'vista2.vistapropiedad',
+		'uses'=> 'VistasController@vistapropiedad'
+	]);
+	//Buscador
+	Route::post('serch', ['as' => 'search', 'uses' => 'NavigationController@search'] );
 
 
 	Route::get('memoryhouses', 'NavigationController@memoryhouses');

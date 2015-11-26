@@ -451,7 +451,7 @@
               </div>
               <div class="card-action">
                   @foreach($files as $act)
-                <a href="{{ asset('activities') }}/{{ $act->activities }}" TARGET="_blank">See more...</a>
+                <a href="#">See more...</a>
                       @endforeach
               </div>
             </div>

@@ -4,7 +4,7 @@
   <div class="row">
       <div class="col s12 m12 l12 ">
         <div class="card-panel blue">
-        <center><span class="white-text" ><h5>MEMORY CARE</h5>
+        <center><span class="white-text" ><h5>Memory Care Exclusive Health Resorts</h5>
           </span></center>
           
         </div>
