@@ -11,12 +11,14 @@
         </li>
         @foreach($images as $image)
             <li>
-                <a href="casasayulita" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
+                {!! Form::hidden('property_id', $image->id,  ['class' => 'validate']) !!}
+                <a href="allresidences" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
                 <div class="caption center-align">
                     <h3>{{ $image->name }}</h3>
                     <h5 class="light grey-text text-lighten-3">{{ $image->slogan }}</h5>
                 </div>
             </li>
         @endforeach
+
     </ul>
 </div>

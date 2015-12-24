@@ -63,7 +63,7 @@
       @include('Partials.serviceProvided')
 
       @yield('form_residencias')
-<center> <span><a class="btn" role="button" href="javascript:window.history.back();"><i class="material-icons"></i>Previous Page</a></span></center>
+<center> <span><a class="btn" role="button" href="javascript:history.back(-1,1)"><i class="material-icons"></i>Previous Page</a></span></center>
        <footer class="page-footer grey lighten-3">
 
           
@@ -89,6 +89,12 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.js"></script>
+  <script>
+      $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15 // Creates a dropdown of 15 years to control year
+      });
+  </script>
   <script>
     $(function()
     {

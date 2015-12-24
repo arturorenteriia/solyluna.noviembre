@@ -51,7 +51,7 @@
                 <li><a href="{{ route('admin.text.independent.create') }}">Edit Independent</a></li>
                 <li><a href="{{ route('admin.text.assisted.create') }}">Edit Assisting</a></li>
                 <li><a href="{{ route('admin.text.memory.create') }}">Edit Memory</a></li>
-                <li><a href="{{ route('admin.contact.create') }}">Edit Contact Us</a></li>
+                <li><a href="{{ route('admin.text.medical.create') }}">Edit Medical</a></li>
             </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Edit amenities</a></li>
             <ul id="dropdown3" class="dropdown-content">

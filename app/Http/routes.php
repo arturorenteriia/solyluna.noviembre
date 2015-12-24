@@ -42,6 +42,10 @@
 		return view('contacto');
 	});
 
+	Route::get('aboutus', function () {
+		return view('aboutus');
+	});
+
 	Route::get('heredado', function(){
 		return view('heredado');
 	});
@@ -52,8 +56,10 @@
 	Route::post('reset_password', ['as' => 'reset_password', 'uses' => 'PasswordsController@reset_password'] );
 	//navegacion
 	Route::get('welcome', 'NavigationController@welcome');
+	Route::get('back', 'NavigationController@back');
 	Route::get('independent', 'NavigationController@independent');
 	Route::get('assisting', 'NavigationController@assisted');
+	Route::get('medicaltourism', 'NavigationController@medicaltourism');
 	Route::get('memorycare', 'NavigationController@memory');
 	Route::get('contacto', 'NavigationController@contactUs');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
@@ -106,6 +112,7 @@
 	Route::get('residenciaamapa', function () {
 		return view('residenciaamapa');
 	});
+	Route::get('allresidences', 'NavigationController@allresidences');
 	Route::get('Acasas', function () {
 		return view('Acasas');
 	});
@@ -176,6 +183,10 @@
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMemory'], function (){
 		Route::resource('text.memory', 'EditMemoryTextController');
+	});
+
+	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMedical'], function (){
+		Route::resource('text.medical', 'EditMedicalTextController');
 	});
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditContacto'], function (){

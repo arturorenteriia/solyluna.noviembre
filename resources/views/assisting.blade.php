@@ -80,8 +80,9 @@ Care for residents with cognitive impairments
 
         </div>
       </div>
-      <h5>{{ $text->title2 }}</h5><p class="grey-text text-darken-2" align="justify">
-        {{ $text->text2 }}
+      <h5>{{ $text->title2 }}</h5>
+      <p class="grey-text text-darken-2" align="justify">
+        {{ $text->text2 }} <a href="amenities">Go to amenities and services</a>
       </p>
       <br>
       <br>

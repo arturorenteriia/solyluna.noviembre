@@ -120,7 +120,7 @@
             @foreach($properties as $property)
                 @if($property->id == $property_id)
 
-        <center><span class="white-text" ><h5>{{ $property->name }}</h5>
+        <center><span class="white-text" ><h5>{{ $property->name }} an {{ $property->service->service  }} Health Resort</h5>
 
           </span></center>
           
@@ -451,7 +451,7 @@
               </div>
               <div class="card-action">
                   @foreach($files as $act)
-                <a href="#">See more...</a>
+                <a href="{{ asset('activities') }}/{{ $act->activities }}">See more...</a>
                       @endforeach
               </div>
             </div>

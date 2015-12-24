@@ -24,7 +24,7 @@
                 <div class="col s12 m12 l3">
                     <div class="card small hoverable">
                         <div class="card-image"  alt="">
-                            <a href="#" class="brand-logo"> <img src="{{ asset('uploads') }}/{{ $property->image }}" height="180px"></a>
+                            <a href="{{ route('vistas.vistapropiedad') }}" class="brand-logo"> <img src="{{ asset('uploads') }}/{{ $property->image }}" height="180px"></a>
                             <a href="#" class="brand-logo"><span class="card-title ">{{ $property->name }}</span></a>
                         </div>
                         <div class="card-content">
