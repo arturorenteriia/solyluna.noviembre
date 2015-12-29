@@ -30,16 +30,18 @@
         <li><a href="independent">Independent Living</a></li>
         <li><a href="assisting">Assisted Living</a></li>
         <li><a href="memorycare">Memory Care</a></li>
+        <li><a href="medicaltourism">Medical Tourism</a></li>
         <li><a href="#"><i class="material-icons">person_pin</i></a></li>
       </ul>
       <!--Navar Movil-->
         <ul class="side-nav" id="slide-out">
-          <li><a href="contacto.html">Contact us</a></li>
+          <li><a href="contacto">Contact us</a></li>
           <li><a href="welcome">Home</a></li>
           <li><a href="aboutus">About Us</a></li>
-          <li><a href="independent.html">Independent Living</a></li>
-          <li><a href="assisting.html">Assisted Living</a></li>
+          <li><a href="independent">Independent Living</a></li>
+          <li><a href="assisting">Assisted Living</a></li>
           <li><a href="memorycare">Memory Care</a></li>
+          <li><a href="medicaltourism">Medical Tourism</a></li>
         </ul>
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">reorder</i></a>
         <!--Fin Navar Movil-->
@@ -63,7 +65,7 @@
       @include('Partials.serviceProvided')
 
       @yield('form_residencias')
-<center> <span><a class="btn" role="button" href="javascript:history.back(-1,1)"><i class="material-icons"></i>Previous Page</a></span></center>
+<center> <span><a class="btn" role="button" href="javascript:history.back(-1,0)"><i class="material-icons"></i>Previous Page</a></span></center>
        <footer class="page-footer grey lighten-3">
 
           

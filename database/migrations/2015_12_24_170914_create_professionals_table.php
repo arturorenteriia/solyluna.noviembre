@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTextAssitedsTable extends Migration {
+class CreateProfessionalsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,16 +12,18 @@ class CreateTextAssitedsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('text_assiteds', function(Blueprint $table)
+		Schema::create('professionals', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->mediumText('title1');
-			$table->longText('text1');
 			$table->mediumText('title2');
+			$table->longText('text1');
 			$table->longText('text2');
 			$table->longText('text3');
 			$table->longText('text4');
 			$table->longText('text5');
+			$table->longText('text6');
+			$table->longText('text7');
 			$table->softDeletes();
 			$table->timestamps();
 		});
@@ -34,7 +36,7 @@ class CreateTextAssitedsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('text_assiteds');
+		Schema::drop('professionals');
 	}
 
 }

@@ -60,6 +60,7 @@
 	Route::get('independent', 'NavigationController@independent');
 	Route::get('assisting', 'NavigationController@assisted');
 	Route::get('medicaltourism', 'NavigationController@medicaltourism');
+	Route::get('ProfessionalServices', 'NavigationController@professionalServices');
 	Route::get('memorycare', 'NavigationController@memory');
 	Route::get('contacto', 'NavigationController@contactUs');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
@@ -87,9 +88,6 @@
 	});
 	Route::get('tecnologia', function () {
 		return view('tecnologia');
-	});
-	Route::get('healthcare', function () {
-		return view('healthcare');
 	});
 	Route::get('amenities', function () {
 		return view('amenities');
@@ -187,6 +185,10 @@
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMedical'], function (){
 		Route::resource('text.medical', 'EditMedicalTextController');
+	});
+
+	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditProfessional'], function (){
+		Route::resource('text.professional', 'EditProfessionalTextController');
 	});
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditContacto'], function (){

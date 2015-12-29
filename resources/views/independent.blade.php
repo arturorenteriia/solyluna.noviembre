@@ -21,50 +21,27 @@
           <div class="divider"></div>
   <div class="section">
       @foreach($textI as $text)
-     <blockquote class="grey-text text-darken-4" align="justify"><h4>{{ $text->title1 }}</h4></blockquote>
-    <div class="col s12 m5 l9">
-        <div class="card-panel white">
-         <img src="images/ILgrupo.jpg" class="responsive-img" width="100%" alt="">
+     <h5>{{ $text->title1 }}</h5>
+      <div class="divider"></div>
+    <div class="row">
+        <div class="col s12 m5 l9">
+            <div class="card-panel white">
+                <img src="images/ILgrupo.jpg" class="responsive-img" width="100%" alt="">
+            </div>
         </div>
-      </div>
-    <p class="grey-text text-darken-2" align="justify">{{ $text->text1 }}
-
-<li class="grey-text text-darken-2" align="justify">
-  Only minor assistance is needed with activities of daily living.
-</li >
-
-<li class="grey-text text-darken-2" align="justify">
-You want a place to live that requires little or no home maintenance and yard work.
-</li>
-
-
-<li class="grey-text text-darken-2" align="justify">
-You want to socialize with your peers and broaden your social network.
-</li>
-
-
-<li class="grey-text text-darken-2" align="justify">
-You want to enjoy activities and meals in the company of others.
-</li>
-
-<br>
-    </p>
-    <div class="col s5 m5 l5">
+        <p class="grey-text text-darken-4" align="justify">{{ $text->text1 }}</p>
+    </div>
+          <h5>{{ $text->title2 }}</h5>
+    <div class="col s12 m6 l5">
         <div class="card-panel white">
-         <img src="images/ILbaraja.jpg" class="responsive-img" width="100%" alt="">
-
+            <img src="images/ILbaraja.jpg" class="responsive-img" width="100%" alt="">
         </div>
-      </div>
-      <h5>{{ $text->title2 }}</h5><p class="grey-text text-darken-2" align="justify">
+    </div>
+          <p class="grey-text text-darken-4" align="justify">
               {{ $text->text2 }}
       </p>
-      <br>
-      <br>
-
-      <br>
-      <br>
-        <a class="grey-text " href="independenthouses"><h5>Find out Independent Living Residences</h5></a>
-        <span><a class="btn" role="button" href="independenthouses"><i class="material-icons">trending_flat</i></a></span>
+       
+        <center><span><a class="btn" role="button" href="independenthouses"><i class="material-icons"></i>TO LOCATE AN INDEPENDENT LIVING RESORTS</a></span></center>
           @endforeach
   </div>
   </div>

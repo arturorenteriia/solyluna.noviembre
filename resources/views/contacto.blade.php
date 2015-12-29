@@ -4,7 +4,7 @@
   <div class="row">
       <div class="col s12 m12 l12 ">
         <div class="card-panel blue">
-        <center><span class="white-text" ><h5>CONTACT US</h5>
+        <center><span class="white-text" ><h5>NOW YOU CAN CONTACT US!</h5>
           </span></center>
           
         </div>

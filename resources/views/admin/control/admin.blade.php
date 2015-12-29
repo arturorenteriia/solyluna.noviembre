@@ -39,19 +39,20 @@
                 <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
                 <li><a href="{{ route('admin.users.create') }}">Crear Usuarios</a></li>
             </ul>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
+            <ul id="dropdown7" class="dropdown-content">
+                <li><a href="{{ route('admin.text.create') }}">Welcome</a></li>
+                <li><a href="{{ route('admin.text.independent.create') }}">Independent</a></li>
+                <li><a href="{{ route('admin.text.assisted.create') }}">Assisting</a></li>
+                <li><a href="{{ route('admin.text.memory.create') }}">Memory</a></li>
+                <li><a href="{{ route('admin.text.professional.create') }}">Professional</a></li>
+                <li><a href="{{ route('admin.text.medical.create') }}">Medical</a></li>
+            </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Resideces</a></li>
             <ul id="dropdown2" class="dropdown-content">
                 <li class="divider"></li>
                 <li><a href="{{ route('admin.properties.create') }}">Add residences</a></li>
                 <li><a href="{{ route('admin.properties.show') }}">Show</a></li>
-            </ul>
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
-            <ul id="dropdown7" class="dropdown-content">
-                <li><a href="{{ route('admin.text.create') }}">Edit Welcome</a></li>
-                <li><a href="{{ route('admin.text.independent.create') }}">Edit Independent</a></li>
-                <li><a href="{{ route('admin.text.assisted.create') }}">Edit Assisting</a></li>
-                <li><a href="{{ route('admin.text.memory.create') }}">Edit Memory</a></li>
-                <li><a href="{{ route('admin.text.medical.create') }}">Edit Medical</a></li>
             </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Edit amenities</a></li>
             <ul id="dropdown3" class="dropdown-content">

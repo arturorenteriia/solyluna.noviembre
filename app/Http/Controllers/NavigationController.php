@@ -7,6 +7,7 @@ use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use solyluna\Professional;
 use solyluna\Property;
 use solyluna\Service;
 use solyluna\State;
@@ -54,6 +55,12 @@ class NavigationController extends Controller {
     {
         $textM = TextMedical::all();
         return view('medicaltourism', compact('textM'));
+    }
+
+    public function professionalServices()
+    {
+        $textM = Professional::all();
+        return view('healthcare', compact('textM'));
     }
 
     public function memoryhouses()

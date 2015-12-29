@@ -100,7 +100,7 @@
                             <div class="card-panel white">
                                 <img src="images/anciana.jpg" class="responsive-img" width="100%" alt="">
                             </div>
-                            <blockquote class="grey-text text-darken-4" align="">{{ $text->description }}</blockquote>
+                             {{ $text->description }}
                         </div>
                         <div class="col s12 l4">
                             <p class="flow-text grey-text text-darken-4" align=''>{{ $text->phrase }}</p>
@@ -166,14 +166,14 @@
               <div class="col s12 m12 l3">
                   <div class="card big hoverable">
                       <div class="card-image">
-                          <a href="healthcare" class="brand-logo"> <img src="images/healthcare-outsourcing-reasons.jpg" height="150"></a>
-                          <a href="healthcare" class="brand-logo">  <span class="card-title">..Professional Services</span></a>
+                          <a href="ProfessionalServices" class="brand-logo"> <img src="images/healthcare-outsourcing-reasons.jpg" height="150"></a>
+                          <a href="ProfessionalServices" class="brand-logo">  <span class="card-title">..Professional Services</span></a>
                       </div>
                       <div class="card-content">
-                          <a href="healthcare" class="brand-logo">   <p class="grey-text text-darken-2">Healthcare Professionals like Nurses, Psychologist and Physicians</p></a>
+                          <a href="ProfessionalServices" class="brand-logo">   <p class="grey-text text-darken-2">Healthcare Professionals like Nurses, Psychologist and Physicians</p></a>
                       </div>
                       <div class="card-action">
-                          <a href="healthcare">See more...</a>
+                          <a href="ProfessionalServices">See more...</a>
                       </div>
                   </div>
               </div>

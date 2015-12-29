@@ -30,6 +30,7 @@
         <li><a href="independent">Independent Living</a></li>
         <li><a href="assisting">Assisted Living</a></li>
         <li><a href="memorycare">Memory Care</a></li>
+        <li><a href="medicaltourism">Medical Tourism</a></li>
         <li><a href="#"><i class="material-icons">person_pin</i></a></li>
       </ul>
       <!--Navar Movil-->
@@ -40,6 +41,7 @@
         <li><a href="independent.html">Independent Living</a></li>
         <li><a href="assisting.html">Assisted Living</a></li>
         <li><a href="memorycare">Memory Care</a></li>
+        <li><a href="medicaltourism">Medical Tourism</a></li>
       </ul>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">reorder</i></a>
       <!--Fin Navar Movil-->
@@ -48,6 +50,7 @@
 </div>
 
 @yield('navbar_menu')
+
 
   @yield('form_residencias')
 
@@ -105,11 +108,6 @@
   </script>
   <script> $(document).ready(function(){
       $('.parallax').parallax();
-    });
-  </script>
-  <script>
-    $(document).ready(function(){
-      $('.materialboxed').materialbox();
     });
   </script>
 </body>

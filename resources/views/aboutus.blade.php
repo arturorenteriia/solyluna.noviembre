@@ -23,7 +23,7 @@
               <div class="card-panel col s12 m12 l12 ">
                   <div class="divider"></div>
                   <div class="section">
-                      <blockquote class="grey-text text-darken-4" align="justify"><h4>Sol & Luna Health Exclusive Resorts</h4></blockquote>
+                      <h5>Sol & Luna Health Exclusive Resorts</h5>
                       <div class="col s12 m5 l5">
                           <div class="card-panel white">
                               <center><img src="images/LogoSolyLuna.png" class="responsive-img" width="50%" alt=""></center>
