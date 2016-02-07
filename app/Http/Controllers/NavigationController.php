@@ -2,6 +2,7 @@
 
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Session;
+use solyluna\About;
 use solyluna\Country;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
@@ -25,6 +26,12 @@ class NavigationController extends Controller {
         $images = Property::all();
         $textW = TextWelcome::all();
         return view('welcome', compact('textW', 'images'));
+    }
+
+    public function aboutus()
+    {
+        $textA = About::all();
+        return view('aboutus', compact('textA'));
     }
 
     public function independent()

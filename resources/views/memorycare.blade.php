@@ -26,11 +26,15 @@
                         <img src="images/memori-care.jpg" class="responsive-img" width="100%" alt="">
                     </div>
                     <p class="grey-text text-darken-4" align="justify">{{ $text->text1 }}</p>
+                    <p class="grey-text text-darken-4" align="justify">{{ $text->text2 }}</p>
                 </div>
                 <div class="row">
                     <div class="col s12 m12 l12">
-                        <h5>{{ $text->title2 }}</h5><p class="grey-text text-darken-4" align="justify">
-                        {{ $text->text2 }}
+                        <h5>{{ $text->title2 }}</h5>
+                        <p class="grey-text text-darken-4" align="justify">{{ $text->text3 }}</p>
+                        <p class="grey-text text-darken-4" align="justify">{{ $text->text4 }} A Lifestyle is also provided with <em><a href="amenities">Amenities and Services</a></em> to fulfill their needs and enhance their sense of self. </p>
+                        <p class="grey-text text-darken-4" align="justify">{{ $text->text5 }}</p>
+                        <p class="grey-text text-darken-4" align="justify">Please <em><a href="contacto">Contact us</a></em> for further assistance on the Memory Care Program.</p>
                     </div>
                 </div>
                 <center><span><a class="btn" role="button" href="memoryhouses"><i class="material-icons"></i>To locate a Memory Care Resorts</a></span></center>

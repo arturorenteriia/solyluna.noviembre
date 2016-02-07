@@ -103,7 +103,7 @@
                              {{ $text->description }}
                         </div>
                         <div class="col s12 l4">
-                            <p class="flow-text grey-text text-darken-4" align=''>{{ $text->phrase }}</p>
+                            <p class="flow-text blue-text text-darken-2" align=''>{{ $text->phrase }}</p>
                         </div>
                         <p class="grey-text text-darken-3" align="justify">{{ $text->secondText }}</p>
                     </div>

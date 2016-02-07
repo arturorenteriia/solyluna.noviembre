@@ -42,10 +42,6 @@
 		return view('contacto');
 	});
 
-	Route::get('aboutus', function () {
-		return view('aboutus');
-	});
-
 	Route::get('heredado', function(){
 		return view('heredado');
 	});
@@ -55,6 +51,7 @@
 	//cambiar password
 	Route::post('reset_password', ['as' => 'reset_password', 'uses' => 'PasswordsController@reset_password'] );
 	//navegacion
+	Route::get('aboutus', 'NavigationController@aboutus');
 	Route::get('welcome', 'NavigationController@welcome');
 	Route::get('back', 'NavigationController@back');
 	Route::get('independent', 'NavigationController@independent');
@@ -186,6 +183,10 @@
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMedical'], function (){
 		Route::resource('text.medical', 'EditMedicalTextController');
 	});
+
+		Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'About'], function (){
+			Route::resource('text.about', 'EditAboutController');
+		});
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditProfessional'], function (){
 		Route::resource('text.professional', 'EditProfessionalTextController');

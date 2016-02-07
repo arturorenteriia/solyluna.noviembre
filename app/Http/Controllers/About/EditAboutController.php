@@ -1,16 +1,15 @@
-<?php namespace solyluna\Http\Controllers\EditMedical;
+<?php namespace solyluna\Http\Controllers\About;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use solyluna\About;
 use solyluna\Http\Requests;
 use solyluna\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use solyluna\Http\Requests\CreateMedicalTextRequest;
-use solyluna\TextMedical;
 use solyluna\User;
 
-class EditMedicalTextController extends Controller {
+class EditAboutController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -29,7 +28,7 @@ class EditMedicalTextController extends Controller {
 	 */
 	public function create()
 	{
-		$count = TextMedical::select('id')
+		$count = About::select('id')
 			->count();
 		if($count >= 1)
 		{
@@ -38,7 +37,7 @@ class EditMedicalTextController extends Controller {
 		else{
 			$user_id = Auth::user()->id;
 			$user_role = User::findOrfail($user_id);
-			return view('admin.text.medical.create', compact('user_role'));
+			return view('admin.text.about.create', compact('user_role'));
 		}
 	}
 
@@ -51,8 +50,8 @@ class EditMedicalTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$textMedical = new TextMedical($request->all());
-		$textMedical->save();
+		$text = new About($request->all());
+		$text->save();
 		Session::flash('message', 'Se guardo el texto correctamento');
 		return view('admin.control.admin', compact('user_role'));
 	}
@@ -65,10 +64,10 @@ class EditMedicalTextController extends Controller {
 	 */
 	public function show()
 	{
-		$edit = TextMedical::all();
+		$edit = About::all();
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		return view('admin.text.medical.show', compact('user_role', 'edit'));
+		return view('admin.text.about.show', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -79,10 +78,10 @@ class EditMedicalTextController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$edit = TextMedical::findOrfail(1);
+		$edit = About::findOrfail(1);
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		return view('admin.text.medical.edit', compact('user_role', 'edit'));
+		return view('admin.text.about.edit', compact('user_role', 'edit'));
 	}
 
 	/**
@@ -95,7 +94,7 @@ class EditMedicalTextController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-		$text = TextMedical::findOrFail($id);
+		$text = About::findOrFail($id);
 		$text->fill(\Request::all());
 		$text->save();
 		Session::flash('message', 'El texto fue editado con exito');

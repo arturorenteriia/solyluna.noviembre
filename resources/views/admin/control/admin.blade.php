@@ -34,12 +34,7 @@
          <div class="divider"></div>
 
         @if($user_role->role == 'superadmin')
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Users</a></li>
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
-                <li><a href="{{ route('admin.users.create') }}">Crear Usuarios</a></li>
-            </ul>
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown7">Text</a></li>
             <ul id="dropdown7" class="dropdown-content">
                 <li><a href="{{ route('admin.text.create') }}">Welcome</a></li>
                 <li><a href="{{ route('admin.text.independent.create') }}">Independent</a></li>
@@ -47,6 +42,12 @@
                 <li><a href="{{ route('admin.text.memory.create') }}">Memory</a></li>
                 <li><a href="{{ route('admin.text.professional.create') }}">Professional</a></li>
                 <li><a href="{{ route('admin.text.medical.create') }}">Medical</a></li>
+                <li><a href="{{ route('admin.text.about.create') }}">About us</a></li>
+            </ul>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Users</a></li>
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
+                <li><a href="{{ route('admin.users.create') }}">Crear Usuarios</a></li>
             </ul>
          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Resideces</a></li>
             <ul id="dropdown2" class="dropdown-content">

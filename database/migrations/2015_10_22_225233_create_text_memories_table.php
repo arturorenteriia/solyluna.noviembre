@@ -19,6 +19,9 @@ class CreateTextMemoriesTable extends Migration {
 			$table->longText('text1');
 			$table->mediumText('title2');
 			$table->longText('text2');
+			$table->longText('text3');
+			$table->longText('text4');
+			$table->longText('text5');
 			$table->softDeletes();
 			$table->timestamps();
 		});

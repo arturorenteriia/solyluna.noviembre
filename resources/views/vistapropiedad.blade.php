@@ -357,7 +357,11 @@
           <li class="collection-item avatar hoverable">
             <img src="images/casacoral.jpg" alt="" class="circle">
             <span class="title"><b>Property Status</b></span>
+              @if($property->status == '1')
              <p class="green-text">Available </p>
+              @else
+              <p class="red-text">Not available </p>
+               @endif
                <p>Service: {{ $property->service->service }}<br>
                Location: {{ $property->country->country }}, {{ $property->city->city }}   <br>
                Bedrooms: {{ $property->num_bedrooms }}<br>

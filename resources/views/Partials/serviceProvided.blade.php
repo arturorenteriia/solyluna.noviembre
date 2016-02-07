@@ -7,7 +7,7 @@
                       <br>
                       {!! Form::open(['route' => 'search', 'method' => 'post']) !!}
                       <select required class="browser-default" name="service" >
-                          <option value="" disabled selected>Services Provided</option>
+                          <option value="{{ csrf_token() }}" disabled selected>Services Provided</option>
                           <option value="3">Independent Living</option>
                           <option value="1">Assisted Living</option>
                           <option value="2">Memory Care</option>

@@ -23,27 +23,29 @@
               <div class="card-panel col s12 m12 l9 ">
                   <div class="divider"></div>
                   <div class="section">
-                      <blockquote class="grey-text text-darken-4" align="justify"><h4>{{ $text->title }}</h4></blockquote>
-                      <div class="col s12 m5 l8">
-                          <div class="card-panel white">
-                              <img src="images/turismo.jpg" class="responsive-img" width="100%" alt="">
-                          </div>
-                      </div>
-                      <p class="grey-text text-darken-4" align="justify">
-                          {{ $text->text1 }}
-                      </p>
-                      <div class="col s5 m5 l5">
+                     <div class="row">
+                         <h4>{{ $text->title }}</h4>
+                         <div class="divider"></div>
+                         <br>
+                         <div class="col s12 m5 l8">
+                             <div class="card-panel white">
+                                 <img src="images/turismo.jpg" class="responsive-img" width="100%" alt="">
+                             </div>
+                         </div>
+                         <p class="grey-text text-darken-4" align="justify">{{ $text->text1 }}</p>
+                         <p class="grey-text text-darken-4" align="justify">{{ $text->text2 }} We also provide <a href="amenities"><em>Amenities and Services</em></a> to enrich their mind, body and spirit and a professional staff of dedicated healthcare provider that includes nutritionist, nurses, psychologists and physicians with access to hospitals services to insure a healthy stay at ours secured resorts.</p>
+                         <p class="grey-text text-darken-4" align="justify">{{ $text->text3 }}</p>
+                     </div>
+                      <div class="col s12 m6 l5">
                           <div class="card-panel white">
                               <img src="images/turismo2.jpg" class="responsive-img" width="100%" alt="">
-
                           </div>
                       </div>
-                      <p class="grey-text text-darken-4" align="justify">
-                        {{ $text->text2 }}
-                      </p>
-
+                      <p class="grey-text text-darken-4" align="justify">{{ $text->text4 }}</p>
+                      <p class="grey-text text-darken-4" align="justify">{{ $text->text5 }}</p>
+                      <p class="grey-text text-darken-4" align="justify">{{ $text->text6 }}</p>
                       <br>
-                      
+                      <p class="grey-text text-darken-4" align="justify">Please <a href="medicaltourism"><em>Contact us now </em></a> for further assistance on the Medical Tourism Program for Travelers.</p>
                       </div>
               </div>
           @endforeach

@@ -50,7 +50,7 @@ class EditAssistedTextController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateAssistedTextRequest $request)
+	public function store(Request $request)
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);

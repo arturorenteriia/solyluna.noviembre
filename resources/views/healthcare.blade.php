@@ -25,6 +25,7 @@
                     </div>
                     <div class="col s12 m12 l12">
                         <center><h5>Professional Services</h5></center>
+                        <p class="grey-text text-darken-4" align="center">Please <em><a href="contacto">Contact us</a></em> for further assistance on the Amenities & Services Program.</p>
                     </div>
                 </div>
             </div>

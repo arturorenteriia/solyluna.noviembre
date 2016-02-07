@@ -54,7 +54,7 @@
                     <div class="form-group">
                         {!! Form::file('image', ['class' => 'form-control']) !!}
                     </div>
-                    <center><button type="submit" class="btn waves-effect waves-light">Create</button></center>
+                    <center><button type="submit" class="btn waves-effect waves-light">Edit Bedroom</button></center>
                 </div>
                 {!! Form::close() !!}
                 {!! Form::open(['route' => ['admin.bedrooms.destroy', $bedrooms], 'method' => 'DELETE' ]) !!}

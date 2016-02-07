@@ -30,6 +30,9 @@
             </div>
         </div>
         <p class="grey-text text-darken-4" align="justify">{{ $text->text1 }}</p>
+        <p class="grey-text text-darken-4" align="justify">{{ $text->text2 }}</p>
+        <p class="grey-text text-darken-4" align="justify">{{ $text->text3 }}</p>
+
     </div>
           <h5>{{ $text->title2 }}</h5>
     <div class="col s12 m6 l5">
@@ -37,9 +40,9 @@
             <img src="images/ILbaraja.jpg" class="responsive-img" width="100%" alt="">
         </div>
     </div>
-          <p class="grey-text text-darken-4" align="justify">
-              {{ $text->text2 }}
-      </p>
+          <p class="grey-text text-darken-4" align="justify">{{ $text->text4 }} For detail information on services provided, please visit the <em><a href="amenities">Amenities and Services page.</a></em></p>
+          <p class="grey-text text-darken-4" align="justify">{{ $text->text5 }}</p>
+          <p class="grey-text text-darken-4" align="justify">Please <em><a href="contacto">Contact us</a></em> for further assistance on the Independent Living Program.</p>
        
         <center><span><a class="btn" role="button" href="independenthouses"><i class="material-icons"></i>TO LOCATE AN INDEPENDENT LIVING RESORTS</a></span></center>
           @endforeach

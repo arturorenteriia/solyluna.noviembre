@@ -45,6 +45,33 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col s12">
+                    <blockquote><h5>Text 3</h5></blockquote>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea1" name="text3" class="materialize-textarea" length="700"></textarea>
+                    <label for="text3">Text3</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <blockquote><h5>Text 4</h5></blockquote>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea1" name="text4" class="materialize-textarea" length="700"></textarea>
+                    <label for="text4">Text4</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <blockquote><h5>Text 5</h5></blockquote>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea1" name="text5" class="materialize-textarea" length="700"></textarea>
+                    <label for="text5">Text5</label>
+                </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
                     <center>
                         <button class="btn waves-effect waves-light" type="submit" name="action">Submit

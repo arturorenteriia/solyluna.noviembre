@@ -18,6 +18,10 @@ class CreateTextMedicalsTable extends Migration {
 			$table->mediumText('title');
 			$table->longText('text1');
 			$table->longText('text2');
+			$table->longText('text3');
+			$table->longText('text4');
+			$table->longText('text5');
+			$table->longText('text6');
 			$table->softDeletes();
 			$table->timestamps();
 		});

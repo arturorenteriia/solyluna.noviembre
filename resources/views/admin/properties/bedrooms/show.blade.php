@@ -24,8 +24,8 @@
                             <li><p>{{ $house->description }}</li>
                         </div>
                         <div class="card-action">
-                            <a href="{{ route('admin.images.show') }}" class="waves-effect waves-light btn  grey lighten-4" title="">Rentar</a>
-                            <a href="{{ route('admin.bedrooms.edit',$house) }}" class="waves-effect waves-light btn  grey lighten-4" title="">Editar</a>
+                            <a href="{{ route('admin.images.show') }}" class="waves-effect waves-light btn  grey lighten-4" title="">Rent</a>
+                            <a href="{{ route('admin.bedrooms.edit',$house) }}" class="waves-effect waves-light btn  grey lighten-4" title="">Edit</a>
                         </div>
                     </div>
                 </div>

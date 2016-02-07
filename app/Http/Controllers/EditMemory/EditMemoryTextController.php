@@ -48,7 +48,7 @@ class EditMemoryTextController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateMemoryTextRequest $request)
+	public function store(Request $request)
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
