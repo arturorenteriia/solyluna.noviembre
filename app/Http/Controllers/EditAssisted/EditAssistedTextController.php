@@ -57,7 +57,7 @@ class EditAssistedTextController extends Controller {
 		$textAssisted = new TextAssited($request->all());
 		$textAssisted->save();
 		Session::flash('message', 'Se guardo el texto correctamento');
-		return view('admin.control.admin', compact('user_role'));
+		return view('admin.panel.admin', compact('user_role'));
 	}
 
 	/**
@@ -102,7 +102,7 @@ class EditAssistedTextController extends Controller {
 		$text->fill(\Request::all());
 		$text->save();
 		Session::flash('message', 'El texto fue editado con exito');
-		return view('admin.control.admin',	 compact('user_role'));
+		return view('admin.panel.admin', compact('user_role'));
 	}
 
 	/**

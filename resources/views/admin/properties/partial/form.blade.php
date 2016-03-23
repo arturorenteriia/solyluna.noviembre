@@ -13,7 +13,7 @@
 
     <div class="form-group">
         {!! Form::label('num_bedrooms', 'Number of rooms') !!}
-        {!! Form::select('num_bedrooms', ['1' => '1', '2' => '2', '3' => '3', '4' => '4'], '1',  ['class' => 'form-control']) !!}
+        {!! Form::select('num_bedrooms', ['1' => '1', '2' => '2', '3' => '3', '4' => '4','5' => '5','6' => '6','7' => '7','8' => '8','9' => '9','10' => '10'], '1',  ['class' => 'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('status', 'Status') !!}

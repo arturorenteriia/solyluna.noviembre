@@ -1,4 +1,4 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
     <a href="#" class="brand-logo center">Bedrooms</a>
@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col s12">
                 <div class="col s12 z-depth-1">
-                    <h5>{{ $bedroom->name }} Bedrooms</h5>
+                    <h5>{{ $bedroom->name }} Habitaciones</h5>
                     <div class="divider"></div>
                     @include('admin.users.partial.messages')
                     {!! Form::open(['route' => 'admin.properties.bedrooms.store', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12' ]) !!}
@@ -18,7 +18,7 @@
                         </div>
                         <div class="input-field col s12">
                             <input type="text" name="bedroom_asigned" class="validate" placeholder="Like Principal">
-                            <label for="bedroom_asigned">Name of bedroom</label>
+                            <label for="bedroom_asigned">Nombre de Habitacion</label>
                         </div>
                         <div class="input-field col s12">
                             <select name="status">

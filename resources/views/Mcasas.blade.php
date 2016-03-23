@@ -30,7 +30,7 @@
                 <a href="#" class="brand-logo">  <p class="grey-text text-darken-2">{{ $property->slogan }}  </p></a>
             </div>
             <div class="card-action">
-                {!! Form::open(['route' => 'vistas.vistapropiedad', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
+                {!! Form::open(['route' => 'vistas.vistapropiedad', 'method' => 'get', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
                 {!! Form::hidden('property_id', $property->id,  ['class' => 'form-control']) !!}
 
                 <center> <button type="submit" class="btn waves-effect waves-light">See More</button></center>

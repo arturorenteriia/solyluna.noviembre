@@ -19,11 +19,11 @@
     //*******Nietos*******************
     var Jalisco = new Array()
     Jalisco[0] = new slctr('-- City --')
-    Jalisco[1] = new slctr("Puerto Vallarta",51)
+    Jalisco[1] = new slctr("Puerto Vallarta",53)
 
     var Nayarit = new Array()
     Nayarit[0] = new slctr('-- City --')
-    Nayarit[1] = new slctr("Bahia de banderas",52)
+    Nayarit[1] = new slctr("Bahía de Banderas",54)
 
     var California = new Array()
     California[0] = new slctr('- -California- -')

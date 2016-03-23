@@ -14,12 +14,18 @@ use solyluna\Service;
 use solyluna\State;
 use solyluna\TextAssited;
 use solyluna\TextContact;
-use solyluna\TextIndependent;
 use solyluna\TextMedical;
+use solyluna\TextIndependent;
 use solyluna\TextMemory;
 use solyluna\TextWelcome;
 
 class NavigationController extends Controller {
+
+    public function marro()
+    {
+	 return view('marro');
+    }
+
 
     public function welcome()
     {
@@ -27,7 +33,7 @@ class NavigationController extends Controller {
         $textW = TextWelcome::all();
         return view('welcome', compact('textW', 'images'));
     }
-
+    
     public function aboutus()
     {
         $textA = About::all();
@@ -58,21 +64,9 @@ class NavigationController extends Controller {
         return view('contacto', compact('textC'));
     }
 
-    public function medicaltourism()
-    {
-        $textM = TextMedical::all();
-        return view('medicaltourism', compact('textM'));
-    }
-
-    public function professionalServices()
-    {
-        $textM = Professional::all();
-        return view('healthcare', compact('textM'));
-    }
-
     public function memoryhouses()
     {
-        $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+        $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms','slogan', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
             ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
             ->where('service_id', '=', 2)
             ->orderBy('name', 'ASC')
@@ -80,38 +74,52 @@ class NavigationController extends Controller {
         return view('Mcasas',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
     }
 
-    public function allresidences()
-    {
-        $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'slogan', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
-            ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
-            ->orderBy('name', 'ASC')
-            ->get();
-        return view('all',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
-    }
-
     public function independenthouses()
     {
-        $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+        $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'slogan', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
             ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
             ->where('service_id', '=', 3)
             ->orderBy('name', 'ASC')
             ->get();
         return view('Icasas',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
     }
+    
+    public function medicaltourism()
+    {
+        $textM = TextMedical::all();
+        return view('medicaltourism', compact('textM'));
+    }
+    
+    public function professionalServices()
+    {
+        $textM = Professional::all();
+        return view('healthcare', compact('textM'));
+    }
 
+    public function allresidences()
+    {
+       $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'slogan', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+            ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
+             ->orderBy('name', 'ASC')
+            ->get();
+        return view('all',compact('properties','service','state', 'city', 'property_type', 'user', 'user_role'));
+    }
+    
     public function search(Request $request)
     {
+   
         $service_id = $request->service;
         $country_id = $request->select;
         $state_id = $request->select2;
         $city_id = $request->select3;
-        $service = Service::findOrFail($service_id);
-        $get_Jalisco = State::findOrFail(51);
-        $get_Nayarit = State::findOrFail(52);
+       
 
         //Si viene el service y la ciudad
         if(!empty($service_id) && !empty($city_id)){
-            if($city_id == '-- City --')
+        $service = Service::findOrFail($service_id);
+        $get_Jalisco = State::findOrFail(51);
+        $get_Nayarit = State::findOrFail(52);
+        if($city_id == '-- City --')
             {
                 if($state_id == 'Jalisco')
                 {
@@ -170,6 +178,9 @@ class NavigationController extends Controller {
         //Si viene service y state
         else if(!empty($service_id) && !empty($country_id) && !empty($state_id))
         {
+        $service = Service::findOrFail($service_id);
+        $get_Jalisco = State::findOrFail(51);
+        $get_Nayarit = State::findOrFail(52);
             if($state_id == 'Jalisco')
             {
                 $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
@@ -208,7 +219,7 @@ class NavigationController extends Controller {
             }
             else
             {
-                $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+            	$properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
                     ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
                     ->where('service_id', '=', $service_id)
                     ->where('country_id', '=', 1)
@@ -224,12 +235,15 @@ class NavigationController extends Controller {
                     return view('searhResorts',compact('properties','service','state', 'city', 'property_type', 'service'));
                 }
             }
+
         }
 
 
         //Si viene solo el service
         else if(!empty($service_id))
         {
+        $service = Service::findOrFail($service_id);
+      
             $properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
                 ->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
                 ->where('service_id', '=', $service_id)
@@ -245,5 +259,10 @@ class NavigationController extends Controller {
                 return view('searhResorts',compact('properties','service','state', 'city', 'property_type', 'service'));
             }
         }
+        else
+        {
+            return redirect()->back();
+        }
     }
+
 }

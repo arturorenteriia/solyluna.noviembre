@@ -25,7 +25,6 @@
                     </div>
                     <div class="col s12 m12 l12">
                         <center><h5>Professional Services</h5></center>
-                        <p class="grey-text text-darken-4" align="center">Please <em><a href="contacto">Contact us</a></em> for further assistance on the Amenities & Services Program.</p>
                     </div>
                 </div>
             </div>
@@ -49,7 +48,7 @@
                     </p>
                 </div>
             </div>
-            <br>
+           
             <div class="row">
                 <div class="col s12 m6 l3">
                     <img class="responsive-img" width="" src="images/Telehealth picture.jpg">
@@ -65,6 +64,7 @@
                     <p class="grey-text text-darken-4" align="justify">
                         {{ $text->text7 }}
                     </p>
+                    <p class="grey-text text-darken-4" align="left">Please <em><a href="contacto">Contact us</a></em> for further assistance on the Amenities & Services Program.</p>
                 </div>
             </div>
         </div>

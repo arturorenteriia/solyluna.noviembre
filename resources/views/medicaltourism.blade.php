@@ -33,7 +33,7 @@
                              </div>
                          </div>
                          <p class="grey-text text-darken-4" align="justify">{{ $text->text1 }}</p>
-                         <p class="grey-text text-darken-4" align="justify">{{ $text->text2 }} We also provide <a href="amenities"><em>Amenities and Services</em></a> to enrich their mind, body and spirit and a professional staff of dedicated healthcare provider that includes nutritionist, nurses, psychologists and physicians with access to hospitals services to insure a healthy stay at ours secured resorts.</p>
+                         <p class="grey-text text-darken-4" align="justify">Ours <a href="assisting"><em>Assisted Living Program</em></a>{{ $text->text2 }} We also provide <a href="amenities"><em>Amenities and Services</em></a> to enrich their mind, body and spirit and a professional staff of dedicated healthcare provider that includes nutritionist, nurses, psychologists and physicians with access to hospitals services to insure a healthy stay at ours secured resorts.</p>
                          <p class="grey-text text-darken-4" align="justify">{{ $text->text3 }}</p>
                      </div>
                       <div class="col s12 m6 l5">
@@ -45,7 +45,7 @@
                       <p class="grey-text text-darken-4" align="justify">{{ $text->text5 }}</p>
                       <p class="grey-text text-darken-4" align="justify">{{ $text->text6 }}</p>
                       <br>
-                      <p class="grey-text text-darken-4" align="justify">Please <a href="medicaltourism"><em>Contact us now </em></a> for further assistance on the Medical Tourism Program for Travelers.</p>
+                      <p class="grey-text text-darken-4" align="justify">Please <a href="contacto"><em>Contact us now </em></a> for <em><a href="contacto"> Reservation </a></em> or further assistance on the Medical Tourism Program for Travelers.</p>
                       </div>
               </div>
           @endforeach

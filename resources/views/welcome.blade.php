@@ -14,7 +14,16 @@
     @include('Partials.script')
 
 </head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-70250809-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <body class="grey lighten-4">
 <!-- it works the same with all jquery version from 1.x to 2.x -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -86,7 +95,7 @@
     <div class="row">
         @include('Partials.serviceProvided')
 
-          <CENTER><h1> SITE UNDER CONSTRUCTION </h1></CENTER>
+          
        <div class="col s12 m12 l9"> <!-- Note that "m8 l9" was added -->
          <div class="row">
             <div class="card-panel col s12 m12 l9 ">
@@ -100,7 +109,7 @@
                             <div class="card-panel white">
                                 <img src="images/anciana.jpg" class="responsive-img" width="100%" alt="">
                             </div>
-                             {{ $text->description }}
+                            <p class="blue-text text-darken-2" align="">{{ $text->description }}</p>
                         </div>
                         <div class="col s12 l4">
                             <p class="flow-text blue-text text-darken-2" align=''>{{ $text->phrase }}</p>
@@ -166,8 +175,8 @@
               <div class="col s12 m12 l3">
                   <div class="card big hoverable">
                       <div class="card-image">
-                          <a href="ProfessionalServices" class="brand-logo"> <img src="images/healthcare-outsourcing-reasons.jpg" height="150"></a>
-                          <a href="ProfessionalServices" class="brand-logo">  <span class="card-title">..Professional Services</span></a>
+                          <a href="ProfessionalServices" class="brand-logo"> <img src="images/your-medical-team.jpg" height="150"></a>
+                          <a href="ProfessionalServices" class="brand-logo">  <span class="card-title">.Professional Services</span></a>
                       </div>
                       <div class="card-content">
                           <a href="ProfessionalServices" class="brand-logo">   <p class="grey-text text-darken-2">Healthcare Professionals like Nurses, Psychologist and Physicians</p></a>
@@ -213,7 +222,7 @@
              <div class="section ">
                 <a href="http://solylunahealthresorts.com/" TARGET="_BLANK"><img src="images/LogoSolyLuna.png" class="responsive-img" width="6%" alt=""></a>
                 <a href="http://www.sanjavier.com.mx/"TARGET="_BLANK" ><img src="images/sanjavier.png" class="responsive-img" width="5%" alt=""></a>
-                <a href="http://www.jalisco.gob.mx/es/jalisco/municipios/puerto-vallarta"TARGET="_BLANK" ><img src="images/pv.jpg" class="responsive-img" width="8%" alt=""></a>
+                <a href="http://magazine.visitpuertovallarta.com/"TARGET="_BLANK" ><img src="images/pv.jpg" class="responsive-img" width="8%" alt=""></a>
                 <a href="http://www.hospitalmedasist.com/?lang=en"TARGET="_BLANK" ><img src="images/medasist.png" class="responsive-img" width="12%" alt=""></a>
                 <a href="http://www.vallartafitness.com.mx/"TARGET="_BLANK" ><img src="images/logoa.png" class="responsive-img" width="12%" alt=""></a>
              </div>
@@ -228,9 +237,9 @@
             <div class="container">
             <b class="black-text text-ligthen-4">© 2015 Copyright Sol & Luna Health Exclusive Resorts</b>
             <a class="black-text text-lighten-3" href="aboutus">| About Us |</a>
-            <a class="black-text text-lighten-3" href="{{ asset('/uploads/Terms.pdf') }}" TARGET="_blank"> Terms |</a>
-            <a class="black-text text-lighten-3" href="#!"> Privacy |</a>
-            <a class="black-text text-lighten-3" href="{{ url('/auth/login') }}"> ADM |</a>
+            <a class="black-text text-lighten-3" href="{{ asset('/uploads/Terms and conditions v 02016 v 1.pdf') }}" TARGET="_blank"> Terms |</a>
+            <a class="black-text text-lighten-3" href="{{ asset('/uploads/Sol y luna Privacy policy v 020115.pdf') }}" TARGET="_blank"> Privacy|</a>
+            
             </div>
           </div>
         </footer>

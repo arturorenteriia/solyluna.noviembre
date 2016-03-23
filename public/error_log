@@ -1,0 +1,226 @@
+[07-Nov-2015 14:59:24 America/Denver] PHP Fatal error:  require(): Failed opening required '/home1/solylun1/public_html/public/../../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/public/index.php on line 21
+[07-Nov-2015 14:59:29 America/Denver] PHP Fatal error:  require(): Failed opening required '/home1/solylun1/public_html/public/../../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/public/index.php on line 21
+[07-Nov-2015 15:00:44 America/Denver] PHP Fatal error:  require(): Failed opening required '/home1/solylun1/public_html/public/../../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/public/index.php on line 21
+[07-Nov-2015 15:01:16 America/Denver] PHP Fatal error:  require(): Failed opening required '/home1/solylun1/public_html/public/../../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/public/index.php on line 21
+[07-Nov-2015 15:04:23 America/Denver] PHP Fatal error:  require(): Failed opening required '/home1/solylun1/public_html/public/../../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/public/index.php on line 21
+[10-Nov-2015 20:22:27] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[10-Nov-2015 20:22:27] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:22:27] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:37:49] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[10-Nov-2015 20:37:49] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:37:49] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:42:09] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[10-Nov-2015 20:42:09] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:42:09] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:45:12] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[10-Nov-2015 20:45:12] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:45:12] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:51:19] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[10-Nov-2015 20:51:19] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 20:51:19] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 21:10:41] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[10-Nov-2015 21:10:41] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[10-Nov-2015 21:10:41] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 04:18:14] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 04:18:14] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 04:18:14] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 14:53:01] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 14:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 14:53:01] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 14:54:35] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 14:54:35] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 14:54:35] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:34:03] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 15:34:03] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:34:03] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:34:19] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 15:34:19] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:34:19] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:37:33] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 15:37:33] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:37:33] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:53:19] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 15:53:19] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 15:53:19] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 17:06:02] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 17:06:02] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 17:06:02] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 17:06:02] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 17:06:02] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 17:06:02] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 17:06:04] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 17:46:49] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 17:46:49] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 17:46:49] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 19:37:50] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 19:37:50] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 19:37:50] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 19:47:04] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 19:47:04] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 19:47:04] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:00:33] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:00:33] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:00:33] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:48:23] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:48:23] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:48:23] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:48:58] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:48:58] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:48:58] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:54:50] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:54:50] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:54:50] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:56:10] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:56:10] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:56:10] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:59:33] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:59:33] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:59:33] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:59:36] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:59:36] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:59:36] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:59:38] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 20:59:38] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 20:59:38] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:01:00] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 21:01:00] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:01:00] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:01:14] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 21:01:14] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:01:14] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:14:27] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 21:14:27] PHP Notice:  Use of undefined constant __DIR__ - assumed '__DIR__' in /home1/solylun1/public_html/index.php on line 21
+[11-Nov-2015 21:14:27] PHP Warning:  require(__DIR__/../sistema/bootstrap/autoload.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/solylun1/public_html/index.php on line 21
+[11-Nov-2015 21:14:27] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '__DIR__/../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/index.php on line 21
+[11-Nov-2015 21:20:02] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 21:20:02] PHP Notice:  Use of undefined constant __DIR__ - assumed '__DIR__' in /home1/solylun1/public_html/index.php on line 21
+[11-Nov-2015 21:20:02] PHP Warning:  require(__DIR__/../sistema/bootstrap/autoload.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/solylun1/public_html/index.php on line 21
+[11-Nov-2015 21:20:02] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '__DIR__/../sistema/bootstrap/autoload.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/solylun1/public_html/index.php on line 21
+[11-Nov-2015 21:35:45] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 21:35:45] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:35:45] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:35:47] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 21:35:47] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 21:35:47] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:03] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:21:03] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:03] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:56] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:21:56] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:56] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:57] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:21:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:57] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:58] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:21:58] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:58] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:58] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:21:58] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:58] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:59] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:21:59] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:21:59] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:02] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:31:02] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:02] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:43] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:31:43] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:43] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:44] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:31:44] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:44] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:45] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:31:45] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:45] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:46] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:31:46] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:31:46] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:12] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:33:12] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:12] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:14] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:33:14] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:14] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:40] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:33:40] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:40] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:50] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:33:50] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:33:50] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:34:30] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:34:30] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:34:30] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:34:31] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:34:31] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:34:31] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:34:32] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:34:32] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:34:32] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:44:16] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[11-Nov-2015 22:44:16] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[11-Nov-2015 22:44:16] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[12-Nov-2015 22:57:28] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 22:57:28] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:28] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:33] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 22:57:33] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:33] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:34] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 22:57:34] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:34] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:35] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 22:57:35] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:35] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:36] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 22:57:36] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:36] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:37] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 22:57:37] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 22:57:37] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[12-Nov-2015 23:01:03] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[12-Nov-2015 23:01:03] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 52
+[12-Nov-2015 23:01:03] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 52
+[13-Nov-2015 08:04:04] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[13-Nov-2015 08:04:04] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[13-Nov-2015 08:04:04] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[13-Nov-2015 10:42:47] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[13-Nov-2015 10:42:47] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[13-Nov-2015 10:42:47] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[13-Nov-2015 13:20:39] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/php/54/usr/lib64/php/modules/imagick.so' - /usr/php/54/usr/lib64/php/modules/imagick.so: undefined symbol: zend_new_interned_string in Unknown on line 0
+[13-Nov-2015 13:20:39] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home1/solylun1/public_html/index.php on line 51
+[13-Nov-2015 13:20:39] PHP Parse error:  syntax error, unexpected T_STRING in /home1/solylun1/public_html/index.php on line 51
+[13-Nov-2015 17:25:53 America/Mexico_City] PHP Fatal error:  Call to undefined method Symfony\Component\HttpFoundation\Session\Session::flash() in /home1/solylun1/sistema/app/Http/Controllers/EditIndependent/EditIndependentTextController.php on line 105
+[13-Nov-2015 17:33:05 America/Mexico_City] PHP Fatal error:  Call to undefined method Symfony\Component\HttpFoundation\Session\Session::flash() in /home1/solylun1/sistema/app/Http/Controllers/EditIndependent/EditIndependentTextController.php on line 105
+[14-Nov-2015 20:06:47 America/Mexico_City] PHP Parse error:  syntax error, unexpected '$file' (T_VARIABLE) in /home1/solylun1/sistema/storage/framework/views/d427152ce88b4454cf927180352c8f66 on line 54
+[14-Nov-2015 20:07:32 America/Mexico_City] PHP Parse error:  syntax error, unexpected '$file' (T_VARIABLE) in /home1/solylun1/sistema/storage/framework/views/d427152ce88b4454cf927180352c8f66 on line 54
+[14-Nov-2015 20:07:35 America/Mexico_City] PHP Parse error:  syntax error, unexpected '$file' (T_VARIABLE) in /home1/solylun1/sistema/storage/framework/views/d427152ce88b4454cf927180352c8f66 on line 54
+[14-Nov-2015 20:37:46 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'admin' (T_STRING) in /home1/solylun1/sistema/app/Http/Controllers/Property/PropertiesController.php on line 143
+[14-Nov-2015 20:38:02 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'admin' (T_STRING) in /home1/solylun1/sistema/app/Http/Controllers/Property/PropertiesController.php on line 143
+[14-Nov-2015 20:38:18 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'admin' (T_STRING) in /home1/solylun1/sistema/app/Http/Controllers/Property/PropertiesController.php on line 143
+[14-Nov-2015 20:39:30 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'admin' (T_STRING) in /home1/solylun1/sistema/app/Http/Controllers/Property/PropertiesController.php on line 143
+[15-Nov-2015 12:00:07 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:00:07 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:00:20 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:00:20 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:00:58 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:00:58 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:04 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:04 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:05 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:05 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:06 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:06 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:11 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:11 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:13 America/Denver] PHP Notice:  Undefined variable: app in /home1/solylun1/public_html/index.php on line 23
+[15-Nov-2015 12:01:13 America/Denver] PHP Fatal error:  Call to a member function bind() on a non-object in /home1/solylun1/public_html/index.php on line 23
+[16-Nov-2015 16:06:30 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home1/solylun1/sistema/app/Http/Controllers/Property/PropertiesController.php on line 87
+[16-Nov-2015 16:06:36 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home1/solylun1/sistema/app/Http/Controllers/Property/PropertiesController.php on line 87
+[16-Nov-2015 17:27:27 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Contact' not found in /home1/solylun1/sistema/app/Http/Controllers/MailController.php on line 29
+[22-Nov-2015 16:46:39 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\Session' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 93
+[24-Nov-2015 20:12:26 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\Service' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 81
+[26-Nov-2015 19:22:18 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\State' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 85
+[24-Dec-2015 18:42:04 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\Professional' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 81
+[24-Dec-2015 18:42:08 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\Professional' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 81
+[24-Dec-2015 19:06:39 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\Professional' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 81
+[03-Jan-2016 15:36:52 America/Mexico_City] PHP Fatal error:  Class 'solyluna\Http\Controllers\About' not found in /home1/solylun1/sistema/app/Http/Controllers/NavigationController.php on line 38

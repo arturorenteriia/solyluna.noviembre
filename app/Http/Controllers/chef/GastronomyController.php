@@ -89,7 +89,7 @@ class GastronomyController extends Controller {
 
 			if (Input::hasFile('image')) {
 				$fileName = $file->getClientOriginalName();
-				$path = public_path() . '\uploads\\';
+				$path = base_path('../public_html/uploads');
 
 				$chef = new Gastronomy($request->all());
 				$chef->image = $fileName;

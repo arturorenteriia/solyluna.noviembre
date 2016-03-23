@@ -1,4 +1,4 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
     <a href="#" class="brand-logo center">ACTUALIZAR A CHEF</a>
@@ -14,7 +14,7 @@
                 @foreach($datos as $campo)
                 {!! Form::open(['route' => ['admin.chef.update', $campo], 'method' => 'PUT', 'files' => 'true', 'class' => 'col s12' ]) !!}
                 <div class="form-group">
-                    {!! Form::text('property_id', $id,  ['class' => 'form-control']) !!}
+                    {!! Form::hidden('property_id', $id,  ['class' => 'form-control']) !!}
                 </div>
                 <div class="input-field">
                     {!!Form::label('nombre', 'Nombre del chef')!!}

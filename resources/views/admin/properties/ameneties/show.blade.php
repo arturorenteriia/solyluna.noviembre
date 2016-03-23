@@ -1,7 +1,7 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">Amenitis</a>
+    <a href="#" class="brand-logo center">Amenitis/Comodidades</a>
 @endsection
 
 @section('add')
@@ -15,10 +15,10 @@
                     </div>
                     <div class="card-content">
 
-                        <li><b>Bedrooms: </b> {{ $property->num_bedrooms }}</li>
-                        <li><b>Services: </b> {{ $property->service->service }}</li>
-                        <li><b>Available rooms: </b></li>
-                        <li><b>Type: </b> {{ $property->property_type->property_type }}</li>
+                        <li><b>Habitaciones: </b> {{ $property->num_bedrooms }}</li>
+                        <li><b>Servicio: </b> {{ $property->service->service }}</li>
+                        <li><b>Habitaciones Disponibles: </b></li>
+                        <li><b>Tipo: </b> {{ $property->property_type->property_type }}</li>
                     </div>
                     <div class="card-action">
                         <a href="{{ route('admin.ameneties.edit',$property) }}" class="right-align">Edit Ameneties</a>

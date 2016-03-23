@@ -1,7 +1,7 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">Bedrooms</a>
+    <a href="#" class="brand-logo center">Habitaciones</a>
 @endsection
 
 @section('add')
@@ -15,12 +15,12 @@
                         </div>
                         <div class="card-content">
                             @if($house->status == 0)
-                                <li><p class="red-text">Not available</p></li>
+                                <li><p class="red-text">No Disponible</p></li>
                             @else
-                                <li><p class="green-text accent-4">Available</p></li>
+                                <li><p class="green-text accent-4">Disponible</p></li>
                             @endif
-                            <li><b>Beds: </b> {{ $house->beds }}</li>
-                            <li><b>Size: </b> {{ $house->size_metrics }}</li>
+                            <li><b>Camas: </b> {{ $house->beds }}</li>
+                            <li><b>Medidas: </b> {{ $house->size_metrics }}</li>
                             <li><p>{{ $house->description }}</li>
                         </div>
                         <div class="card-action">

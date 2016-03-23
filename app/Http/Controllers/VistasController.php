@@ -75,7 +75,7 @@ class VistasController extends Controller {
 		$chef = Gastronomy::select('nombre','apellidos','acerca','docencia','image')
 			->where('property_id', '=', $property_id)
 			->get();
-		$files = File::select('id', 'menu','drinks')
+		$files = File::select('menu','drinks')
 			->where ('property_id','=',$property_id)
 			->get();
 			return view('gastronomy',compact('properties','property_id','chef','files'));
@@ -100,7 +100,7 @@ class VistasController extends Controller {
 	 */
 	public function casasassisting()
 	{
-		$properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
+		$properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description','slogan', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
 			->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
 			->orderBy('name', 'ASC')
 			->get();

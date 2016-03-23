@@ -5,6 +5,12 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 
 class VerifyCsrfToken extends BaseVerifier {
 
+	protected $except = [
+		'search',
+		//'admin/*',
+		//'/photo/index'
+	];
+
 	/**
 	 * Handle an incoming request.
 	 *

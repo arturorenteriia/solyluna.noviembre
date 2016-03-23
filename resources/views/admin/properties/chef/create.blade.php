@@ -1,20 +1,20 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">ADD A CHEF</a>
+    <a href="#" class="brand-logo center">Agregar Chef</a>
 @endsection
 
 @section('add')
         <div class="row">
             <div class="col s12 m8 l6">
                 <div class="col s12 z-depth-1">
-                    <h5>New Chef</h5>
+                    <h5>Agregar Chef</h5>
 
                     <div class="divider"></div>
                     @include('admin.users.partial.messages')
                     {!! Form::open(['route' => 'admin.properties.chef.store', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12' ]) !!}
                     <div class="form-group">
-                        {!! Form::text('property_id', $id_property,  ['class' => 'form-control']) !!}
+                        {!! Form::hidden('property_id', $id_property,  ['class' => 'form-control']) !!}
                     </div>
                     <div class="input-field">
                     {!!Form::label('nombre', 'Nombre del chef')!!}
@@ -36,7 +36,7 @@
                         {!!Form::file('image')!!}
                     <br>
                     <br>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Add Chef</button>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Agregar Chef</button>
                     {!! Form::close() !!}
 
 

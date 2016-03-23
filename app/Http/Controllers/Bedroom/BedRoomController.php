@@ -67,7 +67,7 @@ class BedRoomController extends Controller {
 		if(Input::hasFile('image'))
 		{
 			$fileName = $file->getClientOriginalName();
-			$path = public_path().'\uploads\\';
+			$path = base_path('../public_html/uploads');
 
 			$bedroom = new Bedroom($request->all());
 			$bedroom->image = $fileName;
@@ -133,7 +133,7 @@ class BedRoomController extends Controller {
 		if(Input::hasFile('image'))
 		{
 			$fileName = $file->getClientOriginalName();
-			$path = public_path().'\uploads\\';
+			$path = public_path().'/uploads/';
 
 			if($file->move($path, $fileName))
 			{

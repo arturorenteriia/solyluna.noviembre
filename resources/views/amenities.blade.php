@@ -28,11 +28,12 @@
                     </div>
                 </div>
             </div>
+          
             <div class="row">
                 <div class="col s12">
                     <div class="col s12 m6 l6">
                         <br>
-                        <h5>Your Studio Residence.</h5>
+                        <h5 class="blue-text text-darken-2">Your Studio Residence.</h5>
                         <div class="divider"></div>
                         <li align="justify">Fully furnished, professionally decorated</li>
                         <li align="justify">Spacious bathroom with shower & safety grab-bars</li>
@@ -48,7 +49,7 @@
                     </div>
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Housekeeping & Laundry</h5>
+                        <h5 class="blue-text text-darken-2">Housekeeping & Laundry</h5>
                         <div class="divider"></div>
                         <li>Daily maid services</li>
                         <li>Linen & towels services</li>
@@ -58,7 +59,7 @@
                 <div class="col s12">
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Meal Services</h5>
+                        <h5 class="blue-text text-darken-2">Meal Services</h5>
                         <div class="divider"></div>
                         <li>Breakfast, lunch and dinner</li>
                         <li>Continental breakfast for those that like to sleep late</li>
@@ -75,7 +76,7 @@
                     </div>
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Social Activities</h5>
+                        <h5 class="blue-text text-darken-2">Social Activities</h5>
                         <div class="divider"></div>
                         <li>Access to friends and family using face-to-face communications</li>
                         <li>Diversified social, cultural and recreational programing</li>
@@ -87,7 +88,7 @@
                 <div class="col s12">
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Health Related Services</h5>
+                        <h5 class="blue-text text-darken-2">Health Related Services</h5>
                         <div class="divider"></div>
                         <li align="justify">Assistance with dressing, bathing, feeding, grooming, ambulation and personal care.</li>
                         <li align="justify">Supervision of medications</li>
@@ -111,7 +112,7 @@
                     </div>
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Transportation</h5>
+                        <h5 class="blue-text text-darken-2">Transportation</h5>
                         <div class="divider"></div>
                         <li>Schedule transportation from and to medical services providers</li>
                         <li>Regularly scheduled group transportation to shopping & outing</li>
@@ -120,7 +121,7 @@
                 <div class="col s12">
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Security & Maintenance</h5>
+                        <h5 class="blue-text text-darken-2">Security & Maintenance</h5>
                         <div class="divider"></div>
                         <li>24/7 On-call professional security services</li>
                         <li>Security cameras on site</li>
@@ -137,7 +138,7 @@
                     </div>
                     <div class="col s12 m12 l6">
                         <br>
-                        <h5>Utilities</h5>
+                        <h5 class="blue-text text-darken-2">Utilities</h5>
                         <div class="divider"></div>
                         <li>Electric, water, heat and air-condition</li>
                         <li>Local and international calls (US & Canada) from the resorts phones.</li>

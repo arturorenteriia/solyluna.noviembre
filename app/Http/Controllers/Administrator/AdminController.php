@@ -21,7 +21,7 @@ class AdminController extends Controller {
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
 		//return dd($user);
-		return view('admin.control.admin',compact('user_role'));
+		return view('admin.panel.admin',compact('user_role'));
 	}
 
 	/**

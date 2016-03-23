@@ -344,7 +344,7 @@
         <div class="card-panel">
           <h5 class="grey-text text-darken-4">{{ $property->name }}</h5>
           <div class="divider"></div>
-          <p class="grey-text text-darken-2">{{ $property->description }} </p>
+          <p class="grey-text text-darken-4">{{ $property->description }} </p>
 
 
         </div>
@@ -357,7 +357,7 @@
           <li class="collection-item avatar hoverable">
             <img src="images/casacoral.jpg" alt="" class="circle">
             <span class="title"><b>Property Status</b></span>
-              @if($property->status == '1')
+             @if($property->status == '1')
              <p class="green-text">Available </p>
               @else
               <p class="red-text">Not available </p>
@@ -433,7 +433,8 @@
                 <p class="grey-text text-darken-2">Delight your palate </p>
               </div>
               <div class="card-action">
-                  {!! Form::open(['route' => 'vista.gastronomy','name'=>"form1", 'method' => 'POST', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
+                  {!! Form::open(['route' => 'vista.gastronomy','name'=>"form1", 'method' => 'get', 'class' => 'col s12 m12 s3' ]) !!}
+                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   {!! Form::hidden('property_id', $property->id,  ['class' => 'form-control']) !!}
 
 
@@ -455,7 +456,7 @@
               </div>
               <div class="card-action">
                   @foreach($files as $act)
-                <a href="{{ asset('activities') }}/{{ $act->activities }}">See more...</a>
+                <a href="{{ asset('activities') }}/{{ $act->activities }}" TARGET="_blank">See more...</a>
                       @endforeach
               </div>
             </div>

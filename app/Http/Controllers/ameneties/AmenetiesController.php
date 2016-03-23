@@ -66,7 +66,7 @@ class AmenetiesController extends Controller {
         if(Input::hasFile('menu'))
         {
             $fileName = $file->getClientOriginalName();
-            $path = public_path().'\menus\\';
+            $path = public_path().'/menus/';
 
 
             $files= new File($request->all());
@@ -156,7 +156,7 @@ class AmenetiesController extends Controller {
                 if(Input::hasFile('menu'))
                 {
                     $fileName = $file->getClientOriginalName();
-                    $path = public_path().'\menus\\';
+                  $path = base_path('../public_html/menus');
 
                     if($file->move($path, $fileName))
                     {
@@ -178,7 +178,7 @@ class AmenetiesController extends Controller {
                 if(Input::hasFile('drinks'))
                 {
                     $fileName = $file->getClientOriginalName();
-                    $path = public_path().'\drinks\\';
+                    $path = base_path('../public_html/drinks');
 
                     if($file->move($path, $fileName))
                     {
@@ -200,7 +200,7 @@ class AmenetiesController extends Controller {
                 if(Input::hasFile('activities'))
                 {
                     $fileName = $file->getClientOriginalName();
-                    $path = public_path().'\activities\\';
+                    $path = base_path('../public_html/activities');
 
                     if($file->move($path, $fileName))
                     {

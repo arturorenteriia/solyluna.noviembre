@@ -36,7 +36,7 @@
                   <p class="grey-text text-darken-4" align="justify">{{ $text->text3 }}</p>
                   <p class="grey-text text-darken-4" align="justify">{{ $text->text4 }} For detail information on services provided, please visit the <a href="amenities"><em>Amenities and Services page.</em></a></p>
                   <p class="grey-text text-darken-4" align="justify">{{ $text->text5 }}</p>
-                  <p class="grey-text text-darken-4" align="justify">Please <em><a href="contacto">Contact us</a></em> for further assistance on the Assisted Living Program.</p>
+                  <p class="grey-text text-darken-4" align="justify">Please <em><a href="contacto">Contact us</a></em> for <em><a href="contacto"> Reservation </a></em> or further assistance on the Assisted Living Program.</p>
                   <br>
                   <center><span><a class="btn" role="button" href="casasassisting"><i class="material-icons"></i>TO LOCATE AN ASSISTED LIVING RESORTS</a></span></center>
               </div>

@@ -29,7 +29,7 @@ class MailController extends Controller {
             $contacts = new Contact($request->all());
             $contacts->full_name = $request->first_name." ".$request->last_name;
             $contacts->save();
-            Session::flash('message', $contacts->full_name." El correo se envio correctamente, y nosotros nos pondremos en contacto.");
+            Session::flash('message', $contacts->full_name." Thanks for contacting us, one of ours Health Advisor will be contacting you soon!");
         });
 
         return $redirector->back();

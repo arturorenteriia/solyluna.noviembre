@@ -5,13 +5,12 @@
             <div class="caption center-align">
                 <h3>Welcome to paradise</h3>
 
-                <h5>We Care, We Listen.</h5>
+                <h5 class="light grey-text text-lighten-3"><em>We Care We Listen.</em></h5>
 
             </div>
         </li>
         @foreach($images as $image)
             <li>
-                {!! Form::hidden('property_id', $image->id,  ['class' => 'validate']) !!}
                 <a href="allresidences" class="brand-logo " ><img u="image" src="uploads/{{ $image->image }}" /></a>
                 <div class="caption center-align">
                     <h3>{{ $image->name }}</h3>
@@ -19,6 +18,5 @@
                 </div>
             </li>
         @endforeach
-
     </ul>
 </div>

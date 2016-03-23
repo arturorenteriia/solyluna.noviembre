@@ -55,7 +55,7 @@ class EditMemoryTextController extends Controller {
 		$textMemory = new TextMemory($request->all());
 		$textMemory->save();
 		Session::flash('message', 'Se guardo el texto correctamento');
-		return view('admin.control.admin', compact('user_role'));
+		return view('admin.panel.admin', compact('user_role'));
 	}
 
 	/**
@@ -100,7 +100,7 @@ class EditMemoryTextController extends Controller {
 		$text->fill(\Request::all());
 		$text->save();
 		Session::flash('message', 'El texto fue editado con exito');
-		return view('admin.control.admin',	 compact('user_role'));
+		return view('admin.panel.admin',	 compact('user_role'));
 	}
 
 	/**

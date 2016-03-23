@@ -1,0 +1,8 @@
+
+RewriteEngine on
+# Use PHP5.4 as default
+AddHandler application/x-httpd-php54 .php
+RewriteCond %{HTTP_HOST} ^control\.solylunahealthresorts\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.control\.solylunahealthresorts\.com$
+RewriteRule ^/?$ "http\:\/\/solylunahealthresorts\.com\/admin\/control" [R=301,L]
+

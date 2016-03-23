@@ -1,4 +1,4 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
     <a href="#" class="brand-logo center">Edith text of Independent</a>

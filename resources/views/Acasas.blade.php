@@ -4,7 +4,7 @@
   <div class="row">
       <div class="col s12 m12 l12 ">
         <div class="card-panel blue">
-        <center><span class="white-text" ><h5>ASSISTING LIVING</h5>
+        <center><span class="white-text" ><h5>Assisted Living</h5>
           </span></center>
           
         </div>
@@ -21,27 +21,27 @@
 
      @foreach($properties as $property)
          @if($property->service_id == 1)
-        <div class="col s12 m12 l3">
-            <div class="card small hoverable">
-              <div class="card-image"  alt="">
-                  <a href="#" class="brand-logo"> <img src="{{ asset('uploads') }}/{{ $property->image }}" height="180px"></a>
-                  <a href="#" class="brand-logo"><span class="card-title ">{{ $property->name }}</span></a>
-              </div>
-              <div class="card-content">
-                  <a href="#" class="brand-logo">  <p class="grey-text text-darken-2">{{ $property->slogan }}  </p></a>
-              </div>
-              <div class="card-action">
-                  {!! Form::open(['route' => 'vistas.vistapropiedad', 'method' => 'POST', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
-                  {!! Form::hidden('property_id', $property->id,  ['class' => 'form-control']) !!}
+       <div class="col s12 m12 l3">
+                    <div class="card small hoverable">
+                        <div class="card-image"  alt="">
+                            <a href="#" class="brand-logo"> <img src="{{ asset('uploads') }}/{{ $property->image }}" height="180px"></a>
+                            <a href="#" class="brand-logo"><span class="card-title ">{{ $property->name }}</span></a>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="brand-logo">  <p class="grey-text text-darken-4">{{ $property->slogan }}</p></a>
+                        </div>
+                        <div class="card-action">
+                            {!! Form::open(['route' => 'vistas.vistapropiedad', 'method' => 'get', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
+                            {!! Form::hidden('property_id', $property->id,  ['class' => 'form-control']) !!}
 
-                  <center> <button type="submit" class="btn waves-effect waves-light">See More</button></center>
+                            <center> <button type="submit" class="btn waves-effect waves-light">See More</button></center>
 
-                  {!! Form::close() !!}
+                            {!! Form::close() !!}
 
 
-              </div>
-            </div>
-          </div>
+                        </div>
+                    </div>
+                </div>
          @endif
      @endforeach
 

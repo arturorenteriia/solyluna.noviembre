@@ -14,20 +14,20 @@
 
 	Route::get('/', 'NavigationController@welcome');
 
-	Route::post('vistas', [
+	Route::get('vistas', [
 			'as' => 'vistas.vistapropiedad',
 			'uses'=> 'VistasController@vistapropiedad'
 		]
 	);
 
-	Route::post('vista', [
+	Route::get('vista', [
 			'as' => 'vista.gastronomy',
 			'uses'=> 'VistasController@gastronomy'
 		]
 	);
 
 	Route::get('gastronomy', 'GastronomyController@addchef');
-	Route::get('casasassisting', 'vistasController@casasassisting');
+	Route::get('casasassisting', 'VistasController@casasassisting');
 	Route::get('gastronomy', 'vistasController@gastronomy');
 
 
@@ -53,7 +53,7 @@
 	//navegacion
 	Route::get('aboutus', 'NavigationController@aboutus');
 	Route::get('welcome', 'NavigationController@welcome');
-	Route::get('back', 'NavigationController@back');
+	Route::get('allresidences', 'NavigationController@allresidences');
 	Route::get('independent', 'NavigationController@independent');
 	Route::get('assisting', 'NavigationController@assisted');
 	Route::get('medicaltourism', 'NavigationController@medicaltourism');
@@ -62,14 +62,13 @@
 	Route::get('contacto', 'NavigationController@contactUs');
 	Route::get('change', ['as' => 'change', 'uses' => 'PasswordsController@change'] );
 	Route::get('houses', 'NavigationController@houses');
-	Route::get('menu', 'NavigationController@menu');
 	Route::post('vista2', [
 		'as' => 'vista2.vistapropiedad',
 		'uses'=> 'VistasController@vistapropiedad'
 	]);
+	
 	//Buscador
-	Route::post('serch', ['as' => 'search', 'uses' => 'NavigationController@search'] );
-
+	Route::get('search', ['as' => 'search', 'uses' => 'NavigationController@search'] );
 
 	Route::get('memoryhouses', 'NavigationController@memoryhouses');
 	Route::get('independenthouses', 'NavigationController@independenthouses');
@@ -80,12 +79,17 @@
 	Route::get('Icasas', function () {
 		return view('Icasas');
 	});
+
+	Route::get('privacy', function () {
+		return view('privacy');
+	});
 	Route::get('casasayulita', function () {
 		return view('casasayulita');
 	});
 	Route::get('tecnologia', function () {
 		return view('tecnologia');
 	});
+
 	Route::get('amenities', function () {
 		return view('amenities');
 	});
@@ -107,7 +111,6 @@
 	Route::get('residenciaamapa', function () {
 		return view('residenciaamapa');
 	});
-	Route::get('allresidences', 'NavigationController@allresidences');
 	Route::get('Acasas', function () {
 		return view('Acasas');
 	});
@@ -120,6 +123,7 @@
 	Route::get('makeyourmenu', function () {
 		return view('makeyourmenu');
 	});
+
 	Route::get('formulario', [
 		'as' => 'form_path',
 	]);
@@ -141,7 +145,7 @@
 	});
 
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Administrator'], function (){
-		Route::resource('control', 'AdminController');
+		Route::resource('panel', 'AdminController');
 	});
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'ameneties'], function (){
 		Route::resource('ameneties', 'AmenetiesController');
@@ -156,11 +160,11 @@
 		Route::resource('images', 'ImagesController');
 	});
 
-	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Chef'], function (){
+	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'chef'], function (){
 		Route::resource('properties.chef', 'GastronomyController');
 	});
 
-	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Chef'], function (){
+	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'chef'], function (){
 		Route::resource('chef', 'GastronomyController');
 	});
 
@@ -179,15 +183,15 @@
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMemory'], function (){
 		Route::resource('text.memory', 'EditMemoryTextController');
 	});
-
+	
+	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'About'], function (){
+		Route::resource('text.about', 'EditAboutController');
+	});
+	
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditMedical'], function (){
 		Route::resource('text.medical', 'EditMedicalTextController');
 	});
-
-		Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'About'], function (){
-			Route::resource('text.about', 'EditAboutController');
-		});
-
+	
 	Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'EditProfessional'], function (){
 		Route::resource('text.professional', 'EditProfessionalTextController');
 	});

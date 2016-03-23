@@ -56,7 +56,7 @@ class EditContactController extends Controller {
 		$textContact = new TextContact($request->all());
 		$textContact->save();
 		Session::flash('message', 'Se guardo el texto correctamento');
-		return view('admin.control.admin', compact('user_role'));
+		return view('admin.panel.admin', compact('user_role'));
 	}
 
 	/**
@@ -101,7 +101,7 @@ class EditContactController extends Controller {
 		$text->fill($request->all());
 		$text->save();
 		Session::flash('message', 'El texto fue editado con exito');
-		return view('admin.control.admin',	 compact('user_role'));
+		return view('admin.panel.admin',	 compact('user_role'));
 	}
 
 	/**

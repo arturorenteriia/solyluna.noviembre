@@ -66,15 +66,18 @@ class PropertiesController extends Controller {
 			$fileName = $file->getClientOriginalName();
 			$properties = new Property($request->all());
 			$properties->image = $fileName;
-			if($file)
+			
+				$path = base_path('../public_html/uploads');
+
+			if($file->move($path, $fileName))
 			{
-				\Storage::disk('local')->put($fileName,  \File::get($file));
 				$properties->save();
 				Session::flash('message', "La casa se agrego correctamente");
 				return $redirect->route('admin.properties.show');
 			}
-		}
+		
 	}
+}
 
 	/**
 	 * Display the specified resource.
@@ -86,7 +89,6 @@ class PropertiesController extends Controller {
 	{
 		$user_id = Auth::user()->id;
 		$user_role = User::findOrfail($user_id);
-
 		$properties = Property::select('id', 'name', 'image', 'status', 'num_bedrooms', 'description', 'country_id', 'service_id', 'state_id', 'city_id', 'property_type_id', 'user_id')
 			->with('country')->with('service')->with('state')->with('city')->with('property_type')->with('user')
 			->orderBy('name', 'ASC')
@@ -132,7 +134,7 @@ class PropertiesController extends Controller {
 		if(Input::hasFile('image'))
 		{
 			$fileName = $file->getClientOriginalName();
-			$path = public_path().'\uploads\\';
+			 $path = base_path('../public_html/uploads');
 
 			if($file->move($path, $fileName))
 			{

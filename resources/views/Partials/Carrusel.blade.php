@@ -15,7 +15,7 @@
                 Welcome to paradise
             </div>
             <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 500px; padding: 5px; text-align: left; line-height: 36px; font-size: 30px; color: #FFFFFF;">
-                <h3>  <font face="Monotype Corsiva"> We care, We Listen </font></h3>
+                <h3>  <font face="Monotype Corsiva"> We Care We Listen </font></h3>
             </div>
             {!! Form::open(['route' => 'vista2.vistapropiedad','name'=>"form1", 'method' => 'POST', 'files' => 'true', 'class' => 'col s12 m12 s3' ]) !!}
         </div>

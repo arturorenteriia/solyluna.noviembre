@@ -1,7 +1,7 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">Edith text of welcome</a>
+    <a href="#" class="brand-logo center">Edith text of Welcome</a>
 @endsection
 
 @section('add')

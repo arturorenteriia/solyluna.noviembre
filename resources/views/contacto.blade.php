@@ -32,6 +32,7 @@
                     <option value="Independent Living">Independent Living</option>
                     <option value="Assisted Living">Assisted Living</option>
                     <option value="Memory Care">Memory Care</option>
+                    <option value="Reservations">Reservations</option>
                     <option value="Other">Other</option>
                 </select>
             </div>
@@ -68,7 +69,7 @@
                 <label for="icon_prefix">Telephone</label>
           </div>
           <div class="input-field col s12 m6 l4">
-              <input type="date" class="datepicker" placeholder="">
+              <input type="date" class="datepicker" placeholder="Click for date selection">
               <label for="icon_prefix">Best day and time for contacting</label>
           </div>
           <div class="input-field col s6 m6 l2">

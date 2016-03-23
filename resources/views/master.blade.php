@@ -78,7 +78,7 @@
             <a class="black-text text-lighten-3" href="aboutus">|About Us|</a>
              <a class="black-text text-lighten-3" href="{{ asset('/uploads/Terms.pdf') }}" TARGET="_blank"> Terms |</a>
             <a class="black-text text-lighten-3" href="#!">Privacy|</a>
-                <a class="black-text text-lighten-3" href="{{ url('/auth/login') }}"> ADM |</a>
+
 
             </div>
 

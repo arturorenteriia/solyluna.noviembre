@@ -1,7 +1,7 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">Bedroom: {{ $bedrooms->bedroom_asigned }}</a>
+    <a href="#" class="brand-logo center">Habitacion: {{ $bedrooms->bedroom_asigned }}</a>
 @endsection
 
 @section('add')
@@ -19,15 +19,15 @@
                     <div class="input-field col s12">
                         <select name="status">
                             @if($bedrooms->status == 0)
-                            <option value="0">Not available</option>
-                            <option value="1">Available </option>
+                            <option value="0">No disponible</option>
+                            <option value="1">Disponible</option>
                             @else
-                            <option value="1">Available </option>
-                            <option value="0">Not available</option>
+                            <option value="1">Disponible</option>
+                            <option value="0">No disponible</option>
                             @endif
 
                         </select>
-                        <label for="status">Status</label>
+                        <label for="status">Estatus</label>
                     </div>
                     <div class="input-field col s12">
                         <select name="beds">
@@ -36,20 +36,17 @@
                             <option value="2">2 </option>
                             <option value="3">3 </option>
                             <option value="4">4 </option>
-                            <option value="5">5 </option>
-                            <option value="6">6 </option>
-                            <option value="7">7 </option>
-                            <option value="8">8 </option>
+                            
                         </select>
-                        <label for="beds">Beds</label>
+                        <label for="beds">Camas</label>
                     </div>
                     <div class="input-field col s12">
                         <input type="text" name="size_metrics" class="validate" value="{{ $bedrooms->size_metrics }}" placeholder="Like 10x15">
-                        <label for="size_metrics">Measures</label>
+                        <label for="size_metrics">Medidas</label>
                     </div>
                     <div class="input-field col s12">
                         <textarea id="textarea1" class="materialize-textarea" placeholder="" name="description">{{ $bedrooms->description }}</textarea>
-                        <label for="description">Description</label>
+                        <label for="description">Descripción</label>
                     </div>
                     <div class="form-group">
                         {!! Form::file('image', ['class' => 'form-control']) !!}

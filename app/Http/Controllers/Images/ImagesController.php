@@ -62,7 +62,7 @@ class ImagesController extends Controller {
 			$fileName7 = $file7->getClientOriginalName();
 			$fileName8 = $file8->getClientOriginalName();
 			$fileName9 = $file9->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 
 			$picture = new Picture($request->all());
 			$picture->image1 = $fileName1;
@@ -144,7 +144,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image1'))
 		{
 			$fileName1 = $file1->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file1->move($path,$fileName1))
 			{
 				$picture->image1 = $fileName1;
@@ -155,7 +155,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image2'))
 		{
 			$fileName2 = $file2->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file2->move($path,$fileName2))
 			{
 				$picture->image2 = $fileName2;
@@ -166,7 +166,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image3'))
 		{
 			$fileName3 = $file3->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file3->move($path,$fileName3))
 			{
 				$picture->image3 = $fileName3;
@@ -177,7 +177,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image4'))
 		{
 			$fileName4 = $file4->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file4->move($path,$fileName4))
 			{
 				$picture->image4 = $fileName4;
@@ -188,7 +188,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image5'))
 		{
 			$fileName5 = $file5->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file5->move($path,$fileName5))
 			{
 				$picture->image5 = $fileName5;
@@ -199,7 +199,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image6'))
 		{
 			$fileName6 = $file6->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file6->move($path,$fileName6))
 			{
 				$picture->image6 = $fileName6;
@@ -210,7 +210,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image7'))
 		{
 			$fileName7 = $file7->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file7->move($path,$fileName7))
 			{
 				$picture->image7 = $fileName7;
@@ -221,7 +221,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image8'))
 		{
 			$fileName8 = $file8->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file8->move($path,$fileName8))
 			{
 				$picture->image8 = $fileName8;
@@ -232,7 +232,7 @@ class ImagesController extends Controller {
 		if(Input::hasFile('image9'))
 		{
 			$fileName9 = $file9->getClientOriginalName();
-			$path = public_path().'\carousel\\';
+			$path = base_path('../public_html/carousel');
 			if($file9->move($path,$fileName9))
 			{
 				$picture->image9 = $fileName9;

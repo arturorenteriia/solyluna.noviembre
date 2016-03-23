@@ -1,7 +1,7 @@
-@extends('admin.control.admin')
+@extends('admin.panel.admin')
 
 @section('logo')
-    <a href="#" class="brand-logo center">AMENETIES</a>
+    <a href="#" class="brand-logo center">Amenities/Comodidades</a>
 @endsection
 
 @section('add')
@@ -14,9 +14,9 @@
         <div class="row">
             <div class="col s9">
                 <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#test1">Add Menu</a></li>
-                    <li class="tab col s3"><a  href="#test2">Add Drinks</a></li>
-                    <li class="tab col s3 "><a href="#test3">Add Activities</a></li>
+                    <li class="tab col s3"><a class="active" href="#test1">Agregar Menu</a></li>
+                    <li class="tab col s3"><a  href="#test2">Agregar Bebidas</a></li>
+                    <li class="tab col s3 "><a href="#test3">Agregar Actividades</a></li>
 
                 </ul>
             </div>
@@ -125,7 +125,7 @@
                     <br>
                     <br>
 
-                    <center> <button type="submit" class="btn waves-effect waves-light">Add</button></center>
+                    <center> <button type="submit" class="btn waves-effect waves-light">Agregar</button></center>
 
                     {!! Form::close() !!}
                     <br>
